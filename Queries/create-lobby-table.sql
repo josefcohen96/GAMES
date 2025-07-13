@@ -1,0 +1,10 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+CREATE TABLE "room" (
+  "id" UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  "name" VARCHAR(255) NOT NULL,
+  "gameType" VARCHAR(255) NOT NULL,
+  "maxPlayers" INTEGER NOT NULL DEFAULT 2,
+  "currentPlayers" INTEGER NOT NULL DEFAULT 0,
+  "isStarted" BOOLEAN NOT NULL DEFAULT FALSE
+);
