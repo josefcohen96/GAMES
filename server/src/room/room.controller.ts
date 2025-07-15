@@ -2,13 +2,39 @@ import { Body, Controller, Post, Get, Param, Delete, BadRequestException } from 
 import { RoomService } from './room.service';
 import { LobbyService } from './lobby.service';
 import { CreateRoomDto } from './dto/create-room.dto';
+import { UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('room')
 export class RoomController {
     constructor(
         private readonly roomService: RoomService,
         private readonly lobbyService: LobbyService
     ) { }
+
+    @Get()
+    async getAllRooms() {
+        return this.lobbyService.getAllRooms();
+    }
+
+    @Post()
+    async createRoom(@Body() room: CreateRoomDto) {
+        return this.lobbyService.createRoom(room);
+    }
+
+    @Get(':roomId/players')
+    getPlayers(@Param('roomId') roomId: string) {
+        return this.roomService.getPlayers(roomId);
+    }
+
+    @Delete(':roomid')
+    async deleteRoom(@Param('roomid') roomid: string) {
+        if (!roomid) {
+            throw new BadRequestException('Room ID must be provided');
+        }
+        return this.lobbyService.deleteRoom(roomid);
+    }
 
     @Post(':roomId/join')
     joinRoom(
@@ -24,28 +50,5 @@ export class RoomController {
         @Body() body: { userId: string }
     ) {
         return this.roomService.leaveRoom(roomId, body.userId);
-    }
-
-    @Get(':roomId/players')
-    getPlayers(@Param('roomId') roomId: string) {
-        return this.roomService.getPlayers(roomId);
-    }
-
-    @Post()
-    async createRoom(@Body() room: CreateRoomDto) {
-        return this.lobbyService.createRoom(room);
-    }
-
-    @Delete(':roomid')
-    async deleteRoom(@Param('roomid') roomid: string) {
-        if (!roomid) {
-            throw new BadRequestException('Room ID must be provided');
-        }
-        return this.lobbyService.deleteRoom(roomid);
-    }
-
-    @Get()
-    async getAllRooms() {
-        return this.lobbyService.getAllRooms();
     }
 }
