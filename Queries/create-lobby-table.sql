@@ -8,3 +8,4 @@ CREATE TABLE "room" (
   "currentPlayers" INTEGER NOT NULL DEFAULT 0,
   "isStarted" BOOLEAN NOT NULL DEFAULT FALSE
 );
+

@@ -8,7 +8,6 @@ export class RoomService {
 
     private roomStates: Map<string, { players: string[] }> = new Map();
     constructor(
-        private readonly lobbyService: LobbyService,
         private readonly usersService: UsersService,
     ) { }
 
@@ -35,13 +34,18 @@ export class RoomService {
         if (room) {
             room.players = room.players.filter(id => id !== userId);
         }
-        if (room && room.players.length === 0) {
-            this.lobbyService.deleteRoom(roomId); // Assuming LobbyService is injected
-        }
         return { message: `User ${userId} left room ${roomId}` };
     }
 
     getPlayers(roomId: string): string[] {
         return this.roomStates.get(roomId)?.players || [];
+    }
+
+    deleteRoom(roomId: string) {
+        if (!this.roomStates.has(roomId)) {
+            throw new NotFoundException(`Room with ID ${roomId} not found`);
+        }
+        this.roomStates.delete(roomId);
+        return { message: `Room with ID ${roomId} deleted successfully` };
     }
 }
