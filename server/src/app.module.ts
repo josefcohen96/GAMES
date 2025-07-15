@@ -4,8 +4,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './users/entities/user.entity'; 
-import { LobbyModule } from './lobby/lobby.module';
+import { User } from './users/entities/user.entity';
 import { Room } from './room/entities/room.entity';
 import { RoomModule } from './room/room.module';
 @Module({
@@ -14,14 +13,14 @@ import { RoomModule } from './room/room.module';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres', // שנה בהתאם
-      password: '1234', // שנה בהתאם
+      username: 'postgres', 
+      password: '1234', 
       database: 'games_db',
       entities: [User, Room],
-      synchronize: true, // אל תשאיר ב-true בפרודקשן
+      synchronize: true,
     }),
-    UsersModule, AuthModule, LobbyModule, RoomModule],
+    UsersModule, AuthModule, RoomModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

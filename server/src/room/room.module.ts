@@ -1,15 +1,11 @@
 import { Module, forwardRef } from '@nestjs/common';
 import { RoomController } from './room.controller';
 import { RoomService } from './room.service';
-import { LobbyModule } from 'src/lobby/lobby.module';
-import { UsersModule } from 'src/users/users.module';
+import { LobbyService } from './lobby.service';
 
 @Module({
-  imports: [
-    forwardRef(() => LobbyModule),  // to avoid circular dependency issues
-    forwardRef(() => UsersModule),],
   controllers: [RoomController],
-  providers: [RoomService],
-  exports: [RoomService],
+  providers: [RoomService, LobbyService],
+  exports: [RoomService, LobbyService],
 })
 export class RoomModule { }

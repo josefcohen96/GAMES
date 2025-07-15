@@ -1,9 +1,14 @@
-import { Body, Controller, Post, Get, Param } from '@nestjs/common';
+import { Body, Controller, Post, Get, Param, Delete, BadRequestException } from '@nestjs/common';
 import { RoomService } from './room.service';
+import { LobbyService } from './lobby.service';
+import { CreateRoomDto } from './dto/create-room.dto';
 
 @Controller('room')
 export class RoomController {
-    constructor(private readonly roomService: RoomService) { }
+    constructor(
+        private readonly roomService: RoomService,
+        private readonly lobbyService: LobbyService
+    ) { }
 
     @Post(':roomId/join')
     joinRoom(
@@ -24,5 +29,23 @@ export class RoomController {
     @Get(':roomId/players')
     getPlayers(@Param('roomId') roomId: string) {
         return this.roomService.getPlayers(roomId);
+    }
+
+    @Post()
+    async createRoom(@Body() room: CreateRoomDto) {
+        return this.lobbyService.createRoom(room);
+    }
+
+    @Delete(':roomid')
+    async deleteRoom(@Param('roomid') roomid: string) {
+        if (!roomid) {
+            throw new BadRequestException('Room ID must be provided');
+        }
+        return this.lobbyService.deleteRoom(roomid);
+    }
+
+    @Get()
+    async getAllRooms() {
+        return this.lobbyService.getAllRooms();
     }
 }

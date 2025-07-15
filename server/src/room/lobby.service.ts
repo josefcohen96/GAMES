@@ -1,30 +1,24 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateRoomDto } from '../room/dto/create-room.dto';
-import { Room } from '../room/entities/room.entity';
-import { Repository } from 'typeorm';
-import { InjectRepository } from '@nestjs/typeorm';
-import { RoomService } from '../room/room.service';
+import { CreateRoomDto } from './dto/create-room.dto';
+import { Room } from './entities/room.entity';
+import { RoomService } from './room.service';
 
 
 @Injectable()
 export class LobbyService {
     constructor(
-        @InjectRepository(Room)
-        private readonly roomRepository: Repository<Room>,
         private readonly roomService: RoomService,
     ) { }
 
     async getAllRooms(): Promise<Room[]> {
-        return this.roomRepository.find();
+        return this.roomService.findAll();
     }
 
     async createRoom(dto: CreateRoomDto): Promise<Room> {
         const { userId, ...roomData } = dto;
 
-        const room = this.roomRepository.create(roomData);
-        const savedRoom = await this.roomRepository.save(room);
+        const savedRoom = this.roomService.createRoom(roomData);  // await ?
 
-        // הוספת היוצר כשחקן לחדר בזיכרון
         await this.roomService.joinRoom(savedRoom.id, userId);
 
         return savedRoom;
@@ -33,7 +27,7 @@ export class LobbyService {
     async deleteRoom(roomid: string): Promise<{ message: string }> {
         console.log('Deleting room ID:', roomid);
 
-        const result = await this.roomRepository.delete(roomid);
+        const result = await this.roomService.delete(roomid);
         if (result.affected === 0) {
             throw new NotFoundException(`Room with ID ${roomid} not found`);
         }

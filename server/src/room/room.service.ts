@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { LobbyService } from 'src/lobby/lobby.service';
+import { LobbyService } from 'src/room/lobby.service';
 import { UsersService } from 'src/users/users.service';
 import { NotFoundException } from '@nestjs/common';
 
