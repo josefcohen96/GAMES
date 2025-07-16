@@ -9,6 +9,7 @@ import { Room } from './room/entities/room.entity';
 import { RoomModule } from './room/room.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/jwt-auth.guard'; // הוסף את ה-Guard
+import { GameModule } from './game/game.module';
 
 @Module({
   imports: [
@@ -25,6 +26,8 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard'; // הוסף את ה-Guard
     UsersModule,
     AuthModule,
     RoomModule,
+    GameModule,
+
   ],
   controllers: [AppController],
   providers: [
