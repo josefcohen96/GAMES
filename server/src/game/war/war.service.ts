@@ -1,16 +1,16 @@
-import { Injectable, BadRequestException, NotFoundException} from '@nestjs/common';
+import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
 
 interface Card {
-    suit: 'hearts' | 'diamonds' | 'clubs' | 'spades';
-    value: number; // 2-14 (where 14 = Ace)
+  suit: 'hearts' | 'diamonds' | 'clubs' | 'spades';
+  value: number; // 2-14 (where 14 = Ace)
 }
 
 interface WarGameState {
-    roomId: string;
-    players: { [playerId: string]: Card[] };
-    pile: { playerId: string; card: Card }[];
-    status: 'ongoing' | 'finished';
-    winner?: string;
+  roomId: string;
+  players: { [playerId: string]: Card[] };
+  pile: { playerId: string; card: Card }[];
+  status: 'ongoing' | 'finished';
+  winner?: string;
 }
 
 @Injectable()
@@ -86,22 +86,25 @@ export class WarService {
     gameState.pile.push({ playerId, card });
 
     // When both players have played
-    if (gameState.pile.length === 2) {
-      const [c1, c2] = gameState.pile;
+    const playersInPile = new Set(gameState.pile.map((p) => p.playerId));
+    if (playersInPile.size === 2 && gameState.pile.length % 2 === 0) {
+      // השווה בין שני הקלפים האחרונים
+      const lastTwo = gameState.pile.slice(-2);
+      const [c1, c2] = lastTwo;
 
       if (c1.card.value > c2.card.value) {
-        gameState.players[c1.playerId].push(c1.card, c2.card);
+        gameState.players[c1.playerId].push(...gameState.pile.map(p => p.card));
+        gameState.pile = [];
+        return { message: `${c1.playerId} wins this battle!`, status: 'ongoing' };
       } else if (c2.card.value > c1.card.value) {
-        gameState.players[c2.playerId].push(c1.card, c2.card);
+        gameState.players[c2.playerId].push(...gameState.pile.map(p => p.card));
+        gameState.pile = [];
+        return { message: `${c2.playerId} wins this battle!`, status: 'ongoing' };
       } else {
-        // Tie → War mode
-        // Simple implementation: return tie and keep cards in pile
-        return { message: 'War! Tie occurred. Each player adds another card next turn.' };
+        return { message: 'War! Tie occurred. Each player must play again.', pile: gameState.pile };
       }
-
-      // Clear pile
-      gameState.pile = [];
     }
+
 
     // Check winner
     const [p1, p2] = Object.keys(gameState.players);
@@ -111,11 +114,7 @@ export class WarService {
         gameState.players[p1].length > gameState.players[p2].length ? p1 : p2;
     }
 
-    return {
-      message: `Player ${playerId} played a card`,
-      pile: gameState.pile,
-      status: gameState.status,
-    };
+    return { message: `Player ${playerId} played a card`, pile: gameState.pile, status: gameState.status };
   }
 
   // ✅ Get game state
@@ -123,12 +122,22 @@ export class WarService {
     const gameState = this.gameStates.get(roomId);
     if (!gameState) throw new NotFoundException(`No game found in room ${roomId}`);
 
+    // בונים אובייקט עם הקלפים האחרונים של כל שחקן מתוך pile
+    const lastCards: Record<string, Card[]> = {};
+    gameState.pile.forEach(entry => {
+      if (!lastCards[entry.playerId]) {
+        lastCards[entry.playerId] = [];
+      }
+      lastCards[entry.playerId].push(entry.card);
+    });
+
     return {
       status: gameState.status,
       players: Object.fromEntries(
         Object.entries(gameState.players).map(([id, cards]) => [id, cards.length])
       ),
-      pile: gameState.pile,
+      pile: gameState.pile, // מציג את כל מה שבערימה
+      lastCards, // מציג לכל שחקן איזה קלפים יש ב-pile כרגע
       winner: gameState.winner || null,
     };
   }
