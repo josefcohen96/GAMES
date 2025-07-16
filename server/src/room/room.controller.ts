@@ -20,6 +20,7 @@ export class RoomController {
 
     @Post()
     async createRoom(@Body() room: CreateRoomDto) {
+        console.log('Creating room with data:', room);
         return this.lobbyService.createRoom(room);
     }
 

@@ -19,13 +19,11 @@ export class LobbyService {
     }
 
     async createRoom(dto: CreateRoomDto): Promise<Room> {
-        const { userId, ...roomData } = dto;
-
+        const { ...roomData } = dto;
+        console.log('Creating room with data:', roomData);
         const savedRoom = this.lobbyRepo.create(roomData);
+        console.log('Room created:', savedRoom);
         await this.lobbyRepo.save(savedRoom);
-
-        await this.roomService.joinRoom(savedRoom.id, userId);
-
         return savedRoom;
     }
 

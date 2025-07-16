@@ -18,7 +18,7 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard'; // הוסף את ה-Guard
       port: 5432,
       username: 'postgres',
       password: '1234',
-      database: 'games-db',
+      database: 'games_db', // for laptop use 'games-db'
       entities: [Users, Room],
       synchronize: true,
     }),
