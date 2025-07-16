@@ -149,26 +149,3 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 - `GET /room/:roomId/players` → Get all players in a room
-
----
-
-## 🛠 Future Improvements
-- ✅ Add WebSocket support for real-time updates
-- ✅ Implement refresh tokens for session management
-- ✅ Add role-based access control (Admin, Player)
-- ✅ Add game logic (e.g., War, Chess) on top of the lobby system
-- ✅ Unit & integration tests with Jest
-
----
-
-## 📷 Preview
-![NestJS Logo](https://nestjs.com/img/logo-small.svg)  
-A clean and scalable backend architecture for modern gaming platforms.
-
----
-
-## ⭐ Contribute
-If you like this project, give it a ⭐ on [GitHub](https://github.com/)!  
-Feel free to fork and add new features.
-
----
