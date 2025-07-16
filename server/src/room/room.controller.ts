@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get, Param, Delete, BadRequestException } from '@nestjs/common';
+import { Body, Controller, Post, Get, Param, Delete, BadRequestException, Req } from '@nestjs/common';
 import { RoomService } from './room.service';
 import { LobbyService } from './lobby.service';
 import { CreateRoomDto } from './dto/create-room.dto';
@@ -38,18 +38,14 @@ export class RoomController {
     }
 
     @Post(':roomId/join')
-    joinRoom(
-        @Param('roomId') roomId: string,
-        @Body() body: { userId: string }
-    ) {
-        return this.roomService.joinRoom(roomId, body.userId);
+    joinRoom(@Param('roomId') roomId: string, @Req() req) {
+        const userId = req.user.userId; // מגיע מה-JWT
+        return this.roomService.joinRoom(roomId, userId);
     }
 
     @Post(':roomId/leave')
-    leaveRoom(
-        @Param('roomId') roomId: string,
-        @Body() body: { userId: string }
-    ) {
-        return this.roomService.leaveRoom(roomId, body.userId);
+    leaveRoom(@Param('roomId') roomId: string, @Req() req) {
+        const userId = req.user.userId; // מגיע מה-JWT
+        return this.roomService.leaveRoom(roomId, userId);
     }
 }
