@@ -5,7 +5,6 @@ CREATE TABLE "room" (
   "name" VARCHAR(255) NOT NULL,
   "gameType" VARCHAR(255) NOT NULL,
   "maxPlayers" INTEGER NOT NULL DEFAULT 2,
-  "currentPlayers" INTEGER NOT NULL DEFAULT 0,
   "isStarted" BOOLEAN NOT NULL DEFAULT FALSE
 );
 

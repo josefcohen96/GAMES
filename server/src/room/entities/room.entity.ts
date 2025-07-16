@@ -1,7 +1,7 @@
 // src/lobby/entities/room.entity.ts
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+@Entity('room')
 export class Room {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -10,13 +10,10 @@ export class Room {
   name: string;
 
   @Column()
-  gameType: string; // סוג המשחק: "war", "chess", "memory" וכו'
+  gameType: string;
 
   @Column({ default: 2 })
   maxPlayers: number;
-
-  @Column({ default: 0 })
-  currentPlayers: number;
 
   @Column({ default: false })
   isStarted: boolean;

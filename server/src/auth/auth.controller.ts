@@ -13,10 +13,6 @@ export class AuthController {
   async login(@Body() loginUserDto: LoginDto) {
     return this.authService.login(loginUserDto);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> fcf12ecd8ae1e65eaf27791908ac7b454a0bf3d3
   @Post('register')
   async register(@Body() registerUserDto: RegisterDto) {
     return this.authService.register(registerUserDto);

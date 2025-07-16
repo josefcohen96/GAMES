@@ -47,7 +47,6 @@ export class AuthService {
     };
   }
 
-<<<<<<< HEAD
   async register(registerUserDto: RegisterDto) {
     console.log('Registering user:', registerUserDto);
     if (!registerUserDto.username || !registerUserDto.password) {
@@ -56,22 +55,5 @@ export class AuthService {
     }
     console.log('Creating user with :', registerUserDto);
     return this.usersService.createUser(registerUserDto);
-=======
-  async register(userDto: RegisterDto) {
-    console.log('Registering user:', userDto);
-    if (!userDto.username || !userDto.password) {
-      console.log('Missing username or password:', userDto);
-      throw new UnauthorizedException('Username and password are required');
-    }
-
-    const hashedPassword = await bcrypt.hash(userDto.password, 10);
-    console.log('Hashed password:', hashedPassword);
-    const newUser = {
-      ...userDto,
-      password: hashedPassword,
-    };
-    console.log('Hashed password:', newUser.password);
-    return this.usersService.createUser(newUser);
->>>>>>> fcf12ecd8ae1e65eaf27791908ac7b454a0bf3d3
   }
 }

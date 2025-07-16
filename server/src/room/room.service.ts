@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { LobbyService } from 'src/room/lobby.service';
 import { UsersService } from 'src/users/users.service';
 import { NotFoundException } from '@nestjs/common';
 
@@ -9,6 +8,7 @@ export class RoomService {
     private roomStates: Map<string, { players: string[] }> = new Map();
     constructor(
         private readonly usersService: UsersService,
+
     ) { }
 
 
@@ -25,7 +25,8 @@ export class RoomService {
         } else {
             this.roomStates.set(roomId, { players: [userId] });
         }
-
+        console.log(`####################### Room States Updated #########################`);
+        console.log(this.roomStates)
         return { message: `User ${userId} joined room ${roomId}` };
     }
 
