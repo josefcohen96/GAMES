@@ -56,6 +56,10 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
       message: `${userId} הצטרף לחדר`,
       players: result.players,
     });
+
+    // שולח גם מצב נוכחי של המשחק
+    const state = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'state' });
+    this.server.to(roomId).emit('gameStateUpdate', state);
   }
 
   /** עזיבת חדר */
@@ -73,15 +77,45 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     });
   }
 
-  /** פעולות משחק */
-  @SubscribeMessage('gameAction')
-  handleGameAction(
-    @ConnectedSocket() client: Socket,
-    @MessageBody() data: { roomId: string; gameType: string; action: string; payload?: any }
-  ) {
-    const { roomId, gameType, action, payload } = data;
-    const result = this.gameService.handleAction(roomId, { gameType, action, payload });
+  /** התחלת משחק חדש */
+  @SubscribeMessage('resetGame')
+  handleResetGame(@MessageBody() data: { roomId: string }) {
+    const { roomId } = data;
+    const result = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'resetGame' });
+    this.server.to(roomId).emit('gameStateUpdate', result);
+  }
 
+  /** התחלת סיבוב */
+  @SubscribeMessage('startRound')
+  handleStartRound(@MessageBody() data: { roomId: string }) {
+    const { roomId } = data;
+    const result = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'startRound', payload: {} });
+    this.server.to(roomId).emit('gameStateUpdate', result);
+  }
+
+  /** שמירת תשובות */
+  @SubscribeMessage('saveAnswers')
+  handleSaveAnswers(
+    @ConnectedSocket() client: Socket,
+    @MessageBody() data: { roomId: string; answers: { [category: string]: string } }
+  ) {
+    const { roomId, answers } = data;
+    const userId = (client as any).user.sub;
+
+    const result = this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'saveAnswers',
+      payload: { playerId: userId, answers },
+    });
+
+    this.server.to(roomId).emit('gameStateUpdate', result);
+  }
+
+  /** סיום סיבוב (חישוב ניקוד) */
+  @SubscribeMessage('finishRound')
+  handleFinishRound(@MessageBody() data: { roomId: string }) {
+    const { roomId } = data;
+    const result = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'finishRound' });
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 }

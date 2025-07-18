@@ -9,73 +9,60 @@ export class GameService {
     private readonly eratzIrService: EratzIrService,
   ) {}
 
-  /** ✅ פונקציה כללית שמופעלת מה-Gateway */
   handleAction(roomId: string, body: { gameType: string; action: string; payload?: any }) {
     const { gameType, action, payload } = body;
 
-    let state;
     switch (gameType) {
       case 'war':
-        state = this.handleWarAction(roomId, action, payload);
-        break;
+        return this.handleWarAction(roomId, action, payload);
       case 'eratz-ir':
-        state = this.handleEratzIrAction(roomId, action, payload);
-        break;
+        return this.handleEratzIrAction(roomId, action, payload);
       default:
         throw new BadRequestException(`Unsupported game type: ${gameType}`);
     }
-
-    // ✅ בכל מקרה, נחזיר את המצב המעודכן לשידור
-    return state;
   }
 
-  /** ✅ לוגיקת מלחמה */
+  /** ✅ פעולות למשחק WAR */
   private handleWarAction(roomId: string, action: string, payload: any) {
     switch (action) {
       case 'start':
         if (!payload || !payload.players || payload.players.length !== 2) {
           throw new BadRequestException('War game requires exactly 2 players');
         }
-        this.warService.startGame(roomId, payload.players);
-        return this.warService.getState(roomId);
-
+        return this.warService.startGame(roomId, payload.players);
       case 'play':
-        this.warService.playTurn(roomId, payload.playerId);
-        return this.warService.getState(roomId);
-
+        return this.warService.playTurn(roomId, payload.playerId);
       case 'state':
         return this.warService.getState(roomId);
-
       case 'end':
-        this.warService.endGame(roomId);
-        return { message: 'Game ended', roomId };
-
+        return this.warService.endGame(roomId);
       default:
         throw new BadRequestException(`Unsupported action: ${action}`);
     }
   }
 
-  /** ✅ לוגיקת ארץ עיר */
+  /** ✅ פעולות למשחק ארץ-עיר עם סיבובים */
   private handleEratzIrAction(roomId: string, action: string, payload: any) {
     switch (action) {
-      case 'start':
-        this.eratzIrService.startGame(roomId, payload.categories);
-        return this.eratzIrService.getState(roomId);
+      /** 🟢 התחלת משחק חדש לגמרי */
+      case 'resetGame':
+        return this.eratzIrService.resetGame(roomId);
 
-      case 'save': // אם אתה תומך בשמירה חלקית
-        this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
-        return this.eratzIrService.getState(roomId);
+      /** 🟢 התחלת סיבוב חדש */
+      case 'startRound':
+        return this.eratzIrService.startRound(roomId, payload?.categories);
 
-      case 'submitAll': // סוף משחק
-        this.eratzIrService.submitAll(roomId);
-        return this.eratzIrService.getState(roomId);
+      /** 🟢 שמירת תשובות של שחקן */
+      case 'saveAnswers':
+        return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
 
+      /** 🟢 סיום סיבוב + חישוב ניקוד */
+      case 'finishRound':
+        return this.eratzIrService.finishRound(roomId);
+
+      /** 🟢 קבלת מצב נוכחי */
       case 'state':
         return this.eratzIrService.getState(roomId);
-
-      case 'end':
-        this.eratzIrService.endGame(roomId);
-        return { message: 'Game ended', roomId };
 
       default:
         throw new BadRequestException(`Unsupported action: ${action}`);

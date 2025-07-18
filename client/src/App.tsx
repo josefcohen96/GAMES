@@ -11,9 +11,7 @@ import { initSocket } from "./socket";
 function App() {
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      initSocket();
-    }
+    if (token) initSocket();
   }, []);
 
   return (
