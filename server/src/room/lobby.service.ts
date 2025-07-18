@@ -9,7 +9,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 export class LobbyService {
     constructor(
         private readonly roomService: RoomService,
-        
+
         @InjectRepository(Room)
         private readonly lobbyRepo: Repository<Room>,
     ) { }
@@ -35,5 +35,10 @@ export class LobbyService {
             throw new NotFoundException(`Room with ID ${roomid} not found`);
         }
         return { message: `Room with ID ${roomid} deleted successfully` };
+    }
+
+    async deleteAllRooms(): Promise<{ message: string }> {
+        await this.lobbyRepo.clear();
+        return { message: `All rooms deleted successfully` };
     }
 }

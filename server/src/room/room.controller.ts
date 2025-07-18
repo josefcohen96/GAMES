@@ -29,6 +29,11 @@ export class RoomController {
         return this.roomService.getPlayers(roomId);
     }
 
+    @Delete('deleteall')
+    async deleteAllRooms() {
+        return this.lobbyService.deleteAllRooms();
+    }
+    
     @Delete(':roomid')
     async deleteRoom(@Param('roomid') roomid: string) {
         if (!roomid) {
@@ -48,4 +53,8 @@ export class RoomController {
         const userId = req.user.userId; // מגיע מה-JWT
         return this.roomService.leaveRoom(roomId, userId);
     }
+
+    // deleteall rooms
+
+
 }

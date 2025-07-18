@@ -1,4 +1,5 @@
 import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
+import { RoomService } from '../../room/room.service';
 
 interface EratzIrGameState {
     roomId: string;
@@ -6,9 +7,7 @@ interface EratzIrGameState {
     categories: string[];
     players: string[];
     answers: { [playerId: string]: { [category: string]: string } };
-    completedPlayers: Set<string>;
     status: 'waiting' | 'playing' | 'ended';
-    timer?: NodeJS.Timeout;
     scores: { [playerId: string]: number };
 }
 
@@ -17,10 +16,13 @@ export class EratzIrService {
     private gameStates: Map<string, EratzIrGameState> = new Map();
     private hebrewLetters = 'אבגדהוזחטיכלמנסעפצקרשת'.split('');
 
-    // ✅ Start Game
-    startGame(roomId: string, players: string[], categories: string[] = ['עיר', 'ארץ', 'חי', 'צומח']) {
+    constructor(private readonly roomService: RoomService) { }
+
+    /** ✅ Start Game */
+    startGame(roomId: string, categories: string[] = ['עיר', 'ארץ', 'חי', 'צומח']) {
+        const players = this.roomService.getPlayers(roomId);
         if (players.length < 2) {
-            throw new BadRequestException('צריך לפחות שני שחקנים למשחק ארץ עיר');
+            throw new BadRequestException('צריך לפחות שני שחקנים להתחלת המשחק');
         }
         if (this.gameStates.has(roomId)) {
             throw new BadRequestException('כבר יש משחק פעיל בחדר הזה');
@@ -33,72 +35,38 @@ export class EratzIrService {
             categories,
             players,
             answers: {},
-            completedPlayers: new Set(),
             status: 'playing',
             scores: {},
         };
 
         this.gameStates.set(roomId, gameState);
-        return { message: `משחק התחיל עם האות ${letter}`, categories, letter, players };
+        return { message: `משחק התחיל עם האות ${letter}`, letter, categories, players };
     }
 
-    // ✅ Submit Answers
-    submitAnswers(roomId: string, playerId: string, answers: { [category: string]: string }) {
+    /** ✅ Save answers temporarily (before submitAll) */
+    saveAnswers(roomId: string, playerId: string, answers: { [category: string]: string }) {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
-        if (gameState.status !== 'playing') {
-            throw new BadRequestException('המשחק הסתיים או לא התחיל');
-        }
+        if (gameState.status !== 'playing') throw new BadRequestException('המשחק הסתיים או לא התחיל');
 
         gameState.answers[playerId] = answers;
-        gameState.completedPlayers.add(playerId);
-
-        // אם זה הראשון שסיים → מפעילים טיימר 10 שניות
-        if (gameState.completedPlayers.size === 1 && gameState.players.length > 1) {
-            gameState.timer = setTimeout(() => {
-                this.calculateScores(roomId);
-            }, 10000);
-        }
-
-        // אם כולם סיימו → סיימנו לפני הזמן
-        if (gameState.completedPlayers.size === gameState.players.length) {
-            if (gameState.timer) clearTimeout(gameState.timer);
-            this.calculateScores(roomId);
-        }
-
-        return { message: 'תשובות נשלחו', answers };
+        return { message: 'תשובות זמניות נשמרו', answers };
     }
 
-    // ✅ ניקוי ותיקוף התשובה
-    private normalizeAnswer(answer: string): string {
-        return answer.trim().replace(/[^א-ת\s]/g, ''); // משאיר אותיות ורווחים בלבד
-    }
-
-    private startsWithLetter(answer: string, letter: string): boolean {
-        if (!answer) return false;
-        return answer.charAt(0) === letter;
-    }
-
-    // ✅ Calculate Scores
-    private calculateScores(roomId: string) {
+    /** ✅ Finalize game and calculate scores */
+    submitAll(roomId: string) {
         const gameState = this.gameStates.get(roomId);
-        if (!gameState) return;
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
 
         gameState.status = 'ended';
         const scores: { [playerId: string]: number } = {};
-
-        for (const player of gameState.players) {
-            scores[player] = 0;
-        }
+        for (const player of gameState.players) scores[player] = 0;
 
         for (const category of gameState.categories) {
             const categoryAnswers: { [answer: string]: string[] } = {};
 
             for (const [player, answers] of Object.entries(gameState.answers)) {
-                let ans = answers[category] || '';
-                ans = this.normalizeAnswer(ans);
-
-                // ✅ בדיקה: חייב להתחיל באות המשחק
+                let ans = this.normalizeAnswer(answers[category] || '');
                 if (!this.startsWithLetter(ans, gameState.letter)) continue;
 
                 if (!categoryAnswers[ans]) categoryAnswers[ans] = [];
@@ -106,33 +74,59 @@ export class EratzIrService {
             }
 
             for (const [answer, players] of Object.entries(categoryAnswers)) {
-                if (!answer) continue; // לא ענה
-                const points = players.length === 1 ? 10 : 5; // ייחודי = 10, חוזר = 5
+                if (!answer) continue;
+                const points = players.length === 1 ? 10 : 5;
                 players.forEach(p => scores[p] += points);
             }
         }
 
         gameState.scores = scores;
         this.gameStates.set(roomId, gameState);
+
+        return {
+            message: 'תוצאות חושבו בהצלחה',
+            scores,
+            answers: gameState.answers
+        };
     }
 
-    // ✅ Get State
+    /** ✅ Utility Functions */
+    private normalizeAnswer(answer: string): string {
+        return answer.trim().replace(/[^א-ת\s]/g, '');
+    }
+
+    private startsWithLetter(answer: string, letter: string): boolean {
+        if (!answer) return false;
+        return answer.charAt(0) === letter;
+    }
+
     getState(roomId: string) {
         const gameState = this.gameStates.get(roomId);
-        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+        if (!gameState) {
+            return {
+                status: 'waiting',
+                letter: null,
+                categories: [],
+                answers: {},
+                scores: null,
+                players: this.roomService.getPlayers(roomId) // השג נתוני חדר
+            };
+        }
         return {
             status: gameState.status,
             letter: gameState.letter,
             categories: gameState.categories,
             answers: gameState.answers,
             scores: gameState.status === 'ended' ? gameState.scores : null,
+            players: gameState.players
         };
     }
 
-    // ✅ End Game
     endGame(roomId: string) {
-        if (!this.gameStates.has(roomId)) throw new NotFoundException('לא נמצא משחק');
-        this.calculateScores(roomId);
-        return { message: 'משחק הסתיים', scores: this.gameStates.get(roomId)?.scores };
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+
+        this.gameStates.delete(roomId);
+        return { message: `המשחק בחדר ${roomId} הסתיים בהצלחה` };
     }
 }
