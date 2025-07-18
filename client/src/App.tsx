@@ -5,19 +5,26 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import EratzIrGame from "./components/EratzIrGame";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { useEffect } from "react";
+import { initSocket } from "./socket";
 
 function App() {
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      initSocket();
+    }
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-100">
         <Navbar />
         <div className="p-4">
           <Routes>
-            {/* Public Routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
-            {/* Protected Routes */}
             <Route
               path="/"
               element={

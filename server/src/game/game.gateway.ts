@@ -1,106 +1,87 @@
 import {
   WebSocketGateway,
-  WebSocketServer,
   SubscribeMessage,
-  OnGatewayConnection,
-  OnGatewayDisconnect,
+  WebSocketServer,
   ConnectedSocket,
   MessageBody,
+  OnGatewayConnection,
+  OnGatewayDisconnect,
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
+import { GameService } from './game.service';
+import { RoomService } from '../room/room.service';
 import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException } from '@nestjs/common';
-import { GameService } from './game.service';
 
 @WebSocketGateway({
-  cors: {
-    origin: '*', // אפשר לשים את ה-Frontend URL במקום *
-  },
+  cors: { origin: '*' },
 })
 export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server: Server;
 
   constructor(
     private readonly gameService: GameService,
-    private readonly jwtService: JwtService,
-  ) { }
+    private readonly roomService: RoomService,
+    private readonly jwtService: JwtService
+  ) {}
 
-  /** ✅ אימות חיבור */
   async handleConnection(client: Socket) {
     try {
-      const token = client.handshake.auth?.token || client.handshake.headers?.authorization?.split(' ')[1];
+      const token = client.handshake.auth?.token;
+      if (!token) throw new UnauthorizedException('No token provided');
 
-      if (!token) {
-        throw new UnauthorizedException('Missing token');
-      }
-
-      // ✅ אימות JWT
       const decoded = this.jwtService.verify(token);
-      (client as any).user = decoded; // שומרים את פרטי המשתמש על הסוקט
-
+      (client as any).user = decoded;
       console.log(`✅ Client connected: ${decoded.username}`);
-    } catch (err) {
+    } catch (error) {
       console.log('❌ Unauthorized socket connection');
       client.disconnect();
     }
   }
 
-  /** ✅ התנתקות */
   handleDisconnect(client: Socket) {
-    const username = (client as any).user?.username || 'Unknown';
-    console.log(`❌ Client disconnected: ${username}`);
+    console.log(`❌ Client disconnected: ${(client as any).user?.username}`);
   }
 
-  /** ✅ הצטרפות לחדר */
+  /** הצטרפות לחדר */
   @SubscribeMessage('joinRoom')
-  handleJoinRoom(
-    @ConnectedSocket() client: Socket,
-    @MessageBody() data: { roomId: string },
-  ) {
+  handleJoinRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
     const { roomId } = data;
+    const userId = (client as any).user.sub;
+
     client.join(roomId);
-
-    console.log(`User ${(client as any).user.username} joined room ${roomId}`);
+    const result = this.roomService.joinRoom(roomId, userId);
 
     this.server.to(roomId).emit('roomUpdate', {
-      message: `${(client as any).user.username} הצטרף לחדר`,
+      message: `${userId} הצטרף לחדר`,
+      players: result.players,
     });
   }
 
-  /** ✅ יציאה מחדר */
+  /** עזיבת חדר */
   @SubscribeMessage('leaveRoom')
-  handleLeaveRoom(
-    @ConnectedSocket() client: Socket,
-    @MessageBody() data: { roomId: string },
-  ) {
+  handleLeaveRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
     const { roomId } = data;
-    client.leave(roomId);
+    const userId = (client as any).user.sub;
 
-    console.log(`User ${(client as any).user.username} left room ${roomId}`);
+    client.leave(roomId);
+    const result = this.roomService.leaveRoom(roomId, userId);
 
     this.server.to(roomId).emit('roomUpdate', {
-      message: `${(client as any).user.username} יצא מהחדר`,
+      message: `${userId} עזב את החדר`,
+      players: result.players,
     });
   }
 
-  /** ✅ פעולות משחק */
+  /** פעולות משחק */
   @SubscribeMessage('gameAction')
   handleGameAction(
     @ConnectedSocket() client: Socket,
-    @MessageBody()
-    data: { roomId: string; gameType: string; action: string; payload?: any },
+    @MessageBody() data: { roomId: string; gameType: string; action: string; payload?: any }
   ) {
     const { roomId, gameType, action, payload } = data;
+    const result = this.gameService.handleAction(roomId, { gameType, action, payload });
 
-    console.log(`Game action: ${action} in room ${roomId}`);
-
-    const result = this.gameService.handleAction(roomId, {
-      gameType,
-      action,
-      payload: { ...payload, playerId: (client as any).user.sub }, // מוסיף ID מהטוקן
-    });
-
-    // ✅ שולח את הסטייט החדש לכל השחקנים בחדר
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 }

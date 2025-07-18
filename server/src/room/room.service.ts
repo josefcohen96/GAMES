@@ -1,45 +1,36 @@
-import { Injectable } from '@nestjs/common';
-import { UsersService } from 'src/users/users.service';
-import { NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class RoomService {
+  // Map שמחזיק מצב של שחקנים בחדרים
+  private roomStates: Map<string, { players: string[] }> = new Map();
 
-    private roomStates: Map<string, { players: string[] }> = new Map();
-    constructor(
-        private readonly usersService: UsersService,
+  /** הצטרפות לחדר */
+  joinRoom(roomId: string, userId: string): { message: string; players: string[] } {
+    const room = this.roomStates.get(roomId);
 
-    ) { }
-
-
-    async joinRoom(roomId: string, userId: string): Promise<{ message: string }> {
-        await this.usersService.findById(userId);
-
-        const room = this.roomStates.get(roomId);
-
-        if (room) {
-            if (room.players.includes(userId)) {
-                return { message: `User ${userId} is already in room ${roomId}` };
-            }
-            room.players.push(userId);
-        } else {
-            this.roomStates.set(roomId, { players: [userId] });
-        }
-        console.log(`####################### Room States Updated #########################`);
-        console.log(this.roomStates)
-        return { message: `User ${userId} joined room ${roomId}` };
+    if (room) {
+      if (!room.players.includes(userId)) {
+        room.players.push(userId);
+      }
+    } else {
+      this.roomStates.set(roomId, { players: [userId] });
     }
 
-    leaveRoom(roomId: string, userId: string): { message: string } {
-        const room = this.roomStates.get(roomId);
-        if (room) {
-            room.players = room.players.filter(id => id !== userId);
-        }
-        console.log(this.roomStates)
-        return { message: `User ${userId} left room ${roomId}` };
-    }
+    return { message: `User ${userId} joined room ${roomId}`, players: this.getPlayers(roomId) };
+  }
 
-    getPlayers(roomId: string): string[] {
-        return this.roomStates.get(roomId)?.players || [];
-    }
+  /** עזיבת חדר */
+  leaveRoom(roomId: string, userId: string): { message: string; players: string[] } {
+    const room = this.roomStates.get(roomId);
+    if (!room) throw new NotFoundException('Room not found');
+
+    room.players = room.players.filter((p) => p !== userId);
+    return { message: `User ${userId} left room ${roomId}`, players: this.getPlayers(roomId) };
+  }
+
+  /** קבלת רשימת שחקנים */
+  getPlayers(roomId: string): string[] {
+    return this.roomStates.get(roomId)?.players || [];
+  }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
+import { initSocket, getSocket } from "../socket";
 
 interface Room {
   id: string;
@@ -19,6 +20,21 @@ export default function Home() {
   const [maxPlayers, setMaxPlayers] = useState(2);
   const navigate = useNavigate();
 
+  // אתחול Socket פעם אחת
+  useEffect(() => {
+    initSocket();
+    const socket = getSocket();
+
+    socket.on("roomUpdate", (data) => {
+      console.log("📢 עדכון חדרים:", data);
+      fetchRooms(); // מרענן רשימת חדרים
+    });
+
+    return () => {
+      socket.off("roomUpdate");
+    };
+  }, []);
+
   const fetchRooms = async () => {
     try {
       setLoading(true);
@@ -33,35 +49,29 @@ export default function Home() {
 
   const createRoom = async () => {
     try {
-      // יצירת חדר
       const res = await api.post("/room", {
         name: newRoomName,
         gameType,
         maxPlayers,
       });
-
       const createdRoom = res.data;
-      const roomId = createdRoom.id;
 
-      // הצטרפות אוטומטית של היוצר (Backend מזהה אותו לפי JWT)
-      await api.post(`/room/${roomId}/join`);
+      // שולח אירוע Socket
+      getSocket().emit("joinRoom", { roomId: createdRoom.id });
 
-      // סגירת מודל והעברה לעמוד המשחק
       setShowModal(false);
       setNewRoomName("");
+      fetchRooms();
 
-      navigate(`/games/${gameType}/${roomId}`);
+      navigate(`/games/${gameType}/${createdRoom.id}`);
     } catch (error) {
       console.error("שגיאה ביצירת חדר:", error);
     }
   };
-  const joinRoom = async (roomId: string, gameType: string) => {
-    try {
-      await api.post(`/room/${roomId}/join`);
-      navigate(`/games/${gameType}/${roomId}`);
-    } catch (error) {
-      console.error("שגיאה בהצטרפות לחדר:", error);
-    }
+
+  const joinRoom = (roomId: string, gameType: string) => {
+    getSocket().emit("joinRoom", { roomId });
+    navigate(`/games/${gameType}/${roomId}`);
   };
 
   useEffect(() => {
@@ -93,9 +103,7 @@ export default function Home() {
             >
               <h2 className="text-xl font-bold">{room.name}</h2>
               <p className="text-gray-600">משחק: {room.gameType}</p>
-              <p className="text-gray-600">
-                מקס שחקנים: {room.maxPlayers}
-              </p>
+              <p className="text-gray-600">מקס שחקנים: {room.maxPlayers}</p>
               <p className="text-gray-600">
                 סטטוס: {room.isStarted ? "מתחיל" : "ממתין"}
               </p>
