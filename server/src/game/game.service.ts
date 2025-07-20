@@ -47,21 +47,16 @@ export class GameService {
     switch (action) {
       case 'resetGame':
         return this.eratzIrService.resetGame(roomId);
-
       case 'startRound':
         return this.eratzIrService.startRound(roomId, payload?.categories);
-
       case 'startGame':
         return this.eratzIrService.startGame(roomId);
-      // case 'saveAnswers':
-      //   return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
-
-      // case 'finishRound':
-      //   return this.eratzIrService.finishRound(roomId);
-
+      case 'saveAnswers':   // ✅ חדש
+        return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
+      case 'finishRound':   // ✅ חדש
+        return this.eratzIrService.finishRound(roomId);
       case 'state':
         return this.eratzIrService.getState(roomId);
-
       default:
         throw new BadRequestException(`Unsupported action: ${action}`);
     }

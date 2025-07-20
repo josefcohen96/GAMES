@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { RoomService } from '../../room/room.service';
+import { AiValidationService } from '../../ai-validation/ai-validation.service';
 
 interface EratzIrGameState {
     roomId: string;
@@ -18,7 +19,9 @@ export class EratzIrService {
     private gameStates: Map<string, EratzIrGameState> = new Map();
     private hebrewLetters = 'אבגדהוזחטיכלמנסעפצקרשת'.split('');
 
-    constructor(private readonly roomService: RoomService) { }
+    constructor(
+        private readonly roomService: RoomService,
+        private readonly aiValidator: AiValidationService) { }
 
     startGame(roomId: string) {
         const gameState = this.gameStates.get(roomId);
@@ -103,13 +106,77 @@ export class EratzIrService {
         return gameState;
     }
 
-    /** Utility functions */
-    // private normalizeAnswer(answer: string): string {
-    //     return answer.trim().replace(/[^א-ת\s]/g, '');
-    // }
+    async saveAnswers(roomId: string, playerId: string, answers: { [category: string]: string }) {
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+        if (gameState.status !== 'playing-round') {
+            throw new BadRequestException('לא ניתן לשמור תשובות - לא בזמן סיבוב');
+        }
 
-    // private startsWithLetter(answer: string, letter: string): boolean {
-    //     if (!answer) return false;
-    //     return answer.charAt(0) === letter;
-    // }
+        // אימות תשובות מול Gemini
+        const validation = await this.validateAnswers(roomId, answers);
+        // שמירת תשובות
+        gameState.answers[playerId] = answers;
+        this.gameStates.set(roomId, gameState);
+
+        return { validation, state: gameState };
+    }
+
+
+    finishRound(roomId: string) {
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+        if (gameState.status !== 'playing-round') {
+            throw new BadRequestException('אין סיבוב פעיל לסיים');
+        }
+
+        // חישוב ניקוד לסיבוב
+        const roundScores = this.calculateScores(roomId);
+        gameState.roundScores = roundScores;
+
+        // עדכון ניקוד מצטבר
+        for (const player of gameState.players) {
+            gameState.totalScores[player] += roundScores[player] || 0;
+        }
+
+        gameState.status = 'in-progress';
+        this.gameStates.set(roomId, gameState);
+        return this.getState(roomId);
+    }
+
+    private async validateAnswers(roomId: string, answers: { [category: string]: string }) {
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+
+        const validationResult = await this.aiValidator.validateGameData({
+            roomId,
+            letter: gameState.letter,
+            answers,
+            categories: gameState.categories,
+        });
+
+        if (!validationResult.valid) {
+            throw new BadRequestException(`תשובות לא תקינות: ${validationResult.errors.join(', ')}`);
+        }
+
+        return validationResult.details;
+    }
+
+    private calculateScores(roomId: string): { [playerId: string]: number } {
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+
+        const scores: { [playerId: string]: number } = {};
+        for (const player of gameState.players) {
+            scores[player] = 0;
+            for (const category of gameState.categories) {
+                const answer = gameState.answers[player]?.[category];
+                if (answer) {
+                    scores[player] += 1; // כל תשובה נכונה מקבלת נקודה
+                }
+            }
+        }
+
+        return scores;
+    }
 }

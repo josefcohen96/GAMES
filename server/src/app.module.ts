@@ -10,6 +10,8 @@ import { RoomModule } from './room/room.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/jwt-auth.guard'; // הוסף את ה-Guard
 import { GameModule } from './game/game.module';
+import { AiValidationModule } from './ai-validation/ai-validation.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -23,10 +25,14 @@ import { GameModule } from './game/game.module';
       entities: [Users, Room],
       synchronize: true,
     }),
+     ConfigModule.forRoot({
+      isGlobal: true, // Makes env vars available everywhere
+    }),
     UsersModule,
     AuthModule,
     RoomModule,
     GameModule,
+    AiValidationModule,
 
   ],
   controllers: [AppController],

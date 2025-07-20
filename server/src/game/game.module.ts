@@ -6,9 +6,10 @@ import { EratzIrService } from './eratzIr/eratzIr.service';
 import { RoomModule } from '../room/room.module';
 import { GameGateway } from './game.gateway';
 import { JwtModule } from '@nestjs/jwt';
-
+import { AiValidationModule } from '../ai-validation/ai-validation.module';
 @Module({
   imports: [
+    AiValidationModule,
     RoomModule,
     JwtModule.register({
       secret: process.env.JWT_SECRET || 'secretKey', 
