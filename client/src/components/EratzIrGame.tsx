@@ -24,6 +24,7 @@ export default function EratzIrGame() {
 
   const startGame = () => {
     socket.emit("startGame", { roomId });
+    console.log("📢 start emit התחלת משחק בחדר:", roomId);
     setIsSubmitted(false);
     setAnswers({});
   };
@@ -88,12 +89,10 @@ export default function EratzIrGame() {
         🎮 ארץ עיר - סיבוב {gameState.currentRound}
       </h2>
 
-      {/* ✅ תמיד מציגים שחקנים */}
       <div className="text-center mb-4">
         <p><strong>שחקנים בחדר:</strong> {gameState.players.length > 0 ? gameState.players.join(", ") : "אין עדיין שחקנים"}</p>
       </div>
 
-      {/* מצב לפני התחלת המשחק */}
       {gameState.status === "waiting" && (
         <div className="text-center">
           {canStartGame ? (
@@ -106,7 +105,6 @@ export default function EratzIrGame() {
         </div>
       )}
 
-      {/* המשחק התחיל, מחכים להתחלת סיבוב */}
       {gameState.status === "in-progress" && (
         <div className="text-center">
           <h3 className="mb-2">ניקוד מצטבר:</h3>
@@ -122,7 +120,6 @@ export default function EratzIrGame() {
         </div>
       )}
 
-      {/* סיבוב פעיל */}
       {gameState.status === "playing-round" && (
         <>
           {timer && <p className="text-center text-red-500 text-xl mb-4">⏳ {timer}s</p>}
@@ -147,7 +144,6 @@ export default function EratzIrGame() {
         </>
       )}
 
-      {/* סוף סיבוב */}
       {gameState.status === "ended" && (
         <>
           <h3 className="text-lg font-bold mb-2">תוצאות סיבוב:</h3>

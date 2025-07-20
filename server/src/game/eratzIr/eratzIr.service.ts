@@ -3,7 +3,7 @@ import { RoomService } from '../../room/room.service';
 
 interface EratzIrGameState {
     roomId: string;
-    status: 'waiting' | 'in-progress' | 'playing' | 'ended';
+    status: 'waiting' | 'in-progress' | 'playing-round' | 'ended';
     letter: string | null;
     players: string[];
     currentRound: number;
@@ -69,7 +69,7 @@ export class EratzIrService {
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
 
         const letter = this.hebrewLetters[Math.floor(Math.random() * this.hebrewLetters.length)];
-        gameState.status = 'playing';
+        gameState.status = 'playing-round';
         gameState.currentRound += 1;
         gameState.letter = letter;
         gameState.categories = categories;
