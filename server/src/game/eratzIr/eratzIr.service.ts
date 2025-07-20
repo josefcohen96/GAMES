@@ -1,12 +1,12 @@
-import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { RoomService } from '../../room/room.service';
 
 interface EratzIrGameState {
     roomId: string;
-    players: string[];
-    status: 'waiting' | 'playing' | 'ended';
-    currentRound: number;
+    status: 'waiting' | 'in-progress' | 'playing' | 'ended';
     letter: string | null;
+    players: string[];
+    currentRound: number;
     categories: string[];
     answers: { [playerId: string]: { [category: string]: string } };
     roundScores: { [playerId: string]: number };
@@ -18,9 +18,35 @@ export class EratzIrService {
     private gameStates: Map<string, EratzIrGameState> = new Map();
     private hebrewLetters = 'אבגדהוזחטיכלמנסעפצקרשת'.split('');
 
-    constructor(private readonly roomService: RoomService) {}
+    constructor(private readonly roomService: RoomService) { }
 
-    /** ✅ Reset Game (איפוס הכל) */
+    startGame(roomId: string) {
+        const gameState = this.gameStates.get(roomId);
+        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
+
+        if (gameState.status !== 'waiting') {
+            throw new BadRequestException('המשחק כבר התחיל');
+        }
+
+        if (gameState.players.length < 2) {
+            throw new BadRequestException('נדרשים לפחות שני שחקנים כדי להתחיל משחק');
+        }
+
+        gameState.status = 'in-progress';
+        gameState.currentRound = 0;
+        gameState.letter = null;
+        gameState.categories = [];
+        gameState.answers = {};
+        gameState.roundScores = {};
+        gameState.totalScores = gameState.players.reduce((acc, player) => {
+            acc[player] = 0;
+            return acc;
+        }, {} as { [playerId: string]: number });
+
+        this.gameStates.set(roomId, gameState);
+        return gameState;
+    }
+
     resetGame(roomId: string) {
         const players = this.roomService.getPlayers(roomId);
         const state: EratzIrGameState = {
@@ -38,7 +64,6 @@ export class EratzIrService {
         return this.getState(roomId);
     }
 
-    /** ✅ Start a new round */
     startRound(roomId: string, categories: string[] = ['עיר', 'ארץ', 'חי', 'צומח']) {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
@@ -49,83 +74,42 @@ export class EratzIrService {
         gameState.letter = letter;
         gameState.categories = categories;
         gameState.answers = {};
-        gameState.roundScores = {};
 
         this.gameStates.set(roomId, gameState);
         return this.getState(roomId);
     }
 
-    /** ✅ Save answers temporarily */
-    saveAnswers(roomId: string, playerId: string, answers: { [category: string]: string }) {
-        const gameState = this.gameStates.get(roomId);
-        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
-        if (gameState.status !== 'playing') throw new BadRequestException('המשחק לא פעיל');
 
-        gameState.answers[playerId] = answers;
-        return this.getState(roomId);
-    }
-
-    /** ✅ Finish round – calculate scores */
-    finishRound(roomId: string) {
-        const gameState = this.gameStates.get(roomId);
-        if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
-
-        gameState.status = 'ended';
-        const scores: { [playerId: string]: number } = {};
-        for (const player of gameState.players) scores[player] = 0;
-
-        for (const category of gameState.categories) {
-            const categoryAnswers: { [answer: string]: string[] } = {};
-
-            for (const [player, answers] of Object.entries(gameState.answers)) {
-                let ans = this.normalizeAnswer(answers[category] || '');
-                if (!this.startsWithLetter(ans, gameState.letter!)) continue;
-
-                if (!categoryAnswers[ans]) categoryAnswers[ans] = [];
-                categoryAnswers[ans].push(player);
-            }
-
-            for (const [answer, players] of Object.entries(categoryAnswers)) {
-                if (!answer) continue;
-                const points = players.length === 1 ? 10 : 5;
-                players.forEach(p => {
-                    scores[p] += points;
-                    gameState.totalScores[p] += points;
-                });
-            }
-        }
-
-        gameState.roundScores = scores;
-        this.gameStates.set(roomId, gameState);
-
-        return this.getState(roomId);
-    }
-
-    /** ✅ Get game state */
     getState(roomId: string) {
-        const gameState = this.gameStates.get(roomId);
+        let gameState = this.gameStates.get(roomId);
+
         if (!gameState) {
-            return {
+            const players = this.roomService.getPlayers(roomId);
+            gameState = {
+                roomId,
                 status: 'waiting',
                 letter: null,
                 categories: [],
                 answers: {},
                 roundScores: {},
-                totalScores: {},
-                players: this.roomService.getPlayers(roomId),
+                totalScores: players.reduce((acc, p) => ({ ...acc, [p]: 0 }), {}),
+                players,
                 currentRound: 0,
             };
+
+            this.gameStates.set(roomId, gameState); // save the initial state in the map 
         }
+
         return gameState;
     }
 
-    /** ✅ Utility functions */
-    private normalizeAnswer(answer: string): string {
-        return answer.trim().replace(/[^א-ת\s]/g, '');
-    }
+    /** Utility functions */
+    // private normalizeAnswer(answer: string): string {
+    //     return answer.trim().replace(/[^א-ת\s]/g, '');
+    // }
 
-    private startsWithLetter(answer: string, letter: string): boolean {
-        if (!answer) return false;
-        return answer.charAt(0) === letter;
-    }
+    // private startsWithLetter(answer: string, letter: string): boolean {
+    //     if (!answer) return false;
+    //     return answer.charAt(0) === letter;
+    // }
 }

@@ -26,7 +26,7 @@ export class RoomService {
     if (!room) throw new NotFoundException('Room not found');
 
     room.players = room.players.filter((p) => p !== userId);
-    
+
     return { message: `User ${userId} left room ${roomId}`, players: this.getPlayers(roomId) };
   }
 

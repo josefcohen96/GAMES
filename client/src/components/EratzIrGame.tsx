@@ -22,14 +22,17 @@ export default function EratzIrGame() {
 
   const socket = getSocket();
 
-  const fetchState = () => {
-    socket.emit("gameAction", { roomId, gameType: "eratz-ir", action: "state" });
+  const startGame = () => {
+    socket.emit("startGame", { roomId });
+    setIsSubmitted(false);
+    setAnswers({});
   };
 
   const startRound = () => {
     socket.emit("startRound", { roomId });
     setIsSubmitted(false);
     setAnswers({});
+    setTimer(null);
   };
 
   const resetGame = () => {
@@ -43,11 +46,10 @@ export default function EratzIrGame() {
     if (isSubmitted) return;
     setIsSubmitted(true);
     socket.emit("saveAnswers", { roomId, answers });
-    socket.emit("startTimer", { roomId });
   };
 
   useEffect(() => {
-    fetchState();
+    socket.emit("gameAction", { roomId, gameType: "eratz-ir", action: "state" });
 
     socket.on("gameStateUpdate", (data: GameState) => {
       console.log("📢 עדכון משחק:", data);
@@ -78,17 +80,40 @@ export default function EratzIrGame() {
 
   if (!gameState) return <p>טוען...</p>;
 
+  const canStartGame = gameState.players.length >= 2;
+
   return (
     <div className="max-w-xl mx-auto bg-white shadow-md rounded p-6 mt-6">
-      <h2 className="text-2xl font-bold mb-4 text-center">🎮 ארץ עיר - סיבוב {gameState.currentRound}</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">
+        🎮 ארץ עיר - סיבוב {gameState.currentRound}
+      </h2>
 
+      {/* ✅ תמיד מציגים שחקנים */}
       <div className="text-center mb-4">
-        <p>שחקנים: {gameState.players.join(", ")}</p>
+        <p><strong>שחקנים בחדר:</strong> {gameState.players.length > 0 ? gameState.players.join(", ") : "אין עדיין שחקנים"}</p>
       </div>
 
+      {/* מצב לפני התחלת המשחק */}
       {gameState.status === "waiting" && (
         <div className="text-center">
-          <button onClick={startRound} className="bg-blue-600 text-white px-4 py-2 rounded">
+          {canStartGame ? (
+            <button onClick={startGame} className="bg-green-600 text-white px-4 py-2 rounded">
+              התחל משחק
+            </button>
+          ) : (
+            <p className="text-gray-600">ממתינים לשחקנים נוספים כדי להתחיל...</p>
+          )}
+        </div>
+      )}
+
+      {/* המשחק התחיל, מחכים להתחלת סיבוב */}
+      {gameState.status === "in-progress" && (
+        <div className="text-center">
+          <h3 className="mb-2">ניקוד מצטבר:</h3>
+          {Object.entries(gameState.totalScores).map(([player, score]) => (
+            <p key={player}>{player}: {score} נק'</p>
+          ))}
+          <button onClick={startRound} className="bg-blue-600 text-white px-4 py-2 rounded mt-3">
             התחל סיבוב
           </button>
           <button onClick={resetGame} className="ml-3 bg-gray-600 text-white px-4 py-2 rounded">
@@ -97,7 +122,8 @@ export default function EratzIrGame() {
         </div>
       )}
 
-      {gameState.status === "playing" && (
+      {/* סיבוב פעיל */}
+      {gameState.status === "playing-round" && (
         <>
           {timer && <p className="text-center text-red-500 text-xl mb-4">⏳ {timer}s</p>}
           <p className="text-center mb-2">אות: <b>{gameState.letter}</b></p>
@@ -121,6 +147,7 @@ export default function EratzIrGame() {
         </>
       )}
 
+      {/* סוף סיבוב */}
       {gameState.status === "ended" && (
         <>
           <h3 className="text-lg font-bold mb-2">תוצאות סיבוב:</h3>

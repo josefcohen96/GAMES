@@ -7,7 +7,8 @@ export class GameService {
   constructor(
     private readonly warService: WarService,
     private readonly eratzIrService: EratzIrService,
-  ) {}
+
+  ) { }
 
   handleAction(roomId: string, body: { gameType: string; action: string; payload?: any }) {
     const { gameType, action, payload } = body;
@@ -21,6 +22,7 @@ export class GameService {
         throw new BadRequestException(`Unsupported game type: ${gameType}`);
     }
   }
+
 
   /** ✅ פעולות למשחק WAR */
   private handleWarAction(roomId: string, action: string, payload: any) {
@@ -41,26 +43,22 @@ export class GameService {
     }
   }
 
-  /** ✅ פעולות למשחק ארץ-עיר עם סיבובים */
   private handleEratzIrAction(roomId: string, action: string, payload: any) {
     switch (action) {
-      /** 🟢 התחלת משחק חדש לגמרי */
       case 'resetGame':
         return this.eratzIrService.resetGame(roomId);
 
-      /** 🟢 התחלת סיבוב חדש */
       case 'startRound':
         return this.eratzIrService.startRound(roomId, payload?.categories);
 
-      /** 🟢 שמירת תשובות של שחקן */
-      case 'saveAnswers':
-        return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
+      case 'startGame':
+        return this.eratzIrService.startGame(roomId);
+      // case 'saveAnswers':
+      //   return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
 
-      /** 🟢 סיום סיבוב + חישוב ניקוד */
-      case 'finishRound':
-        return this.eratzIrService.finishRound(roomId);
+      // case 'finishRound':
+      //   return this.eratzIrService.finishRound(roomId);
 
-      /** 🟢 קבלת מצב נוכחי */
       case 'state':
         return this.eratzIrService.getState(roomId);
 

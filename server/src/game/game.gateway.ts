@@ -1,29 +1,22 @@
-import {
-  WebSocketGateway,
-  SubscribeMessage,
-  WebSocketServer,
-  ConnectedSocket,
-  MessageBody,
-  OnGatewayConnection,
-  OnGatewayDisconnect,
-} from '@nestjs/websockets';
+import { WebSocketGateway, SubscribeMessage, WebSocketServer, ConnectedSocket, MessageBody, OnGatewayConnection, OnGatewayDisconnect, } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 import { GameService } from './game.service';
 import { RoomService } from '../room/room.service';
 import { JwtService } from '@nestjs/jwt';
-import { UnauthorizedException } from '@nestjs/common';
+import { UnauthorizedException, BadRequestException } from '@nestjs/common';
 
 @WebSocketGateway({
   cors: { origin: '*' },
 })
 export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
-  @WebSocketServer() server: Server;
+  @WebSocketServer()
+  public server: Server;
 
   constructor(
     private readonly gameService: GameService,
     private readonly roomService: RoomService,
     private readonly jwtService: JwtService
-  ) {}
+  ) { }
 
   async handleConnection(client: Socket) {
     try {
@@ -43,26 +36,47 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     console.log(`❌ Client disconnected: ${(client as any).user?.username}`);
   }
 
-  /** הצטרפות לחדר */
   @SubscribeMessage('joinRoom')
   handleJoinRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
     const { roomId } = data;
     const userId = (client as any).user.sub;
+    if (!userId) {
+      throw new UnauthorizedException('User ID is required');
+    }
+    if (!roomId) {
+      throw new BadRequestException('Room ID is required');
+    }
 
-    client.join(roomId);
-    const result = this.roomService.joinRoom(roomId, userId);
+    console.log(`User ${userId} joining room ${roomId}`);
+    client.join(roomId);  // Join the room in Socket.IO
 
-    this.server.to(roomId).emit('roomUpdate', {
+    const result = this.roomService.joinRoom(roomId, userId);  // if not exists, create it else join it
+
+    this.server.to(roomId).emit('roomUpdate', {  // Notify all clients in the room
       message: `${userId} הצטרף לחדר`,
       players: result.players,
     });
 
-    // שולח גם מצב נוכחי של המשחק
-    const state = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'state' });
-    this.server.to(roomId).emit('gameStateUpdate', state);
+    const currentState = this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'state'
+    });
+
+    if (currentState.status !== 'waiting') {
+      throw new BadRequestException('Cannot join, game already started');
+    }
+
+    this.server.to(roomId).emit('gameStateUpdate', currentState);
   }
 
-  /** עזיבת חדר */
+  @SubscribeMessage('startGame')
+  handleStartGame(@MessageBody() data: { roomId: string }) {
+    const { roomId } = data;
+    const result = this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'startGame' });
+    this.server.to(roomId).emit('gameStateUpdate', result);
+  }
+
+  
   @SubscribeMessage('leaveRoom')
   handleLeaveRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
     const { roomId } = data;
@@ -77,7 +91,6 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     });
   }
 
-  /** התחלת משחק חדש */
   @SubscribeMessage('resetGame')
   handleResetGame(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
@@ -85,7 +98,6 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
-  /** התחלת סיבוב */
   @SubscribeMessage('startRound')
   handleStartRound(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
@@ -93,7 +105,6 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
-  /** שמירת תשובות */
   @SubscribeMessage('saveAnswers')
   handleSaveAnswers(
     @ConnectedSocket() client: Socket,
@@ -111,7 +122,6 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
-  /** סיום סיבוב (חישוב ניקוד) */
   @SubscribeMessage('finishRound')
   handleFinishRound(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
