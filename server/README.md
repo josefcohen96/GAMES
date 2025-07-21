@@ -41,7 +41,12 @@ This directory contains the backend implementation of the GamesProj application.
    npm run start:prod
    ```
 
+## Testing
 
+Run the end-to-end tests:
+```bash
+npm run test:e2e
+```
 
 ## Environment Variables
 
@@ -60,6 +65,17 @@ The server requires the following environment variables:
 ### WebSockets
 
 The server uses WebSockets to enable real-time communication between the client and server. This is particularly useful for multiplayer games where updates need to be sent instantly to all connected players. The `game.gateway.ts` file handles WebSocket connections and events, ensuring smooth and efficient communication.
+
+#### WebSocket Events
+
+The following WebSocket events are implemented:
+
+- **connection**: Triggered when a client connects to the server. Used to initialize the connection and set up necessary resources.
+- **disconnect**: Triggered when a client disconnects. Used to clean up resources and notify other players.
+- **joinRoom**: Allows a player to join a specific game room. The server validates the room ID and updates the room state.
+- **leaveRoom**: Allows a player to leave a game room. The server updates the room state and notifies other players.
+- **gameUpdate**: Sends updates about the game state to all players in the room. This includes player actions, scores, and other game-related data.
+- **chatMessage**: Handles chat messages sent by players in the room. The server broadcasts the message to all players in the room.
 
 ### JWT Authentication
 
