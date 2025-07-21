@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+# Client Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the frontend implementation of the GamesProj application. It is built using React and TypeScript, and utilizes Vite as the build tool.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **src/**: Contains the main source code for the client.
+  - **api/**: Handles API calls using Axios.
+  - **components/**: Contains reusable React components.
+  - **pages/**: Contains page-level components for routing.
+  - **App.tsx**: The main application component.
+  - **main.tsx**: Entry point for the application.
 
-## Expanding the ESLint configuration
+- **index.html**: The main HTML file for the application.
+- **vite.config.ts**: Configuration file for Vite.
+- **tsconfig.json**: TypeScript configuration file.
+- **package.json**: Contains dependencies and scripts for the client.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Navigate to the `client` directory:
+   ```bash
+   cd client
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Running the Client
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Build for production:
+   ```bash
+   npm run build
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Preview the production build:
+   ```bash
+   npm run preview
+   ```
+
+## Features
+
+- **Responsive Design**: Ensures the application works seamlessly across devices.
+- **API Integration**: Communicates with the backend server for data.
+- **Protected Routes**: Implements route protection using `ProtectedRoute.tsx`.
+- **User Authentication**: Provides login and registration functionality.
+
+## Environment Variables
+
+The client requires the following environment variables:
+
+- `VITE_API_URL`: Base URL for the backend API.
+
+## License
+
+This project is licensed under the MIT License.
