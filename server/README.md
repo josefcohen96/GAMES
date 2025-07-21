@@ -87,12 +87,16 @@ The server uses WebSockets to enable real-time communication between the client 
 
 The following WebSocket events are implemented:
 
-- **connection**: Triggered when a client connects to the server. Used to initialize the connection and set up necessary resources.
-- **disconnect**: Triggered when a client disconnects. Used to clean up resources and notify other players.
-- **joinRoom**: Allows a player to join a specific game room. The server validates the room ID and updates the room state.
-- **leaveRoom**: Allows a player to leave a game room. The server updates the room state and notifies other players.
-- **gameUpdate**: Sends updates about the game state to all players in the room. This includes player actions, scores, and other game-related data.
-- **chatMessage**: Handles chat messages sent by players in the room. The server broadcasts the message to all players in the room.
+- **connection**: Triggered when a client connects to the server. Validates the JWT token and initializes the connection.
+- **disconnect**: Triggered when a client disconnects. Cleans up resources and logs the disconnection.
+- **joinRoom**: Allows a player to join a specific game room. Validates the room ID and user ID, updates the room state, and sends the current game state to all players.
+- **leaveRoom**: Allows a player to leave a game room. Updates the room state and notifies other players.
+- **startGame**: Starts the game in a specific room. Updates the game state and notifies all players.
+- **resetGame**: Resets the game state in a specific room. Notifies all players.
+- **startRound**: Starts a new round in the game. Updates the game state and notifies all players.
+- **saveAnswers**: Saves player answers for the current round. Updates the game state and notifies all players.
+- **finishRound**: Ends the current round. Updates the game state and notifies all players.
+- **finishRoundWithTimer**: Ends the round after a countdown timer. Notifies players about the countdown and updates the game state after the timer.
 
 ### JWT Authentication
 
