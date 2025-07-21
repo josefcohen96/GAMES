@@ -43,20 +43,20 @@ export class GameService {
     }
   }
 
-  private handleEratzIrAction(roomId: string, action: string, payload: any) {
+   private async handleEratzIrAction(roomId: string, action: string, payload: any) {
     switch (action) {
       case 'resetGame':
-        return this.eratzIrService.resetGame(roomId);
+        return await this.eratzIrService.resetGame(roomId);
       case 'startRound':
-        return this.eratzIrService.startRound(roomId, payload?.categories);
+        return await this.eratzIrService.startRound(roomId, payload?.categories);
       case 'startGame':
-        return this.eratzIrService.startGame(roomId);
+        return await this.eratzIrService.startGame(roomId);
       case 'saveAnswers':   // ✅ חדש
-        return this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
+        return await this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
       case 'finishRound':   // ✅ חדש
-        return this.eratzIrService.finishRound(roomId);
+        return await this.eratzIrService.finishRound(roomId);
       case 'state':
-        return this.eratzIrService.getState(roomId);
+        return await this.eratzIrService.getState(roomId);
       default:
         throw new BadRequestException(`Unsupported action: ${action}`);
     }

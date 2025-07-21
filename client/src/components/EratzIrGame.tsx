@@ -23,13 +23,14 @@ export default function EratzIrGame() {
   const socket = getSocket();
 
   const startGame = () => {
+    console.log("📤 שולח startGame =>", { roomId });
     socket.emit("startGame", { roomId });
-    console.log("📢 start emit התחלת משחק בחדר:", roomId);
     setIsSubmitted(false);
     setAnswers({});
   };
 
   const startRound = () => {
+    console.log("📤 שולח startRound =>", { roomId });
     socket.emit("startRound", { roomId });
     setIsSubmitted(false);
     setAnswers({});
@@ -37,6 +38,7 @@ export default function EratzIrGame() {
   };
 
   const resetGame = () => {
+    console.log("📤 שולח resetGame =>", { roomId });
     socket.emit("resetGame", { roomId });
     setIsSubmitted(false);
     setAnswers({});
@@ -45,19 +47,35 @@ export default function EratzIrGame() {
 
   const submitAnswers = () => {
     if (isSubmitted) return;
+
+    const allFilled = gameState?.categories.every(cat => answers[cat]?.trim() !== "");
+    if (!allFilled) {
+      alert("אנא מלא את כל התשובות לפני שליחה");
+      return;
+    }
+
     setIsSubmitted(true);
+    console.log("📤 שולח saveAnswers =>", { roomId, answers });
     socket.emit("saveAnswers", { roomId, answers });
+
+    if (!timerRef.current) {
+      console.log("📤 שולח finishRoundWithTimer =>", { roomId });
+      socket.emit("finishRoundWithTimer", { roomId });
+    }
   };
 
   useEffect(() => {
-    socket.emit("gameAction", { roomId, gameType: "eratz-ir", action: "state" });
+    console.log("📤 שולח joinRoom =>", { roomId });
+    socket.emit("joinRoom", { roomId });
 
     socket.on("gameStateUpdate", (data: GameState) => {
-      console.log("📢 עדכון משחק:", data);
+      console.log("📥 התקבל gameStateUpdate =>", data);
+      if (!data || !data.status) return;
       setGameState(data);
     });
 
     socket.on("startCountdown", () => {
+      console.log("📥 התקבל startCountdown");
       if (!timerRef.current) {
         setTimer(10);
         timerRef.current = window.setInterval(() => {
@@ -65,7 +83,8 @@ export default function EratzIrGame() {
             if (prev && prev > 1) return prev - 1;
             clearInterval(timerRef.current!);
             timerRef.current = null;
-            socket.emit("finishRound", { roomId });
+            console.log("📤 טיימר הסתיים => שולח finishRoundWithTimer");
+            socket.emit("finishRoundWithTimer", { roomId });
             return 0;
           });
         }, 1000);
@@ -73,15 +92,21 @@ export default function EratzIrGame() {
     });
 
     return () => {
+      console.log("🧹 מנקה ליסטנרים");
       socket.off("gameStateUpdate");
       socket.off("startCountdown");
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [roomId]);
 
-  if (!gameState) return <p>טוען...</p>;
+  if (!gameState) {
+    console.log("⌛ מחכה לנתונים... מציג טוען");
+    return <p>טוען...</p>;
+  }
 
+  console.log("📢 gameState:", gameState);
   const canStartGame = gameState.players.length >= 2;
+  const allFilled = gameState.categories.every(cat => answers[cat]?.trim() !== "");
 
   return (
     <div className="max-w-xl mx-auto bg-white shadow-md rounded p-6 mt-6">
@@ -90,7 +115,7 @@ export default function EratzIrGame() {
       </h2>
 
       <div className="text-center mb-4">
-        <p><strong>שחקנים בחדר:</strong> {gameState.players.length > 0 ? gameState.players.join(", ") : "אין עדיין שחקנים"}</p>
+        <p><strong>שחקנים בחדר:</strong> {gameState.players.join(", ")}</p>
       </div>
 
       {gameState.status === "waiting" && (
@@ -137,7 +162,11 @@ export default function EratzIrGame() {
             </div>
           ))}
           {!isSubmitted && (
-            <button onClick={submitAnswers} className="bg-green-600 text-white px-4 py-2 rounded mt-3">
+            <button
+              onClick={submitAnswers}
+              disabled={!allFilled}
+              className={`bg-green-600 text-white px-4 py-2 rounded mt-3 ${!allFilled ? "opacity-50 cursor-not-allowed" : ""}`}
+            >
               שלח תשובות
             </button>
           )}

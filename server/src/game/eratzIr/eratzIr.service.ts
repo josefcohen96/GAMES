@@ -23,13 +23,11 @@ export class EratzIrService {
         private readonly roomService: RoomService,
         private readonly aiValidator: AiValidationService) { }
 
-    startGame(roomId: string) {
+    async startGame(roomId: string) {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
 
-        if (gameState.status !== 'waiting') {
-            throw new BadRequestException('המשחק כבר התחיל');
-        }
+
 
         if (gameState.players.length < 2) {
             throw new BadRequestException('נדרשים לפחות שני שחקנים כדי להתחיל משחק');
@@ -50,7 +48,7 @@ export class EratzIrService {
         return gameState;
     }
 
-    resetGame(roomId: string) {
+    async resetGame(roomId: string) {
         const players = this.roomService.getPlayers(roomId);
         const state: EratzIrGameState = {
             roomId,
@@ -67,7 +65,7 @@ export class EratzIrService {
         return this.getState(roomId);
     }
 
-    startRound(roomId: string, categories: string[] = ['עיר', 'ארץ', 'חי', 'צומח']) {
+    async startRound(roomId: string, categories: string[] = ['עיר', 'ארץ', 'חי', 'צומח']) {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
 
@@ -83,7 +81,9 @@ export class EratzIrService {
     }
 
 
-    getState(roomId: string) {
+    async getState(roomId: string) {
+        console.log("📥 getState for room:", roomId);
+
         let gameState = this.gameStates.get(roomId);
 
         if (!gameState) {
@@ -113,9 +113,8 @@ export class EratzIrService {
             throw new BadRequestException('לא ניתן לשמור תשובות - לא בזמן סיבוב');
         }
 
-        // אימות תשובות מול Gemini
         const validation = await this.validateAnswers(roomId, answers);
-        // שמירת תשובות
+        console.log("📢 saveAnswers: validation", validation);
         gameState.answers[playerId] = answers;
         this.gameStates.set(roomId, gameState);
 
@@ -123,24 +122,56 @@ export class EratzIrService {
     }
 
 
-    finishRound(roomId: string) {
+    async finishRound(roomId: string) {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
         if (gameState.status !== 'playing-round') {
             throw new BadRequestException('אין סיבוב פעיל לסיים');
         }
 
-        // חישוב ניקוד לסיבוב
-        const roundScores = this.calculateScores(roomId);
-        gameState.roundScores = roundScores;
+        console.log(`📥 finishRound for room: ${roomId}`);
 
-        // עדכון ניקוד מצטבר
-        for (const player of gameState.players) {
-            gameState.totalScores[player] += roundScores[player] || 0;
+        // שלב 1: בקשת ולידציה ל-AI
+        const validationResult = await this.aiValidator.validateGameData({
+            roomId,
+            letter: gameState.letter,
+            answers: gameState.answers,
+            categories: gameState.categories,
+        });
+
+        console.log("📢 Validation Result", validationResult);
+
+        const roundScores: { [playerId: string]: number } = {};
+
+        // שלב 2: חישוב ניקוד
+        if (validationResult.details && Object.keys(validationResult.details).length > 0) {
+            for (const player of gameState.players) {
+                const playerValidation = validationResult.details[player] || {};
+                let score = 0;
+                for (const cat of gameState.categories) {
+                    if (playerValidation[cat]) score += 1;
+                }
+                roundScores[player] = score;
+                gameState.totalScores[player] += score;
+            }
+        } else {
+            console.warn("⚠️ AI לא החזיר details → מחשב ניקוד פשוט");
+            for (const player of gameState.players) {
+                const answers = gameState.answers[player] || {};
+                let score = 0;
+                for (const cat of gameState.categories) {
+                    if (answers[cat] && answers[cat].trim() !== "") score += 1;
+                }
+                roundScores[player] = score;
+                gameState.totalScores[player] += score;
+            }
         }
 
-        gameState.status = 'in-progress';
+        // שלב 3: עדכון מצב המשחק
+        gameState.roundScores = roundScores;
+        gameState.status = 'ended';
         this.gameStates.set(roomId, gameState);
+
         return this.getState(roomId);
     }
 

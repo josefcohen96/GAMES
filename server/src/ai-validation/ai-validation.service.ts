@@ -1,10 +1,10 @@
-import { Injectable, HttpException, InternalServerErrorException } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 interface ValidationResult {
   valid: boolean;
   errors: string[];
-  details: Record<string, boolean>;
+  details: Record<string, Record<string, boolean>>;
 }
 
 @Injectable()
@@ -23,38 +23,43 @@ export class AiValidationService {
   async validateGameData(data: any): Promise<ValidationResult> {
     try {
       const safeData = JSON.stringify(data, null, 2);
+      console.log("📢 AI Validation Request Data:", safeData);
 
       const prompt = `
-אתה משמש כבודק נתונים למשחק "ארץ עיר". קיבלת את הנתונים הבאים:
+אתה משמש כבודק תשובות למשחק "ארץ עיר".
+קיבלת את הנתונים הבאים:
 ${safeData}
 
-בצע את הבדיקות הבאות:
-1. האם כל הערכים חוקיים? (מדינה קיימת, עיר קיימת במדינה וכו').
-2. החזר אך ורק JSON תקין במבנה הבא (אל תוסיף טקסט מסביב):
+בדוק כל שחקן וכל קטגוריה לפי האות הנתונה.
+אם התשובה נכונה - החזר true, אחרת false.
+
+**חובה להחזיר JSON בלבד במבנה הבא:**
 {
   "valid": true/false,
-  "errors": ["רשימת שגיאות בעברית"],
-  "details": { "שם_קטגוריה": true/false }
+  "errors": ["רשימת שגיאות כלליות"],
+  "details": {
+    "playerId1": { "קטגוריה1": true/false, "קטגוריה2": true/false },
+    "playerId2": { "קטגוריה1": true/false, "קטגוריה2": true/false }
+  }
 }
 
-שים לב:
-- כל ההסברים והשגיאות יהיו בעברית בלבד.
-- אל תוסיף טקסט נוסף מחוץ ל-JSON.
+חוקי:
+- details חייב להכיל את כל השחקנים.
+- לכל קטגוריה שציינת במשחק תהיה תשובה true אם נכונה, אחרת false.
+- valid = false אם יש לפחות תשובה אחת לא נכונה.
+- החזר אך ורק JSON. ללא טקסט נוסף.
 `;
 
-      // שליחת הבקשה ל-AI
       const result = await this.model.generateContent(prompt);
       const textResponse = result.response.text().trim();
 
-      // שליפת JSON מתוך הטקסט (במקרה והמודל הוסיף משהו)
+      console.log("📢 AI Response Text:", textResponse);
+
       const jsonMatch = textResponse.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) {
-        throw new Error('לא נמצא JSON תקין בתשובת ה-AI');
-      }
+      if (!jsonMatch) throw new Error('לא נמצא JSON תקין בתשובת ה-AI');
 
       const parsed: ValidationResult = JSON.parse(jsonMatch[0]);
 
-      // בדיקת מבנה התשובה
       if (
         typeof parsed.valid !== 'boolean' ||
         !Array.isArray(parsed.errors) ||
@@ -69,5 +74,4 @@ ${safeData}
       throw new InternalServerErrorException('האימות נכשל');
     }
   }
-
 }
