@@ -41,12 +41,7 @@ This directory contains the backend implementation of the GamesProj application.
    npm run start:prod
    ```
 
-## Testing
 
-Run the end-to-end tests:
-```bash
-npm run test:e2e
-```
 
 ## Environment Variables
 
