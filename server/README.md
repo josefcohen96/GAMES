@@ -109,7 +109,3 @@ The `ai-validation` module integrates Google Generative AI to validate game data
 ### Macro-Level Architecture
 
 The server is designed with a modular architecture to ensure scalability and maintainability. Each feature is encapsulated within its own module, such as `auth`, `game`, `room`, and `users`. This separation of concerns allows for easier development and testing. The `app.module.ts` file serves as the root module, importing and organizing all other modules.
-
-## License
-
-This project is licensed under the MIT License.
