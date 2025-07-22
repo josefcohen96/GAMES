@@ -57,7 +57,3 @@ This directory contains the frontend implementation of the GamesProj application
 The client requires the following environment variables:
 
 - `VITE_API_URL`: Base URL for the backend API.
-
-## License
-
-This project is licensed under the MIT License.
