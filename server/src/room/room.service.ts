@@ -2,10 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class RoomService {
-  // Map שמחזיק מצב של שחקנים בחדרים
   private roomStates: Map<string, { players: string[] }> = new Map();
 
-  /** הצטרפות לחדר */
   joinRoom(roomId: string, userId: string): { message: string; players: string[] } {
     const room = this.roomStates.get(roomId);
 
@@ -20,7 +18,6 @@ export class RoomService {
     return { message: `User ${userId} joined room ${roomId}`, players: this.getPlayers(roomId) };
   }
 
-  /** עזיבת חדר */
   leaveRoom(roomId: string, userId: string): { message: string; players: string[] } {
     const room = this.roomStates.get(roomId);
     if (!room) throw new NotFoundException('Room not found');
@@ -30,8 +27,7 @@ export class RoomService {
     return { message: `User ${userId} left room ${roomId}`, players: this.getPlayers(roomId) };
   }
 
-  /** קבלת רשימת שחקנים */
-  getPlayers(roomId: string): string[] {
+   getPlayers(roomId: string): string[] {
     return this.roomStates.get(roomId)?.players || [];
   }
 }

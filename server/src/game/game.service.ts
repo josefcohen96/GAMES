@@ -24,7 +24,6 @@ export class GameService {
   }
 
 
-  /** ✅ פעולות למשחק WAR */
   private handleWarAction(roomId: string, action: string, payload: any) {
     switch (action) {
       case 'start':
@@ -43,7 +42,7 @@ export class GameService {
     }
   }
 
-   private async handleEratzIrAction(roomId: string, action: string, payload: any) {
+  private async handleEratzIrAction(roomId: string, action: string, payload: any) {
     switch (action) {
       case 'resetGame':
         return await this.eratzIrService.resetGame(roomId);
@@ -51,9 +50,9 @@ export class GameService {
         return await this.eratzIrService.startRound(roomId, payload?.categories);
       case 'startGame':
         return await this.eratzIrService.startGame(roomId);
-      case 'saveAnswers':   // ✅ חדש
+      case 'saveAnswers':
         return await this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
-      case 'finishRound':   // ✅ חדש
+      case 'finishRound':
         return await this.eratzIrService.finishRound(roomId);
       case 'state':
         return await this.eratzIrService.getState(roomId);

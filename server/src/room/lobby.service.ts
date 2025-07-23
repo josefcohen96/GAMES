@@ -1,15 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateRoomDto } from './dto/create-room.dto';
 import { Room } from './entities/room.entity';
-import { RoomService } from './room.service';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class LobbyService {
     constructor(
-        private readonly roomService: RoomService,
-
         @InjectRepository(Room)
         private readonly lobbyRepo: Repository<Room>,
     ) { }
