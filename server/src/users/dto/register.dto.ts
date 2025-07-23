@@ -1,7 +1,5 @@
 
 import { IsString, MinLength, IsNotEmpty } from 'class-validator';
-import { Not } from 'typeorm';
-
 
 export class RegisterDto {
 

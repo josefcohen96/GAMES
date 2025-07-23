@@ -31,36 +31,14 @@ export class UsersService {
             username,
             password: hashedPassword,
         });
-        console.log('Hashed password: ', user.password);
-        console.log('User to be created:', user);
         await this.userRepository.save(user);
-        console.log('User created:', user);
         return { message: 'User created successfully' };
     }
 
-    // async login(dto: { username: string; password: string }): Promise<{ message: string, token: string, userId: User | null }> {
-    //     const { username, password
-    //     } = dto;
-    //     const user = await this.userRepository.findOne({ where: { username } });
-    //     if (!user) {
-    //         throw new NotFoundException('User not found');
-    //     }
-    //     const isPasswordValid = await bcrypt.compare(password, user.password);
-    //     if (!isPasswordValid) {
-    //         throw new UnauthorizedException('Invalid credentials');
-    //     }
-    //     console.log('User logged in:', user);
-    //     const payload = { username: user.username, sub: user.id };
-    //     const token = this.jwtService.sign(payload);
-    //     console.log('Generated JWT token:', token);
-    //     const userId = await this.userRepository.findOne({ where: { username } });
-    //     return { message: 'Login successful', token, userId };
-    // }
+  
 
     async updateUser(id: string, Body: { username?: string; password?: string }): Promise<{ message: string }> {
-        // Logic to update a user
         const { username, password } = Body;
-        console.log(`Updating user with id ${id} with data:`, Body);
         if (!username && !password) {
             throw new BadRequestException('At least one field (username or password) must be provided for update');
         }
