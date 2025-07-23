@@ -8,7 +8,7 @@ import { Users } from './users/entities/user.entity';
 import { Room } from './room/entities/room.entity';
 import { RoomModule } from './room/room.module';
 import { APP_GUARD } from '@nestjs/core';
-import { JwtAuthGuard } from './auth/jwt-auth.guard'; // הוסף את ה-Guard
+import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { GameModule } from './game/game.module';
 import { AiValidationModule } from './ai-validation/ai-validation.module';
 import { ConfigModule } from '@nestjs/config';

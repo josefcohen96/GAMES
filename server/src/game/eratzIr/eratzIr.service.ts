@@ -131,7 +131,6 @@ export class EratzIrService {
 
         console.log(`📥 finishRound for room: ${roomId}`);
 
-        // שלב 1: בקשת ולידציה ל-AI
         const validationResult = await this.aiValidator.validateGameData({
             roomId,
             letter: gameState.letter,
@@ -143,7 +142,6 @@ export class EratzIrService {
 
         const roundScores: { [playerId: string]: number } = {};
 
-        // שלב 2: חישוב ניקוד
         if (validationResult.details && Object.keys(validationResult.details).length > 0) {
             for (const player of gameState.players) {
                 const playerValidation = validationResult.details[player] || {};
@@ -167,7 +165,6 @@ export class EratzIrService {
             }
         }
 
-        // שלב 3: עדכון מצב המשחק
         gameState.roundScores = roundScores;
         gameState.status = 'ended';
         this.gameStates.set(roomId, gameState);
@@ -203,7 +200,7 @@ export class EratzIrService {
             for (const category of gameState.categories) {
                 const answer = gameState.answers[player]?.[category];
                 if (answer) {
-                    scores[player] += 1; // כל תשובה נכונה מקבלת נקודה
+                    scores[player] += 1;
                 }
             }
         }

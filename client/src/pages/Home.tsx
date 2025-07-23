@@ -20,14 +20,13 @@ export default function Home() {
   const [maxPlayers, setMaxPlayers] = useState(2);
   const navigate = useNavigate();
 
-  // אתחול Socket פעם אחת
   useEffect(() => {
     initSocket();
     const socket = getSocket();
 
     socket.on("roomUpdate", (data) => {
       console.log("📢 עדכון חדרים:", data);
-      fetchRooms(); // מרענן רשימת חדרים
+      fetchRooms(); 
     });
 
     return () => {
@@ -56,7 +55,6 @@ export default function Home() {
       });
       const createdRoom = res.data;
 
-      // שולח אירוע Socket
       getSocket().emit("joinRoom", { roomId: createdRoom.id });
 
       setShowModal(false);

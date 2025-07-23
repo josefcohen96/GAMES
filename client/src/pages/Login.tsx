@@ -13,7 +13,7 @@ export default function Login() {
     try {
       const res = await api.post("/auth/login", { username, password });
       localStorage.setItem("token", res.data.access_token);
-      navigate("/"); // אחרי התחברות, חוזר ל־Home
+      navigate("/");
     } catch (err) {
       setError("שם משתמש או סיסמה לא נכונים");
     }

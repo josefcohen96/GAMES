@@ -13,8 +13,8 @@ export default function Register() {
         try {
             console.log("Attempting to register with:", { username, password });
             await api.post("/auth/register", { username, password });
-            navigate("/login"); // אחרי הרשמה, עובר למסך התחברות
-        } catch (err) {
+            navigate("/login"); 
+        } catch (err) { 
             setError("שגיאה בהרשמה, ייתכן שהשם כבר קיים");
         }
     };

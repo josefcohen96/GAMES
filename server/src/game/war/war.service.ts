@@ -88,7 +88,6 @@ export class WarService {
     // When both players have played
     const playersInPile = new Set(gameState.pile.map((p) => p.playerId));
     if (playersInPile.size === 2 && gameState.pile.length % 2 === 0) {
-      // השווה בין שני הקלפים האחרונים
       const lastTwo = gameState.pile.slice(-2);
       const [c1, c2] = lastTwo;
 
@@ -122,7 +121,6 @@ export class WarService {
     const gameState = this.gameStates.get(roomId);
     if (!gameState) throw new NotFoundException(`No game found in room ${roomId}`);
 
-    // בונים אובייקט עם הקלפים האחרונים של כל שחקן מתוך pile
     const lastCards: Record<string, Card[]> = {};
     gameState.pile.forEach(entry => {
       if (!lastCards[entry.playerId]) {
@@ -136,8 +134,8 @@ export class WarService {
       players: Object.fromEntries(
         Object.entries(gameState.players).map(([id, cards]) => [id, cards.length])
       ),
-      pile: gameState.pile, // מציג את כל מה שבערימה
-      lastCards, // מציג לכל שחקן איזה קלפים יש ב-pile כרגע
+      pile: gameState.pile,
+      lastCards,
       winner: gameState.winner || null,
     };
   }

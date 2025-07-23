@@ -134,10 +134,8 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async handleFinishRoundWithTimer(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
 
-    // שדר לכל המשתמשים שהטיימר מתחיל
     this.server.to(roomId).emit('startCountdown');
 
-    // הפעל טיימר בשרת
     setTimeout(async () => {
       const result = await this.gameService.handleAction(roomId, {
         gameType: 'eratz-ir',

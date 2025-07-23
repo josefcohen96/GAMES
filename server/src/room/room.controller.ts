@@ -43,13 +43,13 @@ export class RoomController {
 
     @Post(':roomId/join')
     joinRoom(@Param('roomId') roomId: string, @Req() req) {
-        const userId = req.user.userId; // מגיע מה-JWT
+        const userId = req.user.userId;
         return this.roomService.joinRoom(roomId, userId);
     }
 
     @Post(':roomId/leave')
     leaveRoom(@Param('roomId') roomId: string, @Req() req) {
-        const userId = req.user.userId; // מגיע מה-JWT
+        const userId = req.user.userId; 
         return this.roomService.leaveRoom(roomId, userId);
     }
 
