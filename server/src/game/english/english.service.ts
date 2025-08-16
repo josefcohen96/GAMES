@@ -1,39 +1,8 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
+import { EnglishGameLevel, EnglishGameState, EnglishGameStatus,EnglishGameType,EnglishQuestion } from './english.constants';
 
-export interface EnglishQuestion {
-    id: string;
-    type: 'vocabulary' | 'grammar' | 'reading' | 'listening' | 'writing';
-    level: 'beginner' | 'intermediate' | 'advanced';
-    question: string;
-    options?: string[];
-    correctAnswer: string | string[];
-    explanation: string;
-    points: number;
-    timeLimit?: number;
-}
-
-export interface EnglishGameState {
-    roomId: string;
-    gameType: 'vocabulary' | 'grammar' | 'reading' | 'listening' | 'writing' | 'mixed';
-    level: 'beginner' | 'intermediate' | 'advanced';
-    players: {
-        [playerId: string]: {
-            score: number;
-            currentQuestion: number;
-            answers: { [questionId: string]: string | string[] };
-            timeRemaining: number;
-            isActive: boolean;
-        };
-    };
-    currentRound: number;
-    totalRounds: number;
-    questions: EnglishQuestion[];
-    gameStatus: 'waiting' | 'playing' | 'finished';
-    startTime?: Date;
-    endTime?: Date;
-}
 
 @Injectable()
 export class EnglishService {
@@ -56,7 +25,6 @@ export class EnglishService {
                 });
             });
             
-            console.log(`Loaded ${this.questionsDatabase.length} English questions`);
         } catch (error) {
             console.error('Error loading questions:', error);
             throw new Error('Failed to load English questions');
@@ -65,13 +33,13 @@ export class EnglishService {
 
     startGame(
         roomId: string,
-        gameType: 'vocabulary' | 'grammar' | 'reading' | 'listening' | 'writing' | 'mixed',
-        level: 'beginner' | 'intermediate' | 'advanced',
+        gameType: EnglishGameType,
+        level: EnglishGameLevel,
         players: string[],
     ): EnglishGameState {
         // Filter questions based on game type and level
         let filteredQuestions = this.questionsDatabase.filter(
-            (q) => q.level === level && (gameType === 'mixed' || q.type === gameType),
+            (q) => q.level === level && (gameType === EnglishGameType.MIXED || q.type === gameType),
         );
 
         // Shuffle and select 10 questions
@@ -89,7 +57,7 @@ export class EnglishService {
             currentRound: 1,
             totalRounds: filteredQuestions.length,
             questions: filteredQuestions,
-            gameStatus: 'waiting',
+            gameStatus: EnglishGameStatus.WAITING,
             startTime: new Date(),
         };
 
@@ -101,6 +69,7 @@ export class EnglishService {
                 answers: {},
                 timeRemaining: 0,
                 isActive: true,
+                askedQuestionIds: [],
             };
         });
 
@@ -114,11 +83,11 @@ export class EnglishService {
             throw new BadRequestException('Game not found');
         }
 
-        if (game.gameStatus !== 'waiting' && game.gameStatus !== 'playing') {
+        if (game.gameStatus !== EnglishGameStatus.WAITING && game.gameStatus !== EnglishGameStatus.PLAYING) {
             throw new BadRequestException('Game is not in a valid state to start round');
         }
 
-        game.gameStatus = 'playing';
+        game.gameStatus = EnglishGameStatus.PLAYING;
         game.currentRound = 1;
 
         // Set time limits for current question
@@ -147,7 +116,7 @@ export class EnglishService {
             throw new BadRequestException('Player not found in game');
         }
 
-        if (game.gameStatus !== 'playing') {
+        if (game.gameStatus !== EnglishGameStatus.PLAYING) {
             throw new BadRequestException('Game is not currently playing');
         }
 
@@ -166,7 +135,8 @@ export class EnglishService {
         if (isCorrect) {
             player.score += question.points;
         }
-
+        player.askedQuestionIds.push(questionId); // Track answered questions
+        
         // Move to next question
         player.currentQuestion++;
 
@@ -192,7 +162,7 @@ export class EnglishService {
             throw new BadRequestException('Game not found');
         }
 
-        game.gameStatus = 'finished';
+        game.gameStatus = EnglishGameStatus.FINISHED;
         game.endTime = new Date();
 
         // Calculate final scores
@@ -236,15 +206,15 @@ export class EnglishService {
         levels: string[];
         questionCounts: { [key: string]: number };
     } {
-        const types = ['vocabulary', 'grammar', 'reading', 'listening', 'writing', 'mixed'];
-        const levels = ['beginner', 'intermediate', 'advanced'];
+        const types = Object.values(EnglishGameType);
+        const levels = Object.values(EnglishGameLevel);
 
         const questionCounts: { [key: string]: number } = {};
         types.forEach((type) => {
             levels.forEach((level) => {
                 const key = `${type}_${level}`;
                 questionCounts[key] = this.questionsDatabase.filter(
-                    (q) => q.level === level && (type === 'mixed' || q.type === type),
+                    (q) => q.level === level && (type === EnglishGameType.MIXED || q.type === type),
                 ).length;
             });
         });
@@ -259,7 +229,7 @@ export class EnglishService {
         game.currentRound++;
 
         if (game.currentRound > game.totalRounds) {
-            game.gameStatus = 'finished';
+            game.gameStatus = EnglishGameStatus.FINISHED;
             return;
         }
 
