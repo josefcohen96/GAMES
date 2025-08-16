@@ -267,6 +267,7 @@ export default function EnglishGame() {
                 <th className="py-2 pr-4">Rank</th>
                 <th className="py-2 pr-4">Player</th>
                 <th className="py-2 pr-4">Score</th>
+                <th className="py-2 pr-4">Maximum score</th>
               </tr>
             </thead>
             <tbody>
@@ -275,6 +276,7 @@ export default function EnglishGame() {
                   <td className="py-2 pr-4">{idx + 1}</td>
                   <td className="py-2 pr-4">{row.playerId}</td>
                   <td className="py-2 pr-4 font-semibold">{row.score}</td>
+                  <td className="py-2 pr-4">{state.totalRounds * 10}</td>
                 </tr>
               ))}
             </tbody>

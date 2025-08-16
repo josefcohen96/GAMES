@@ -1,0 +1,6042 @@
+{
+  "vocabulary": {
+    "beginner": [
+      {
+        "id": "vocabulary_beginner_1",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word means the same as 'large'?",
+        "options": [
+          "big",
+          "small",
+          "thin",
+          "cold"
+        ],
+        "correctAnswer": "big",
+        "explanation": "'Large' and 'big' have the same meaning.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_2",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'happy'?",
+        "options": [
+          "sad",
+          "excited",
+          "tall",
+          "bright"
+        ],
+        "correctAnswer": "sad",
+        "explanation": "'Sad' is the opposite of 'happy'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_3",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word does not belong in the group: apple, banana, carrot, orange?",
+        "options": [
+          "carrot",
+          "apple",
+          "banana",
+          "orange"
+        ],
+        "correctAnswer": "carrot",
+        "explanation": "Carrot is a vegetable, while the others are fruits.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_4",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "She looked ______ because she didn't sleep.",
+        "options": [
+          "tired",
+          "excited",
+          "fresh",
+          "happy"
+        ],
+        "correctAnswer": "tired",
+        "explanation": "If you don't sleep, you feel tired.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_5",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word is similar in meaning to 'quick'?",
+        "options": [
+          "fast",
+          "slow",
+          "lazy",
+          "loud"
+        ],
+        "correctAnswer": "fast",
+        "explanation": "'Quick' and 'fast' are synonyms.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_6",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Translate to English: 'אני שותה מים'.",
+        "options": [
+          "I drink water",
+          "I eat water",
+          "I drink milk",
+          "I drank water"
+        ],
+        "correctAnswer": "I drink water",
+        "explanation": "'אני שותה מים' means 'I drink water' in English.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_7",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word means the same as 'begin'?",
+        "options": [
+          "start",
+          "finish",
+          "clean",
+          "hold"
+        ],
+        "correctAnswer": "start",
+        "explanation": "'Begin' and 'start' mean the same thing.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_8",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'cold'?",
+        "options": [
+          "hot",
+          "wet",
+          "light",
+          "strong"
+        ],
+        "correctAnswer": "hot",
+        "explanation": "'Hot' is the opposite of 'cold'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_9",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word does not belong: Monday, Friday, yesterday, Wednesday?",
+        "options": [
+          "yesterday",
+          "Monday",
+          "Friday",
+          "Wednesday"
+        ],
+        "correctAnswer": "yesterday",
+        "explanation": "'Yesterday' is not a day of the week.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_10",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Please ______ the door when you leave.",
+        "options": [
+          "close",
+          "open",
+          "write",
+          "eat"
+        ],
+        "correctAnswer": "close",
+        "explanation": "You close a door when you leave.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_11",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "'Child' and ______ have similar meanings.",
+        "options": [
+          "kid",
+          "adult",
+          "baby",
+          "teacher"
+        ],
+        "correctAnswer": "kid",
+        "explanation": "'Child' and 'kid' mean the same thing.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_12",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'short'?",
+        "options": [
+          "tall",
+          "thin",
+          "dark",
+          "small"
+        ],
+        "correctAnswer": "tall",
+        "explanation": "'Tall' is the opposite of 'short'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_13",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word does not belong: red, blue, circle, green?",
+        "options": [
+          "circle",
+          "red",
+          "blue",
+          "green"
+        ],
+        "correctAnswer": "circle",
+        "explanation": "'Circle' is a shape, while the others are colors.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_14",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "A ______ has stripes and lives in the jungle.",
+        "options": [
+          "zebra",
+          "dog",
+          "cat",
+          "bird"
+        ],
+        "correctAnswer": "zebra",
+        "explanation": "A zebra has stripes and often lives in grasslands.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_15",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word means the same as 'small'?",
+        "options": [
+          "little",
+          "big",
+          "heavy",
+          "hard"
+        ],
+        "correctAnswer": "little",
+        "explanation": "'Small' and 'little' have similar meanings.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_16",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'night'?",
+        "options": [
+          "day",
+          "month",
+          "year",
+          "week"
+        ],
+        "correctAnswer": "day",
+        "explanation": "'Day' is the opposite of 'night'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_17",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word does not belong: table, chair, bed, banana?",
+        "options": [
+          "banana",
+          "table",
+          "chair",
+          "bed"
+        ],
+        "correctAnswer": "banana",
+        "explanation": "'Banana' is food, while the others are furniture.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_18",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "She writes with a ______.",
+        "options": [
+          "pencil",
+          "spoon",
+          "door",
+          "shoe"
+        ],
+        "correctAnswer": "pencil",
+        "explanation": "You write with a pencil.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_19",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word is similar in meaning to 'happy'?",
+        "options": [
+          "joyful",
+          "sad",
+          "angry",
+          "slow"
+        ],
+        "correctAnswer": "joyful",
+        "explanation": "'Happy' and 'joyful' have similar meanings.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_20",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'up'?",
+        "options": [
+          "down",
+          "around",
+          "left",
+          "near"
+        ],
+        "correctAnswer": "down",
+        "explanation": "'Up' and 'down' are opposites.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_21",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which does not belong: run, jump, sing, color?",
+        "options": [
+          "color",
+          "run",
+          "jump",
+          "sing"
+        ],
+        "correctAnswer": "color",
+        "explanation": "'Color' is not an action, while the others are actions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_22",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "I ______ to school every day.",
+        "options": [
+          "walk",
+          "cook",
+          "fly",
+          "sleep"
+        ],
+        "correctAnswer": "walk",
+        "explanation": "Many people walk to school.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_23",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word means the same as 'end'?",
+        "options": [
+          "finish",
+          "begin",
+          "start",
+          "play"
+        ],
+        "correctAnswer": "finish",
+        "explanation": "'End' and 'finish' mean the same thing.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_24",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'early'?",
+        "options": [
+          "late",
+          "soon",
+          "bright",
+          "light"
+        ],
+        "correctAnswer": "late",
+        "explanation": "'Late' is the opposite of 'early'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_beginner_25",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word does not belong: cat, dog, fish, tree?",
+        "options": [
+          "tree",
+          "cat",
+          "dog",
+          "fish"
+        ],
+        "correctAnswer": "tree",
+        "explanation": "'Tree' is a plant, while the others are animals.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "vocabulary_intermediate_1",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word means the same as 'difficult'?",
+        "options": [
+          "challenging",
+          "easy",
+          "light",
+          "soft"
+        ],
+        "correctAnswer": "challenging",
+        "explanation": "'Difficult' and 'challenging' have similar meanings.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_2",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is the opposite of 'increase'?",
+        "options": [
+          "decrease",
+          "rise",
+          "improve",
+          "accelerate"
+        ],
+        "correctAnswer": "decrease",
+        "explanation": "'Decrease' is the opposite of 'increase'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_3",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "'Purchase' has a similar meaning to ______.",
+        "options": [
+          "buy",
+          "sell",
+          "borrow",
+          "lend"
+        ],
+        "correctAnswer": "buy",
+        "explanation": "To 'purchase' something means to 'buy' it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_4",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "The movie was so ______ that I fell asleep.",
+        "options": [
+          "boring",
+          "exciting",
+          "loud",
+          "short"
+        ],
+        "correctAnswer": "boring",
+        "explanation": "If a movie is boring, you might fall asleep.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_5",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word does not belong: doctor, teacher, hospital, engineer?",
+        "options": [
+          "hospital",
+          "doctor",
+          "teacher",
+          "engineer"
+        ],
+        "correctAnswer": "hospital",
+        "explanation": "Hospital is a place, while the others are professions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_6",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word means 'quickly'?",
+        "options": [
+          "rapidly",
+          "slowly",
+          "rarely",
+          "loudly"
+        ],
+        "correctAnswer": "rapidly",
+        "explanation": "'Rapidly' means 'quickly'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_7",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is the opposite of 'accept'?",
+        "options": [
+          "refuse",
+          "receive",
+          "allow",
+          "admire"
+        ],
+        "correctAnswer": "refuse",
+        "explanation": "'Refuse' is the opposite of 'accept'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_8",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Translate to English: 'אני קורא ספר טוב'.",
+        "options": [
+          "I read a good book",
+          "I eat a good book",
+          "I write a good book",
+          "I have a good look"
+        ],
+        "correctAnswer": "I read a good book",
+        "explanation": "'אני קורא ספר טוב' means 'I read a good book' in English.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_9",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "'Give up' means ______.",
+        "options": [
+          "surrender",
+          "continue",
+          "start",
+          "share"
+        ],
+        "correctAnswer": "surrender",
+        "explanation": "To 'give up' means to surrender or stop trying.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_10",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word does not belong: democracy, monarchy, university, dictatorship?",
+        "options": [
+          "university",
+          "democracy",
+          "monarchy",
+          "dictatorship"
+        ],
+        "correctAnswer": "university",
+        "explanation": "University is an educational institution, while the others are forms of government.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_11",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which collocation is correct?",
+        "options": [
+          "make a decision",
+          "do a decision",
+          "create a decision",
+          "build a decision"
+        ],
+        "correctAnswer": "make a decision",
+        "explanation": "We say 'make a decision' in English.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_12",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is the opposite of 'ancient'?",
+        "options": [
+          "modern",
+          "old",
+          "historic",
+          "classic"
+        ],
+        "correctAnswer": "modern",
+        "explanation": "'Ancient' is old, and 'modern' is new.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_13",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "'Assist' has a similar meaning to ______.",
+        "options": [
+          "help",
+          "hinder",
+          "harm",
+          "ignore"
+        ],
+        "correctAnswer": "help",
+        "explanation": "'Assist' means to help.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_14",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "To ______ a meeting means to plan and arrange it.",
+        "options": [
+          "schedule",
+          "attend",
+          "cancel",
+          "delay"
+        ],
+        "correctAnswer": "schedule",
+        "explanation": "To schedule a meeting is to plan it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_15",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word does not belong: guitar, piano, music, violin?",
+        "options": [
+          "music",
+          "guitar",
+          "piano",
+          "violin"
+        ],
+        "correctAnswer": "music",
+        "explanation": "Music is the art form, while the others are instruments.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_16",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word means 'unexpected'?",
+        "options": [
+          "surprising",
+          "ordinary",
+          "usual",
+          "normal"
+        ],
+        "correctAnswer": "surprising",
+        "explanation": "'Surprising' means unexpected.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_17",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is the opposite of 'include'?",
+        "options": [
+          "exclude",
+          "contain",
+          "involve",
+          "invite"
+        ],
+        "correctAnswer": "exclude",
+        "explanation": "To exclude is to leave something out.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_18",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "'Look after' means to ______.",
+        "options": [
+          "care for",
+          "search for",
+          "remove",
+          "ignore"
+        ],
+        "correctAnswer": "care for",
+        "explanation": "To look after someone means to care for them.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_19",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "The scientist made an important ______ in her research.",
+        "options": [
+          "discovery",
+          "disaster",
+          "confusion",
+          "problem"
+        ],
+        "correctAnswer": "discovery",
+        "explanation": "Scientists make discoveries, not disasters.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_20",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word does not belong: satisfaction, happiness, success, quickly?",
+        "options": [
+          "quickly",
+          "satisfaction",
+          "happiness",
+          "success"
+        ],
+        "correctAnswer": "quickly",
+        "explanation": "'Quickly' is an adverb, while the others are nouns.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_21",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "'Brief' has a similar meaning to ______.",
+        "options": [
+          "short",
+          "long",
+          "detailed",
+          "complex"
+        ],
+        "correctAnswer": "short",
+        "explanation": "'Brief' means short.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_22",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is the opposite of 'permit'?",
+        "options": [
+          "forbid",
+          "allow",
+          "decide",
+          "remind"
+        ],
+        "correctAnswer": "forbid",
+        "explanation": "'Forbid' is the opposite of 'permit'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_23",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which verb completes the collocation: ______ an apology?",
+        "options": [
+          "make",
+          "do",
+          "give",
+          "pay"
+        ],
+        "correctAnswer": "make",
+        "explanation": "We say 'make an apology'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_24",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "He felt ______ when he didn't get the job.",
+        "options": [
+          "disappointed",
+          "delighted",
+          "relieved",
+          "energized"
+        ],
+        "correctAnswer": "disappointed",
+        "explanation": "If you don't get a job, you feel disappointed.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_intermediate_25",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "Which word does not belong: ellipse, triangle, rectangle, green?",
+        "options": [
+          "green",
+          "ellipse",
+          "triangle",
+          "rectangle"
+        ],
+        "correctAnswer": "green",
+        "explanation": "'Green' is a color, while the others are shapes.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "vocabulary_advanced_1",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Meticulous' has a similar meaning to ______.",
+        "options": [
+          "careful",
+          "careless",
+          "spontaneous",
+          "vague"
+        ],
+        "correctAnswer": "careful",
+        "explanation": "'Meticulous' means very careful and attentive.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_2",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Scarce' is the opposite of ______.",
+        "options": [
+          "abundant",
+          "rare",
+          "limited",
+          "precious"
+        ],
+        "correctAnswer": "abundant",
+        "explanation": "If something is scarce, it is in short supply; 'abundant' is the opposite.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_3",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Inevitable' means ______.",
+        "options": [
+          "unavoidable",
+          "unlikely",
+          "trivial",
+          "optional"
+        ],
+        "correctAnswer": "unavoidable",
+        "explanation": "'Inevitable' means that something is unavoidable.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_4",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "The professor's lecture was so ______ that many students were confused.",
+        "options": [
+          "convoluted",
+          "simple",
+          "boring",
+          "short"
+        ],
+        "correctAnswer": "convoluted",
+        "explanation": "A convoluted lecture is complex and hard to follow.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_5",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Which word does not belong: altruistic, benevolent, generous, selfish?",
+        "options": [
+          "selfish",
+          "altruistic",
+          "benevolent",
+          "generous"
+        ],
+        "correctAnswer": "selfish",
+        "explanation": "'Selfish' is the opposite of the other words, which all describe kindness.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_6",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Commence' has a similar meaning to ______.",
+        "options": [
+          "begin",
+          "finish",
+          "confuse",
+          "examine"
+        ],
+        "correctAnswer": "begin",
+        "explanation": "'Commence' means to begin.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_7",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What is the opposite of 'transparent'?",
+        "options": [
+          "opaque",
+          "clear",
+          "lucid",
+          "obvious"
+        ],
+        "correctAnswer": "opaque",
+        "explanation": "'Opaque' is the opposite of 'transparent'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_8",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Bring about' means to ______.",
+        "options": [
+          "cause",
+          "delay",
+          "destroy",
+          "cancel"
+        ],
+        "correctAnswer": "cause",
+        "explanation": "To 'bring about' something means to cause it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_9",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "The CEO's ______ decision saved the company from bankruptcy.",
+        "options": [
+          "strategic",
+          "reckless",
+          "narrow",
+          "trivial"
+        ],
+        "correctAnswer": "strategic",
+        "explanation": "A strategic decision is carefully planned for success.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_10",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Which word does not belong: analysis, evaluation, synthesis, drive?",
+        "options": [
+          "drive",
+          "analysis",
+          "evaluation",
+          "synthesis"
+        ],
+        "correctAnswer": "drive",
+        "explanation": "'Drive' is not a scholarly process like the others.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_11",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Concise' has a similar meaning to ______.",
+        "options": [
+          "brief",
+          "wordy",
+          "complex",
+          "uncertain"
+        ],
+        "correctAnswer": "brief",
+        "explanation": "'Concise' means brief and to the point.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_12",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Diminish' is the opposite of ______.",
+        "options": [
+          "increase",
+          "decrease",
+          "reduce",
+          "subtract"
+        ],
+        "correctAnswer": "increase",
+        "explanation": "To 'diminish' means to decrease; 'increase' is the opposite.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_13",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Look down on' means to ______ someone.",
+        "options": [
+          "disrespect",
+          "admire",
+          "support",
+          "accompany"
+        ],
+        "correctAnswer": "disrespect",
+        "explanation": "To look down on someone is to disrespect them.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_14",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "The novel's ending was intentionally ______ to encourage discussion.",
+        "options": [
+          "ambiguous",
+          "obvious",
+          "predictable",
+          "shallow"
+        ],
+        "correctAnswer": "ambiguous",
+        "explanation": "An ambiguous ending can encourage discussion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_15",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Which word does not belong: integrity, honesty, deceit, reliability?",
+        "options": [
+          "deceit",
+          "integrity",
+          "honesty",
+          "reliability"
+        ],
+        "correctAnswer": "deceit",
+        "explanation": "'Deceit' is negative, while the others are positive qualities.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_16",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Ubiquitous' means ______.",
+        "options": [
+          "everywhere",
+          "rare",
+          "hidden",
+          "trivial"
+        ],
+        "correctAnswer": "everywhere",
+        "explanation": "If something is ubiquitous, it is everywhere.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_17",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Reluctant' is the opposite of ______.",
+        "options": [
+          "eager",
+          "nervous",
+          "shy",
+          "uncertain"
+        ],
+        "correctAnswer": "eager",
+        "explanation": "Someone who is reluctant is hesitant; 'eager' is the opposite.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_18",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Her ______ for detail made her an excellent editor.",
+        "options": [
+          "penchant",
+          "disregard",
+          "distaste",
+          "indifference"
+        ],
+        "correctAnswer": "penchant",
+        "explanation": "A 'penchant' for detail means a strong liking for it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_19",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Cut back on' means to ______.",
+        "options": [
+          "reduce",
+          "increase",
+          "ignore",
+          "delay"
+        ],
+        "correctAnswer": "reduce",
+        "explanation": "To cut back on something means to reduce it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_20",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Which word does not belong: analysis, research, study, concert?",
+        "options": [
+          "concert",
+          "analysis",
+          "research",
+          "study"
+        ],
+        "correctAnswer": "concert",
+        "explanation": "'Concert' is an event, while the others relate to academic work.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_21",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Tedious' has a similar meaning to ______.",
+        "options": [
+          "boring",
+          "exciting",
+          "inspiring",
+          "challenging"
+        ],
+        "correctAnswer": "boring",
+        "explanation": "'Tedious' means long and boring.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_22",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Eminent' is the opposite of ______.",
+        "options": [
+          "obscure",
+          "famous",
+          "renowned",
+          "respected"
+        ],
+        "correctAnswer": "obscure",
+        "explanation": "'Eminent' means well-known; 'obscure' is the opposite.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_23",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "The scientist's theory was highly ______ by the academic community.",
+        "options": [
+          "acclaimed",
+          "ignored",
+          "simple",
+          "outdated"
+        ],
+        "correctAnswer": "acclaimed",
+        "explanation": "When something is acclaimed, it is praised.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_24",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "'Disseminate' means to ______.",
+        "options": [
+          "spread",
+          "hide",
+          "collect",
+          "memorize"
+        ],
+        "correctAnswer": "spread",
+        "explanation": "To disseminate information is to spread it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "vocabulary_advanced_25",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "Which word does not belong: azure, crimson, turquoise, banana?",
+        "options": [
+          "banana",
+          "azure",
+          "crimson",
+          "turquoise"
+        ],
+        "correctAnswer": "banana",
+        "explanation": "'Banana' is not a color.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "grammar": {
+    "beginner": [
+      {
+        "id": "grammar_beginner_1",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "She ______ to school every day.",
+        "options": [
+          "goes",
+          "go",
+          "going",
+          "gone"
+        ],
+        "correctAnswer": "goes",
+        "explanation": "Use 'goes' for third-person singular present tense.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_2",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "They ______ playing soccer now.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "are",
+        "explanation": "For the plural subject 'they', use 'are'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_3",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "____ is raining.",
+        "options": [
+          "It",
+          "They",
+          "She",
+          "He"
+        ],
+        "correctAnswer": "It",
+        "explanation": "Use 'It' for weather expressions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_4",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "I saw ______ elephant at the zoo.",
+        "options": [
+          "an",
+          "a",
+          "the",
+          "no article"
+        ],
+        "correctAnswer": "an",
+        "explanation": "Use 'an' before a vowel sound.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_5",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "My parents ______ happy.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "are",
+        "explanation": "For plural subjects, use 'are'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_6",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Yesterday, we ______ a movie.",
+        "options": [
+          "watched",
+          "watch",
+          "watching",
+          "watches"
+        ],
+        "correctAnswer": "watched",
+        "explanation": "Use past tense 'watched' for yesterday.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_7",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "He ______ born in 1990.",
+        "options": [
+          "was",
+          "were",
+          "is",
+          "be"
+        ],
+        "correctAnswer": "was",
+        "explanation": "Use 'was' for singular past tense.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_8",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "The cat is _____ the table.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "to"
+        ],
+        "correctAnswer": "on",
+        "explanation": "Use 'on' for surfaces.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_9",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "______ you like coffee?",
+        "options": [
+          "Do",
+          "Does",
+          "Did",
+          "Are"
+        ],
+        "correctAnswer": "Do",
+        "explanation": "Use 'Do' to form present simple questions with 'you'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_10",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "My house is ______ than yours.",
+        "options": [
+          "bigger",
+          "big",
+          "biggest",
+          "more big"
+        ],
+        "correctAnswer": "bigger",
+        "explanation": "Use '-er' to form comparatives for short adjectives.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_11",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "She has ______ dog.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correctAnswer": "a",
+        "explanation": "Use 'a' before words starting with a consonant sound.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_12",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "He ______ like spinach.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "wasn't"
+        ],
+        "correctAnswer": "doesn't",
+        "explanation": "Use 'doesn't' for third-person singular negative.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_13",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "I will call you ______ I arrive.",
+        "options": [
+          "when",
+          "who",
+          "where",
+          "how"
+        ],
+        "correctAnswer": "when",
+        "explanation": "Use 'when' to indicate the time something happens.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_14",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Three ______ are on the table.",
+        "options": [
+          "apples",
+          "apple",
+          "apple's",
+          "appleses"
+        ],
+        "correctAnswer": "apples",
+        "explanation": "Add 's' to form the plural of most nouns.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_15",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "They ______ at home last night.",
+        "options": [
+          "were",
+          "was",
+          "are",
+          "is"
+        ],
+        "correctAnswer": "were",
+        "explanation": "Use 'were' for plural past tense.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_16",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "This book is ______.",
+        "options": [
+          "mine",
+          "me",
+          "my",
+          "I"
+        ],
+        "correctAnswer": "mine",
+        "explanation": "'Mine' is the possessive pronoun.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_17",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "I ______ see you tomorrow.",
+        "options": [
+          "will",
+          "am",
+          "did",
+          "have"
+        ],
+        "correctAnswer": "will",
+        "explanation": "Use 'will' to express future actions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_18",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "How ______ your weekend?",
+        "options": [
+          "was",
+          "were",
+          "is",
+          "are"
+        ],
+        "correctAnswer": "was",
+        "explanation": "'Weekend' is singular, so use 'was'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_19",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "You ______ not smoke here.",
+        "options": [
+          "must",
+          "can",
+          "might",
+          "shall"
+        ],
+        "correctAnswer": "must",
+        "explanation": "Use 'must' for strong prohibition.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_20",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "We will meet ______ Monday.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "to"
+        ],
+        "correctAnswer": "on",
+        "explanation": "Use 'on' with days of the week.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_21",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "There ______ some milk in the fridge.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "is",
+        "explanation": "Use 'is' with uncountable nouns.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_22",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "______ are going to the park.",
+        "options": [
+          "They",
+          "Them",
+          "He",
+          "She"
+        ],
+        "correctAnswer": "They",
+        "explanation": "'They' is the subject pronoun.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_23",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "She ______ a cake yesterday.",
+        "options": [
+          "made",
+          "make",
+          "makes",
+          "making"
+        ],
+        "correctAnswer": "made",
+        "explanation": "Use the past form 'made' for yesterday.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_24",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "The children ______ playing outside.",
+        "options": [
+          "are",
+          "is",
+          "was",
+          "were"
+        ],
+        "correctAnswer": "are",
+        "explanation": "Use 'are' with plural subjects in present continuous.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_beginner_25",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "He runs ______ fast.",
+        "options": [
+          "very",
+          "many",
+          "much",
+          "more"
+        ],
+        "correctAnswer": "very",
+        "explanation": "Use 'very' to modify an adjective or adverb.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "grammar_intermediate_1",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "By the time we arrived, he ______.",
+        "options": [
+          "had left",
+          "left",
+          "has left",
+          "was leaving"
+        ],
+        "correctAnswer": "had left",
+        "explanation": "Use past perfect to show an action completed before another past action.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_2",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "She ______ French for five years.",
+        "options": [
+          "has been studying",
+          "studied",
+          "studies",
+          "is studying"
+        ],
+        "correctAnswer": "has been studying",
+        "explanation": "Present perfect continuous shows an action that began in the past and continues.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_3",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "This is the man ______ car was stolen.",
+        "options": [
+          "whose",
+          "who's",
+          "which",
+          "that"
+        ],
+        "correctAnswer": "whose",
+        "explanation": "'Whose' shows possession in a relative clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_4",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "I am interested ______ learning Spanish.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "for"
+        ],
+        "correctAnswer": "in",
+        "explanation": "Use 'interested in'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_5",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "If I ______ enough money, I would buy a new car.",
+        "options": [
+          "had",
+          "have",
+          "had had",
+          "will have"
+        ],
+        "correctAnswer": "had",
+        "explanation": "Use past simple in conditional type 2 for hypothetical situations.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_6",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "They said they ______ the movie already.",
+        "options": [
+          "had seen",
+          "saw",
+          "have seen",
+          "see"
+        ],
+        "correctAnswer": "had seen",
+        "explanation": "Use past perfect to show an action completed before the time mentioned.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_7",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "You ______ see a doctor.",
+        "options": [
+          "should",
+          "must",
+          "might",
+          "will"
+        ],
+        "correctAnswer": "should",
+        "explanation": "'Should' is used to give advice.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_8",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Neither the teacher nor the students ______ present.",
+        "options": [
+          "were",
+          "was",
+          "are",
+          "have been"
+        ],
+        "correctAnswer": "were",
+        "explanation": "With 'neither...nor', the verb agrees with the nearer subject.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_9",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "She prefers ______ tea to coffee.",
+        "options": [
+          "drinking",
+          "drink",
+          "drank",
+          "drinks"
+        ],
+        "correctAnswer": "drinking",
+        "explanation": "Use gerund after 'prefer'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_10",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "The book, ______ I borrowed, was fascinating.",
+        "options": [
+          "which",
+          "where",
+          "whose",
+          "who"
+        ],
+        "correctAnswer": "which",
+        "explanation": "Use 'which' to introduce non-defining relative clauses about things.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_11",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "This exam is ______ than the last one.",
+        "options": [
+          "more difficult",
+          "most difficult",
+          "difficult",
+          "more difficulter"
+        ],
+        "correctAnswer": "more difficult",
+        "explanation": "Use 'more' with longer adjectives to form comparatives.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_12",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "I wish I ______ to the party last night.",
+        "options": [
+          "had gone",
+          "went",
+          "go",
+          "have gone"
+        ],
+        "correctAnswer": "had gone",
+        "explanation": "Use past perfect after 'wish' to express regret about the past.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_13",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "He plays ______ piano.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "no article"
+        ],
+        "correctAnswer": "the",
+        "explanation": "Use 'the' with instruments.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_14",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "We ______ dinner by the time you arrive.",
+        "options": [
+          "will have finished",
+          "will finish",
+          "finish",
+          "have finished"
+        ],
+        "correctAnswer": "will have finished",
+        "explanation": "Use future perfect to show completion before a future time.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_15",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Despite ______ hard, he failed the test.",
+        "options": [
+          "studying",
+          "study",
+          "studied",
+          "studies"
+        ],
+        "correctAnswer": "studying",
+        "explanation": "Use gerund after 'despite'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_16",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "I don't know ______ he will come.",
+        "options": [
+          "whether",
+          "weather",
+          "either",
+          "rather"
+        ],
+        "correctAnswer": "whether",
+        "explanation": "Use 'whether' in indirect questions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_17",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Rarely ______ such a beautiful sunset.",
+        "options": [
+          "have I seen",
+          "I have seen",
+          "have seen I",
+          "seen I have"
+        ],
+        "correctAnswer": "have I seen",
+        "explanation": "Negative adverbials require inversion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_18",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "She asked me where ______ going.",
+        "options": [
+          "I was",
+          "was I",
+          "am I",
+          "am I going"
+        ],
+        "correctAnswer": "I was",
+        "explanation": "Word order in indirect questions is subject + verb.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_19",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "This book is written ______ beginners.",
+        "options": [
+          "for",
+          "to",
+          "at",
+          "with"
+        ],
+        "correctAnswer": "for",
+        "explanation": "Use 'for' to indicate purpose.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_20",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Not only ______ but she also sings.",
+        "options": [
+          "does she dance",
+          "she dances",
+          "she does dance",
+          "do she dance"
+        ],
+        "correctAnswer": "does she dance",
+        "explanation": "After 'not only', use inversion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_21",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "He ______ to have stolen the money.",
+        "options": [
+          "is said",
+          "said",
+          "was saying",
+          "says"
+        ],
+        "correctAnswer": "is said",
+        "explanation": "Use passive infinitive in reporting structures.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_22",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "He said, 'I will call you tomorrow'.",
+        "options": [
+          "He said he would call me the next day",
+          "He said he will call me tomorrow",
+          "He said he called me the next day",
+          "He said he would call me tomorrow"
+        ],
+        "correctAnswer": "He said he would call me the next day",
+        "explanation": "In reported speech, change 'will' to 'would' and time expression.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_23",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "The more you practice, ______ you become.",
+        "options": [
+          "the better",
+          "better",
+          "more better",
+          "the more better"
+        ],
+        "correctAnswer": "the better",
+        "explanation": "Use 'the comparative..., the comparative...' structure.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_24",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "We need to ______ the meeting until next week.",
+        "options": [
+          "put off",
+          "put up with",
+          "put out",
+          "put on"
+        ],
+        "correctAnswer": "put off",
+        "explanation": "'Put off' means to postpone.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_intermediate_25",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "There is ______ sugar left in the jar.",
+        "options": [
+          "little",
+          "a few",
+          "much",
+          "many"
+        ],
+        "correctAnswer": "little",
+        "explanation": "Use 'little' with uncountable nouns.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "grammar_advanced_1",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Had I known about the traffic, I ______ earlier.",
+        "options": [
+          "would have left",
+          "will leave",
+          "left",
+          "had left"
+        ],
+        "correctAnswer": "would have left",
+        "explanation": "Use conditional perfect in third conditional sentences.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_2",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "No sooner ______ the phone rang.",
+        "options": [
+          "had I sat down than",
+          "I sat down than",
+          "had sat down then",
+          "do I sit down when"
+        ],
+        "correctAnswer": "had I sat down than",
+        "explanation": "After 'no sooner', use past perfect and inversion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_3",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "If I ______ in your position, I would not hesitate.",
+        "options": [
+          "were",
+          "was",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "were",
+        "explanation": "In hypothetical conditional, use 'were' for all persons.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_4",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "The conference, the theme of ______ was sustainability, attracted many scholars.",
+        "options": [
+          "which",
+          "that",
+          "whom",
+          "whose"
+        ],
+        "correctAnswer": "which",
+        "explanation": "Use 'which' to introduce a non-defining relative clause providing extra information.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_5",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "She suggested that he ______ earlier.",
+        "options": [
+          "arrive",
+          "arrives",
+          "arrived",
+          "will arrive"
+        ],
+        "correctAnswer": "arrive",
+        "explanation": "Use base verb form in subjunctive clauses after verbs like 'suggest'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_6",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "By next year, I ______ here for a decade.",
+        "options": [
+          "will have been working",
+          "will work",
+          "have worked",
+          "will be working"
+        ],
+        "correctAnswer": "will have been working",
+        "explanation": "Use future perfect continuous to show duration up to a future point.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_7",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "It's essential ______ the rules.",
+        "options": [
+          "to understand",
+          "understand",
+          "understanding",
+          "understood"
+        ],
+        "correctAnswer": "to understand",
+        "explanation": "Use infinitive after adjectives like 'essential'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_8",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Were he ______, he would apologize.",
+        "options": [
+          "to know",
+          "know",
+          "knowing",
+          "knows"
+        ],
+        "correctAnswer": "to know",
+        "explanation": "'Were he to...' introduces a conditional inversion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_9",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "If she ______ harder, she might have won.",
+        "options": [
+          "had trained",
+          "has trained",
+          "trained",
+          "trains"
+        ],
+        "correctAnswer": "had trained",
+        "explanation": "Use past perfect in third conditional for past hypothetical.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_10",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "To ______ did you give the book?",
+        "options": [
+          "whom",
+          "who",
+          "whose",
+          "which"
+        ],
+        "correctAnswer": "whom",
+        "explanation": "'Whom' is used as the object of a verb or preposition.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_11",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "So beautiful ______ that everyone stopped to stare.",
+        "options": [
+          "was the dancer",
+          "the dancer was",
+          "was dancer",
+          "dancer was"
+        ],
+        "correctAnswer": "was the dancer",
+        "explanation": "Inversion occurs after so + adjective at beginning.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_12",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Under no circumstances ______ late.",
+        "options": [
+          "should you be",
+          "you should be",
+          "you be",
+          "should be you"
+        ],
+        "correctAnswer": "should you be",
+        "explanation": "Negative adverbials require inversion.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_13",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Should you ______ me, please call.",
+        "options": [
+          "need",
+          "needed",
+          "needing",
+          "to need"
+        ],
+        "correctAnswer": "need",
+        "explanation": "In conditional inversion, use base form after 'should you'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_14",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Walking down the street, she ______ a lost child.",
+        "options": [
+          "saw",
+          "was seen",
+          "has seen",
+          "see"
+        ],
+        "correctAnswer": "saw",
+        "explanation": "Use past simple when the subject performs the action.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_15",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "He acted as if he ______ the boss.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "be"
+        ],
+        "correctAnswer": "were",
+        "explanation": "Use 'were' in hypothetical comparisons.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_16",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "This painting is no less valuable ______ that one.",
+        "options": [
+          "than",
+          "as",
+          "as than",
+          "as as"
+        ],
+        "correctAnswer": "than",
+        "explanation": "Use 'than' in comparisons of equality.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_17",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Only after the speech ______ applause.",
+        "options": [
+          "did the audience give",
+          "the audience gave",
+          "the audience did give",
+          "gave the audience"
+        ],
+        "correctAnswer": "did the audience give",
+        "explanation": "Inversion occurs after 'only after'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_18",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "You ______ told me the truth.",
+        "options": [
+          "should have",
+          "should",
+          "would have",
+          "could"
+        ],
+        "correctAnswer": "should have",
+        "explanation": "Use 'should have' to express regret about the past.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_19",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Hardly ______ when the alarm went off.",
+        "options": [
+          "had I fallen asleep",
+          "I had fallen asleep",
+          "I fell asleep",
+          "did I fall asleep"
+        ],
+        "correctAnswer": "had I fallen asleep",
+        "explanation": "Use inversion after 'hardly'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_20",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "He is ______ honest man.",
+        "options": [
+          "an",
+          "a",
+          "the",
+          "no article"
+        ],
+        "correctAnswer": "an",
+        "explanation": "Use 'an' before vowel sounds.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_21",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "No one knows the reason ______ he left so suddenly.",
+        "options": [
+          "why",
+          "that",
+          "for",
+          "because"
+        ],
+        "correctAnswer": "why",
+        "explanation": "Use 'why' to introduce a reason clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_22",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "He was accused ______ fraud.",
+        "options": [
+          "of",
+          "for",
+          "with",
+          "to"
+        ],
+        "correctAnswer": "of",
+        "explanation": "Use 'accused of'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_23",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "It is high time you ______ for yourself.",
+        "options": [
+          "stood up",
+          "stand up",
+          "have stood up",
+          "stand up"
+        ],
+        "correctAnswer": "stood up",
+        "explanation": "Use past simple after 'it's high time'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_24",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Little ______ about the danger ahead.",
+        "options": [
+          "did they know",
+          "they knew",
+          "knew they",
+          "did know they"
+        ],
+        "correctAnswer": "did they know",
+        "explanation": "Use inversion after 'little' at the beginning of a sentence.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "grammar_advanced_25",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Seldom ______ such a magnificent performance.",
+        "options": [
+          "have I witnessed",
+          "I have witnessed",
+          "witnessed I",
+          "I witnessed"
+        ],
+        "correctAnswer": "have I witnessed",
+        "explanation": "Use inversion after 'seldom'.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "reading": {
+    "beginner": [
+      {
+        "id": "reading_beginner_1",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Sarah has a small cat named Mimi. Mimi likes to sleep on the couch. What is the name of Sarah's cat?",
+        "options": [
+          "Mimi",
+          "Sarah",
+          "Couch",
+          "Small"
+        ],
+        "correctAnswer": "Mimi",
+        "explanation": "The text says the cat's name is Mimi.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_2",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Ben goes to school by bus every morning. How does Ben travel to school?",
+        "options": [
+          "By bus",
+          "By car",
+          "By bike",
+          "On foot"
+        ],
+        "correctAnswer": "By bus",
+        "explanation": "The sentence states that he goes by bus.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_3",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The sky is cloudy, and it might rain later today. What is the weather like?",
+        "options": [
+          "Cloudy",
+          "Sunny",
+          "Snowy",
+          "Windy"
+        ],
+        "correctAnswer": "Cloudy",
+        "explanation": "The sky is described as cloudy.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_4",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Lisa likes to read books about animals. She loves learning about lions and elephants. What does Lisa enjoy reading about?",
+        "options": [
+          "animals",
+          "cars",
+          "music",
+          "games"
+        ],
+        "correctAnswer": "animals",
+        "explanation": "She enjoys books about animals.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_5",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Tom has two brothers and one sister. How many siblings does Tom have?",
+        "options": [
+          "three",
+          "two",
+          "one",
+          "four"
+        ],
+        "correctAnswer": "three",
+        "explanation": "Two brothers + one sister = three siblings.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_6",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The store opens at 9 a.m. on weekends. What time does the store open on weekends?",
+        "options": [
+          "9 a.m.",
+          "10 a.m.",
+          "8 a.m.",
+          "11 a.m."
+        ],
+        "correctAnswer": "9 a.m.",
+        "explanation": "The store opens at 9 a.m. on weekends.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_7",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Mary is baking a chocolate cake for her friend's birthday. What is Mary baking?",
+        "options": [
+          "a chocolate cake",
+          "a pie",
+          "cookies",
+          "bread"
+        ],
+        "correctAnswer": "a chocolate cake",
+        "explanation": "She is baking a chocolate cake.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_8",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The dog jumped over the fence and ran into the garden. Where did the dog go after jumping over the fence?",
+        "options": [
+          "into the garden",
+          "into the house",
+          "onto the street",
+          "into the pool"
+        ],
+        "correctAnswer": "into the garden",
+        "explanation": "The dog ran into the garden.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_9",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Jenny writes in her journal every night before she sleeps. When does Jenny write in her journal?",
+        "options": [
+          "every night",
+          "every morning",
+          "every afternoon",
+          "every weekend"
+        ],
+        "correctAnswer": "every night",
+        "explanation": "She writes every night.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_10",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The lake is frozen during the winter, and people can skate on it. What can people do on the lake in winter?",
+        "options": [
+          "skate",
+          "swim",
+          "fish",
+          "sail"
+        ],
+        "correctAnswer": "skate",
+        "explanation": "People can skate on the frozen lake.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_11",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Alex's favorite color is blue. He paints his room blue. What color did Alex paint his room?",
+        "options": [
+          "blue",
+          "red",
+          "green",
+          "yellow"
+        ],
+        "correctAnswer": "blue",
+        "explanation": "Alex painted his room blue.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_12",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The train arrives at the station every hour. How often does the train arrive at the station?",
+        "options": [
+          "every hour",
+          "every day",
+          "every week",
+          "every month"
+        ],
+        "correctAnswer": "every hour",
+        "explanation": "It arrives every hour.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_13",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Maria drinks tea with honey when she has a sore throat. What does Maria add to her tea when she is sick?",
+        "options": [
+          "honey",
+          "sugar",
+          "lemon",
+          "milk"
+        ],
+        "correctAnswer": "honey",
+        "explanation": "She adds honey.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_14",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The park has a playground and a small pond. What is found in the park besides a playground?",
+        "options": [
+          "a small pond",
+          "a library",
+          "a cafe",
+          "a museum"
+        ],
+        "correctAnswer": "a small pond",
+        "explanation": "There is a small pond in the park.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_15",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Daniel wears a warm coat because it is cold outside. Why does Daniel wear a warm coat?",
+        "options": [
+          "because it is cold outside",
+          "because it is raining",
+          "because it is sunny",
+          "because it is windy"
+        ],
+        "correctAnswer": "because it is cold outside",
+        "explanation": "He wears a coat due to the cold.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_16",
+        "type": "reading",
+        "level": "beginner",
+        "question": "There are seven days in a week. How many days are in a week?",
+        "options": [
+          "seven",
+          "five",
+          "six",
+          "eight"
+        ],
+        "correctAnswer": "seven",
+        "explanation": "A week has seven days.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_17",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Emily visits her grandparents every Sunday afternoon. Who does Emily visit every Sunday?",
+        "options": [
+          "her grandparents",
+          "her friends",
+          "her cousins",
+          "her neighbors"
+        ],
+        "correctAnswer": "her grandparents",
+        "explanation": "She visits her grandparents.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_18",
+        "type": "reading",
+        "level": "beginner",
+        "question": "John loves eating apples but dislikes bananas. Which fruit does John dislike?",
+        "options": [
+          "bananas",
+          "apples",
+          "oranges",
+          "grapes"
+        ],
+        "correctAnswer": "bananas",
+        "explanation": "John dislikes bananas.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_19",
+        "type": "reading",
+        "level": "beginner",
+        "question": "A bee landed on the flower to collect nectar. What did the bee land on?",
+        "options": [
+          "the flower",
+          "the tree",
+          "the grass",
+          "the leaf"
+        ],
+        "correctAnswer": "the flower",
+        "explanation": "The bee landed on the flower.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_20",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The teacher asked the students to open their books to page ten. Which page did the teacher ask the students to open to?",
+        "options": [
+          "page ten",
+          "page five",
+          "page twenty",
+          "page one"
+        ],
+        "correctAnswer": "page ten",
+        "explanation": "They were asked to open to page ten.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_21",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Sammy's soccer game starts at 3 p.m. What time does Sammy's soccer game start?",
+        "options": [
+          "3 p.m.",
+          "4 p.m.",
+          "2 p.m.",
+          "5 p.m."
+        ],
+        "correctAnswer": "3 p.m.",
+        "explanation": "It starts at 3 p.m.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_22",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Helen bought some fresh vegetables from the market. Where did Helen buy vegetables?",
+        "options": [
+          "from the market",
+          "from the farm",
+          "from the store",
+          "from the garden"
+        ],
+        "correctAnswer": "from the market",
+        "explanation": "She bought them at the market.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_23",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Peter is watching a movie about space travel. What is the movie about?",
+        "options": [
+          "space travel",
+          "cooking",
+          "history",
+          "animals"
+        ],
+        "correctAnswer": "space travel",
+        "explanation": "The movie is about space travel.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_24",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Anna and her friends are building a sandcastle at the beach. What are Anna and her friends building?",
+        "options": [
+          "a sandcastle",
+          "a snowman",
+          "a house",
+          "a boat"
+        ],
+        "correctAnswer": "a sandcastle",
+        "explanation": "They are building a sandcastle.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_beginner_25",
+        "type": "reading",
+        "level": "beginner",
+        "question": "The clock on the wall shows that it is almost noon. What time is it according to the clock?",
+        "options": [
+          "almost noon",
+          "almost midnight",
+          "early morning",
+          "late evening"
+        ],
+        "correctAnswer": "almost noon",
+        "explanation": "It is almost noon according to the clock.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "reading_intermediate_1",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "James saved money for months to buy a new bicycle. When he finally had enough, he felt proud of his patience. Why did James feel proud?",
+        "options": [
+          "because he saved money to buy a bicycle",
+          "because he got a gift",
+          "because he built a bicycle",
+          "because he borrowed money"
+        ],
+        "correctAnswer": "because he saved money to buy a bicycle",
+        "explanation": "James was proud because he saved up for the bike himself.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_2",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The city council planted trees along the streets to provide shade and reduce pollution. Residents appreciated the greener view. What was one purpose of planting trees?",
+        "options": [
+          "to provide shade",
+          "to block traffic",
+          "to make room for buildings",
+          "to attract birds"
+        ],
+        "correctAnswer": "to provide shade",
+        "explanation": "One purpose mentioned is to provide shade.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_3",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "After the heavy rain, the river overflowed and flooded the nearby fields. Farmers lost some of their crops. What consequence did the heavy rain have?",
+        "options": [
+          "it caused the river to flood fields",
+          "it dried the river",
+          "it improved crops",
+          "it stopped farmers"
+        ],
+        "correctAnswer": "it caused the river to flood fields",
+        "explanation": "The text states that the river flooded the fields.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_4",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Emma studied French for two years before moving to Paris. Her efforts helped her communicate easily with locals. How did studying French help Emma?",
+        "options": [
+          "it made it easy to talk with locals",
+          "it allowed her to travel by train",
+          "it taught her to cook French food",
+          "it gave her a job"
+        ],
+        "correctAnswer": "it made it easy to talk with locals",
+        "explanation": "The study helped her communicate.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_5",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "During the museum tour, the guide explained how ancient tools were made. The visitors asked many questions about history. What did the guide talk about?",
+        "options": [
+          "how ancient tools were made",
+          "how to make modern tools",
+          "how to paint",
+          "how to cook"
+        ],
+        "correctAnswer": "how ancient tools were made",
+        "explanation": "The guide explained the making of ancient tools.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_6",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Marco forgot to set his alarm and woke up late. As a result, he missed the first train and arrived at work an hour late. Why was Marco late for work?",
+        "options": [
+          "because he forgot to set his alarm",
+          "because the train was early",
+          "because he went to bed late",
+          "because he overslept intentionally"
+        ],
+        "correctAnswer": "because he forgot to set his alarm",
+        "explanation": "He overslept because he didn't set his alarm.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_7",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Tina enjoys hiking in the mountains because it helps her relax and stay fit. She tries to go hiking at least once a month. How often does Tina try to hike?",
+        "options": [
+          "at least once a month",
+          "every day",
+          "once a week",
+          "twice a year"
+        ],
+        "correctAnswer": "at least once a month",
+        "explanation": "She aims to hike at least once a month.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_8",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The documentary about marine life featured colorful coral reefs and exotic fish. It encouraged viewers to protect the oceans. What did the documentary encourage viewers to do?",
+        "options": [
+          "protect the oceans",
+          "visit the fish",
+          "eat seafood",
+          "swim in coral reefs"
+        ],
+        "correctAnswer": "protect the oceans",
+        "explanation": "The documentary encouraged ocean protection.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_9",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "While playing chess, Henry thought carefully about each move. His patience paid off when he won the game. What helped Henry win the chess game?",
+        "options": [
+          "his careful thinking",
+          "his speed",
+          "his luck",
+          "his opponent's mistake"
+        ],
+        "correctAnswer": "his careful thinking",
+        "explanation": "He won because he thought carefully.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_10",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Laura volunteers at the animal shelter every Saturday. She feeds the animals and cleans their cages. What does Laura do at the shelter?",
+        "options": [
+          "feed animals and clean cages",
+          "adopt animals",
+          "teach animals tricks",
+          "paint the shelter"
+        ],
+        "correctAnswer": "feed animals and clean cages",
+        "explanation": "Her tasks include feeding animals and cleaning cages.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_11",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The bakery introduced a loyalty card system; customers who buy ten loaves of bread get one free. Sales increased after the program began. What happened after the bakery started the loyalty program?",
+        "options": [
+          "sales increased",
+          "sales decreased",
+          "customers complained",
+          "bread quality declined"
+        ],
+        "correctAnswer": "sales increased",
+        "explanation": "Sales went up after the loyalty program.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_12",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "When the power went out, the family lit candles and told stories. Even without electricity, they enjoyed their evening. How did the family feel about their evening without electricity?",
+        "options": [
+          "they enjoyed it",
+          "they were bored",
+          "they were angry",
+          "they left the house"
+        ],
+        "correctAnswer": "they enjoyed it",
+        "explanation": "They enjoyed the evening.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_13",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Oliver likes to plan his day carefully, making a to-do list every morning. This habit helps him stay organized. What helps Oliver stay organized?",
+        "options": [
+          "making a to-do list",
+          "eating breakfast",
+          "reading the news",
+          "sleeping early"
+        ],
+        "correctAnswer": "making a to-do list",
+        "explanation": "His to-do list keeps him organized.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_14",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The science teacher demonstrated a chemical reaction by mixing two liquids. The students were fascinated by the colorful result. How did the students react to the demonstration?",
+        "options": [
+          "they were fascinated",
+          "they were bored",
+          "they were angry",
+          "they were silent"
+        ],
+        "correctAnswer": "they were fascinated",
+        "explanation": "The students were fascinated by the reaction.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_15",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "After finishing her novel, the author sent it to several publishers. She hoped one of them would agree to publish it. What did the author hope?",
+        "options": [
+          "that a publisher would publish her novel",
+          "that she would start a new job",
+          "that the novel would be rejected",
+          "that she would stop writing"
+        ],
+        "correctAnswer": "that a publisher would publish her novel",
+        "explanation": "She hoped a publisher would accept her novel.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_16",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Our neighborhood organizes a clean-up day every spring. Residents pick up trash, plant flowers, and repaint fences. What activities are done during the clean-up day?",
+        "options": [
+          "all of the above",
+          "pick up trash",
+          "plant flowers",
+          "repaint fences"
+        ],
+        "correctAnswer": "all of the above",
+        "explanation": "All three activities are mentioned.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_17",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Before he decided to buy a car, Liam compared prices at different dealerships. He also asked friends for recommendations. What did Liam do before buying a car?",
+        "options": [
+          "he compared prices and asked for recommendations",
+          "he bought the first car he saw",
+          "he took a loan",
+          "he learned to drive"
+        ],
+        "correctAnswer": "he compared prices and asked for recommendations",
+        "explanation": "He researched before purchasing.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_18",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The new law requires all cyclists to wear helmets. Safety officials believe this will reduce head injuries. Why was the law introduced?",
+        "options": [
+          "to reduce head injuries",
+          "to sell more helmets",
+          "to slow down cyclists",
+          "to punish cyclists"
+        ],
+        "correctAnswer": "to reduce head injuries",
+        "explanation": "The law aims to reduce injuries.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_19",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "While visiting a foreign country, Rachel tried the local cuisine. She discovered she loved spicy dishes. What did Rachel discover?",
+        "options": [
+          "she loved spicy dishes",
+          "she disliked local food",
+          "she preferred desserts",
+          "she couldn't find food"
+        ],
+        "correctAnswer": "she loved spicy dishes",
+        "explanation": "She discovered she liked spicy food.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_20",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "At the art exhibition, there were paintings, sculptures, and photographs. Visitors enjoyed the diversity of the artwork. What did visitors enjoy about the art exhibition?",
+        "options": [
+          "the diversity of the artwork",
+          "the location",
+          "the snacks",
+          "the crowd"
+        ],
+        "correctAnswer": "the diversity of the artwork",
+        "explanation": "The visitors enjoyed the variety of art.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_21",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Every morning, the gardener waters the plants and removes the weeds to help them grow. What is one of the gardener's tasks?",
+        "options": [
+          "removing weeds",
+          "driving a truck",
+          "painting the fence",
+          "feeding animals"
+        ],
+        "correctAnswer": "removing weeds",
+        "explanation": "He removes weeds.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_22",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "When Mia practiced the piano regularly, she noticed a significant improvement in her performance. What effect did regular practice have on Mia's piano playing?",
+        "options": [
+          "her performance improved",
+          "it got worse",
+          "there was no change",
+          "she got bored"
+        ],
+        "correctAnswer": "her performance improved",
+        "explanation": "Her playing improved with practice.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_23",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The article explained that eating a balanced diet includes fruits, vegetables, proteins, and grains. What should be included in a balanced diet according to the article?",
+        "options": [
+          "fruits, vegetables, proteins and grains",
+          "only fruits and vegetables",
+          "only proteins",
+          "only grains"
+        ],
+        "correctAnswer": "fruits, vegetables, proteins and grains",
+        "explanation": "A balanced diet includes all listed categories.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_24",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "The city built new bike lanes to encourage cycling and reduce traffic congestion. What was one reason for building new bike lanes?",
+        "options": [
+          "to encourage cycling",
+          "to create parking spaces",
+          "to increase taxes",
+          "to block cars"
+        ],
+        "correctAnswer": "to encourage cycling",
+        "explanation": "Bike lanes encourage cycling.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_intermediate_25",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "After hearing the loud thunder, the dog hid under the bed. What caused the dog to hide?",
+        "options": [
+          "loud thunder",
+          "a stranger",
+          "a loud song",
+          "a new toy"
+        ],
+        "correctAnswer": "loud thunder",
+        "explanation": "The loud thunder scared the dog.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "reading_advanced_1",
+        "type": "reading",
+        "level": "advanced",
+        "question": "When researchers conducted the study, they found a correlation between exercise and mental health: participants who engaged in regular physical activity reported lower levels of stress and anxiety. The authors cautioned, however, that correlation does not prove causation. What key point did the authors emphasize about the study's findings?",
+        "options": [
+          "that correlation does not prove causation",
+          "that exercise causes stress",
+          "that mental health is unaffected by exercise",
+          "that the sample size was large"
+        ],
+        "correctAnswer": "that correlation does not prove causation",
+        "explanation": "The authors emphasized that correlation doesn't establish causation.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_2",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The government introduced a tax incentive to promote the use of solar panels. As a result, the number of households installing solar panels doubled within a year, significantly reducing dependence on fossil fuels. What was one outcome of the tax incentive?",
+        "options": [
+          "a doubling of households installing solar panels",
+          "a decrease in solar panel use",
+          "an increase in fossil fuel dependence",
+          "elimination of fossil fuels"
+        ],
+        "correctAnswer": "a doubling of households installing solar panels",
+        "explanation": "The number of households installing solar panels doubled.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_3",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Although the novel received critical acclaim, its complex narrative structure made it challenging for some readers. Despite this, it won several literary awards. Why might some readers find the novel difficult?",
+        "options": [
+          "because of its complex narrative structure",
+          "because it is too short",
+          "because it has pictures",
+          "because of simple language"
+        ],
+        "correctAnswer": "because of its complex narrative structure",
+        "explanation": "The complexity of the structure makes it challenging.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_4",
+        "type": "reading",
+        "level": "advanced",
+        "question": "During the debate, one candidate focused on healthcare reform, while the other highlighted education and infrastructure. The moderator ensured each topic received equal attention. What role did the moderator play?",
+        "options": [
+          "ensuring each topic received equal attention",
+          "supporting one candidate",
+          "deciding the winner",
+          "asking no questions"
+        ],
+        "correctAnswer": "ensuring each topic received equal attention",
+        "explanation": "The moderator made sure each topic was equally discussed.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_5",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The company's profits surged after it diversified its product line and entered new markets. Analysts attributed the growth to effective marketing strategies and competitive pricing. To what did analysts attribute the company's growth?",
+        "options": [
+          "effective marketing and competitive pricing",
+          "cutting salaries",
+          "reducing product quality",
+          "closing markets"
+        ],
+        "correctAnswer": "effective marketing and competitive pricing",
+        "explanation": "Analysts credited the marketing and pricing strategies.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_6",
+        "type": "reading",
+        "level": "advanced",
+        "question": "While the mountain trail was difficult and steep, the breathtaking view from the summit made the hike worthwhile for the climbers. What made the challenging hike worthwhile?",
+        "options": [
+          "the breathtaking view from the summit",
+          "the ease of the trail",
+          "the short distance",
+          "the cool weather"
+        ],
+        "correctAnswer": "the breathtaking view from the summit",
+        "explanation": "The view made the hike worthwhile.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_7",
+        "type": "reading",
+        "level": "advanced",
+        "question": "After the hurricane devastated the coastal town, international aid organizations provided relief supplies and assisted in rebuilding efforts. Local volunteers also played a crucial role in recovery. Who contributed to the town's recovery after the hurricane?",
+        "options": [
+          "international aid organizations and local volunteers",
+          "only the government",
+          "only tourists",
+          "no one"
+        ],
+        "correctAnswer": "international aid organizations and local volunteers",
+        "explanation": "Both aid organizations and local volunteers helped recover.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_8",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Scientists are developing biodegradable plastics to reduce environmental pollution. These new materials can decompose naturally, unlike traditional plastics that remain in landfills for centuries. How do biodegradable plastics differ from traditional plastics?",
+        "options": [
+          "they can decompose naturally",
+          "they are heavier",
+          "they are more expensive to make",
+          "they are non-renewable"
+        ],
+        "correctAnswer": "they can decompose naturally",
+        "explanation": "Biodegradable plastics can break down naturally.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_9",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The art critic argued that modern installations challenge traditional definitions of art by incorporating everyday objects and interactive elements. According to the critic, how do modern installations challenge traditional definitions of art?",
+        "options": [
+          "by using everyday objects and interactive elements",
+          "by copying classical paintings",
+          "by removing color",
+          "by focusing on landscapes"
+        ],
+        "correctAnswer": "by using everyday objects and interactive elements",
+        "explanation": "They challenge by using everyday objects and interactive elements.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_10",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Despite initial skepticism, the small startup secured major investment after demonstrating a prototype of its innovative medical device that could detect diseases early. What changed investors' minds about the startup?",
+        "options": [
+          "demonstration of a prototype",
+          "a large advertising campaign",
+          "government pressure",
+          "celebrity endorsements"
+        ],
+        "correctAnswer": "demonstration of a prototype",
+        "explanation": "The prototype demonstration convinced investors.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_11",
+        "type": "reading",
+        "level": "advanced",
+        "question": "In her lecture, the historian highlighted the influence of trade routes on cultural exchange, showing how goods, ideas, and technologies spread across continents. What did the historian say about trade routes?",
+        "options": [
+          "they facilitated the spread of goods, ideas, and technologies across continents",
+          "they were always dangerous",
+          "they limited cultural exchange",
+          "they originated in one country"
+        ],
+        "correctAnswer": "they facilitated the spread of goods, ideas, and technologies across continents",
+        "explanation": "Trade routes allowed goods and ideas to spread.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_12",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The experiment succeeded because the team followed a rigorous methodology and documented every step carefully. Their meticulous records allowed other scientists to replicate the results. Why were other scientists able to replicate the results?",
+        "options": [
+          "because the team documented every step carefully",
+          "because the experiment was simple",
+          "because they used the same lab",
+          "because they guessed the method"
+        ],
+        "correctAnswer": "because the team documented every step carefully",
+        "explanation": "Documentation enabled replication.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_13",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Before signing the contract, Maria reviewed every clause to ensure there were no hidden fees or unfavorable terms. What was Maria checking for in the contract?",
+        "options": [
+          "hidden fees or unfavorable terms",
+          "the length of the contract",
+          "the company's address",
+          "the font size"
+        ],
+        "correctAnswer": "hidden fees or unfavorable terms",
+        "explanation": "She looked for hidden fees or bad terms.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_14",
+        "type": "reading",
+        "level": "advanced",
+        "question": "When the new bridge opened, commuters saved an average of twenty minutes on their daily travel time. However, environmentalists expressed concerns about potential harm to the local wildlife. What concern did environmentalists have about the new bridge?",
+        "options": [
+          "potential harm to local wildlife",
+          "increased traffic speed",
+          "the color of the bridge",
+          "travel time reduction"
+        ],
+        "correctAnswer": "potential harm to local wildlife",
+        "explanation": "They were concerned about harm to wildlife.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_15",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Although the athlete broke the world record, he remained humble and credited his coach and teammates for their support. How did the athlete react to breaking the world record?",
+        "options": [
+          "he remained humble and credited his coach and teammates",
+          "he bragged about his success",
+          "he retired",
+          "he criticized his coach"
+        ],
+        "correctAnswer": "he remained humble and credited his coach and teammates",
+        "explanation": "He remained humble and gave credit.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_16",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The architectural design integrated sustainable materials and energy-efficient systems, setting a new standard for eco-friendly building practices. What set the architectural design apart?",
+        "options": [
+          "sustainable materials and energy-efficient systems",
+          "its historical style",
+          "its low cost",
+          "its small size"
+        ],
+        "correctAnswer": "sustainable materials and energy-efficient systems",
+        "explanation": "The use of sustainable and energy-efficient features set it apart.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_17",
+        "type": "reading",
+        "level": "advanced",
+        "question": "After decades of conflict, the peace treaty established a framework for cooperation and economic development between the two nations. What did the peace treaty establish?",
+        "options": [
+          "a framework for cooperation and economic development",
+          "a new war",
+          "an arms race",
+          "a tourism industry"
+        ],
+        "correctAnswer": "a framework for cooperation and economic development",
+        "explanation": "It established cooperation and development.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_18",
+        "type": "reading",
+        "level": "advanced",
+        "question": "When the teacher introduced group projects, students initially resisted but later appreciated the collaborative learning experience. How did students' attitudes towards group projects change?",
+        "options": [
+          "they initially resisted but later appreciated them",
+          "they always liked them",
+          "they still disliked them",
+          "they ignored them"
+        ],
+        "correctAnswer": "they initially resisted but later appreciated them",
+        "explanation": "Students came to appreciate group projects.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_19",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The documentary revealed that many endangered species face habitat loss due to deforestation and climate change. According to the documentary, what threats do endangered species face?",
+        "options": [
+          "habitat loss due to deforestation and climate change",
+          "abundant food",
+          "increased populations",
+          "new habitats"
+        ],
+        "correctAnswer": "habitat loss due to deforestation and climate change",
+        "explanation": "Habitat loss from deforestation and climate change threatens species.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_20",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Even though the recipe called for salt, Leo forgot to add it. Consequently, the soup tasted bland. Why did the soup taste bland?",
+        "options": [
+          "because Leo forgot to add salt",
+          "because too much salt was added",
+          "because the soup was spicy",
+          "because the vegetables were raw"
+        ],
+        "correctAnswer": "because Leo forgot to add salt",
+        "explanation": "The soup lacked salt.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_21",
+        "type": "reading",
+        "level": "advanced",
+        "question": "During the conference, experts emphasized the importance of cybersecurity in protecting personal data and preventing financial fraud. What was highlighted about cybersecurity?",
+        "options": [
+          "it protects personal data and prevents financial fraud",
+          "it increases prices",
+          "it is unnecessary",
+          "it replaces human jobs"
+        ],
+        "correctAnswer": "it protects personal data and prevents financial fraud",
+        "explanation": "Cybersecurity protects data and prevents fraud.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_22",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Although renewable energy sources are becoming more affordable, many communities still lack access to reliable electricity. What issue do many communities face regarding electricity?",
+        "options": [
+          "lack of access to reliable electricity",
+          "too much electricity",
+          "expensive fossil fuels",
+          "electric cars"
+        ],
+        "correctAnswer": "lack of access to reliable electricity",
+        "explanation": "They lack reliable electricity.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_23",
+        "type": "reading",
+        "level": "advanced",
+        "question": "The novelist used symbolism to convey deeper themes about freedom and identity, allowing readers to interpret the story on multiple levels. How did the novelist convey deeper themes?",
+        "options": [
+          "by using symbolism",
+          "by using simple language",
+          "by using factual data",
+          "by using photographs"
+        ],
+        "correctAnswer": "by using symbolism",
+        "explanation": "Symbolism conveys deeper themes.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_24",
+        "type": "reading",
+        "level": "advanced",
+        "question": "After reviewing the evidence, the judge concluded that the defendant was innocent and dismissed all charges. What was the judge's decision?",
+        "options": [
+          "the defendant was innocent and all charges were dismissed",
+          "the defendant was guilty",
+          "the trial was postponed",
+          "a new law was passed"
+        ],
+        "correctAnswer": "the defendant was innocent and all charges were dismissed",
+        "explanation": "The judge dismissed the charges.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "reading_advanced_25",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Researchers developed a vaccine that triggered a strong immune response without severe side effects, offering hope for disease prevention. What positive outcome did the vaccine have?",
+        "options": [
+          "it triggered a strong immune response without severe side effects",
+          "it caused severe side effects",
+          "it cured all diseases",
+          "it had no effect"
+        ],
+        "correctAnswer": "it triggered a strong immune response without severe side effects",
+        "explanation": "The vaccine worked without severe side effects.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "writing": {
+    "beginner": [
+      {
+        "id": "writing_beginner_1",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence is correctly capitalized?",
+        "options": [
+          "She lives in london.",
+          "She lives in London.",
+          "she lives in London.",
+          "she Lives in london."
+        ],
+        "correctAnswer": "She lives in London.",
+        "explanation": "Proper nouns like 'London' must be capitalized.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_2",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words to form a correct sentence: am / I / student / a",
+        "options": [
+          "I am a student.",
+          "Am I a student.",
+          "A student I am.",
+          "Student am a I."
+        ],
+        "correctAnswer": "I am a student.",
+        "explanation": "The correct word order is 'I am a student.'",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_3",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the sentence with correct punctuation.",
+        "options": [
+          "Where are you?",
+          "Where are you.",
+          "Where are you!",
+          "where are you?"
+        ],
+        "correctAnswer": "Where are you?",
+        "explanation": "Questions require a question mark and proper capitalization.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_4",
+        "type": "writing",
+        "level": "beginner",
+        "question": "I ___ breakfast at 7 a.m.",
+        "options": [
+          "eat",
+          "ate",
+          "eating",
+          "eats"
+        ],
+        "correctAnswer": "eat",
+        "explanation": "Use present simple for habitual actions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_5",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence is a statement?",
+        "options": [
+          "Can you swim?",
+          "Close the door!",
+          "I like pizza.",
+          "Don't touch that!"
+        ],
+        "correctAnswer": "I like pizza.",
+        "explanation": "A statement is a declarative sentence.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_6",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: never / I / coffee / drink / .",
+        "options": [
+          "I never drink coffee.",
+          "Never I drink coffee.",
+          "I drink never coffee.",
+          "I drink coffee never."
+        ],
+        "correctAnswer": "I never drink coffee.",
+        "explanation": "The adverb 'never' comes before the verb in this sentence.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_7",
+        "type": "writing",
+        "level": "beginner",
+        "question": "It ______ raining.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "is",
+        "explanation": "Use 'is' with 'it' for present continuous.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_8",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence has correct subject–verb agreement?",
+        "options": [
+          "They is playing.",
+          "They are playing.",
+          "They am playing.",
+          "They be playing."
+        ],
+        "correctAnswer": "They are playing.",
+        "explanation": "Use 'are' with plural subject 'they'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_9",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: school / to / go / I / every / day / .",
+        "options": [
+          "I go to school every day.",
+          "School I go every day to.",
+          "I to school go every day.",
+          "Every day go I to school."
+        ],
+        "correctAnswer": "I go to school every day.",
+        "explanation": "The natural word order is subject + verb + object + time.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_10",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the correct sentence.",
+        "options": [
+          "He don't like apples.",
+          "He doesn't like apples.",
+          "He not like apples.",
+          "He doesn't likes apples."
+        ],
+        "correctAnswer": "He doesn't like apples.",
+        "explanation": "Use 'doesn't' with base verb for third-person singular negative.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_11",
+        "type": "writing",
+        "level": "beginner",
+        "question": "My friend and ____ went to the park.",
+        "options": [
+          "I",
+          "me",
+          "she",
+          "he"
+        ],
+        "correctAnswer": "I",
+        "explanation": "Use 'I' as part of the subject.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_12",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence uses a contraction correctly?",
+        "options": [
+          "She's happy.",
+          "She're happy.",
+          "She is happy.",
+          "She's are happy."
+        ],
+        "correctAnswer": "She's happy.",
+        "explanation": "'She's' correctly contracts 'She is'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_13",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: can't / because / outside / go / we / late / is / it / too",
+        "options": [
+          "We can't go outside because it is too late.",
+          "We because it is too late can't go outside.",
+          "Can't we go outside because it is too late.",
+          "We go outside because it is too late can't."
+        ],
+        "correctAnswer": "We can't go outside because it is too late.",
+        "explanation": "This is the correct word order.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_14",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence uses capital letters correctly?",
+        "options": [
+          "Next week we will go to paris.",
+          "Next Week we will go to Paris.",
+          "Next week we will go to Paris.",
+          "next week we will go to paris."
+        ],
+        "correctAnswer": "Next week we will go to Paris.",
+        "explanation": "Proper nouns like 'Paris' must be capitalized.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_15",
+        "type": "writing",
+        "level": "beginner",
+        "question": "I saw ____ elephant at the zoo.",
+        "options": [
+          "an",
+          "a",
+          "the",
+          "no word"
+        ],
+        "correctAnswer": "an",
+        "explanation": "Use 'an' before vowel sounds.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_16",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She don't have a bike.",
+          "She doesn't have a bike.",
+          "She not have a bike.",
+          "She hasn't a bike."
+        ],
+        "correctAnswer": "She doesn't have a bike.",
+        "explanation": "Use 'doesn't' with base verb.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_17",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: birthday / today / it's / my",
+        "options": [
+          "It's my birthday today.",
+          "My it's birthday today.",
+          "It's today my birthday.",
+          "Birthday my today it's."
+        ],
+        "correctAnswer": "It's my birthday today.",
+        "explanation": "The correct word order is 'It's my birthday today.'",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_18",
+        "type": "writing",
+        "level": "beginner",
+        "question": "They ______ to music right now.",
+        "options": [
+          "are listening",
+          "is listening",
+          "listening",
+          "listens"
+        ],
+        "correctAnswer": "are listening",
+        "explanation": "Use 'are listening' for present continuous with plural subject.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_19",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Do you can swim?",
+          "Can you swim?",
+          "Swim you can?",
+          "Can swim you?"
+        ],
+        "correctAnswer": "Can you swim?",
+        "explanation": "Modal verbs come before the subject in questions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_20",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: drive / can't / yet / I",
+        "options": [
+          "I can't drive yet.",
+          "Can't I drive yet.",
+          "Yet I can't drive.",
+          "I yet can't drive."
+        ],
+        "correctAnswer": "I can't drive yet.",
+        "explanation": "The correct word order is 'I can't drive yet.'",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_21",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the sentence with correct punctuation.",
+        "options": [
+          "What time is it?",
+          "What time is it.",
+          "what time is it?",
+          "What time is it!"
+        ],
+        "correctAnswer": "What time is it?",
+        "explanation": "Questions require a question mark and capital letter at the start.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_22",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Please pass ____ salt.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "no article"
+        ],
+        "correctAnswer": "the",
+        "explanation": "Use 'the' for specific items known to both speaker and listener.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_23",
+        "type": "writing",
+        "level": "beginner",
+        "question": "One child, two ____.",
+        "options": [
+          "children",
+          "childs",
+          "childes",
+          "childrenes"
+        ],
+        "correctAnswer": "children",
+        "explanation": "The plural of 'child' is 'children'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_24",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Arrange the words: clean / room / I / my / should / today",
+        "options": [
+          "I should clean my room today.",
+          "I should today clean my room.",
+          "Should I clean my room today.",
+          "Clean I should my room today."
+        ],
+        "correctAnswer": "I should clean my room today.",
+        "explanation": "Correct word order is subject + modal + verb + object + time.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_beginner_25",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the correct sentence.",
+        "options": [
+          "There are much people at the concert.",
+          "There are many people at the concert.",
+          "There is many people at the concert.",
+          "There were many peoples at the concert."
+        ],
+        "correctAnswer": "There are many people at the concert.",
+        "explanation": "Use 'many' with countable nouns and 'are' for plural.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "writing_intermediate_1",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence uses a relative clause correctly?",
+        "options": [
+          "The book that I read was interesting.",
+          "The book, I read was interesting that.",
+          "I read book was interesting that.",
+          "The book interesting was read I."
+        ],
+        "correctAnswer": "The book that I read was interesting.",
+        "explanation": "The relative pronoun 'that' introduces the clause correctly.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_2",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank with an appropriate transition: She studied hard; ______, she passed the exam.",
+        "options": [
+          "therefore",
+          "however",
+          "although",
+          "because"
+        ],
+        "correctAnswer": "therefore",
+        "explanation": "'Therefore' shows cause and effect.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_3",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence has parallel structure?",
+        "options": [
+          "He likes hiking, swimming, and to ride a bike.",
+          "He likes to hike, to swim, and to ride a bike.",
+          "He likes hiking, to swim, and riding a bike.",
+          "He likes to hike, swim, and riding a bike."
+        ],
+        "correctAnswer": "He likes to hike, to swim, and to ride a bike.",
+        "explanation": "Infinitives should be used consistently for parallelism.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_4",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Arrange the words into a correct sentence: we / stayed / because / we / were / tired",
+        "options": [
+          "We stayed because we were tired.",
+          "Because we were stayed tired we.",
+          "We were stayed tired because we.",
+          "Because were we tired we stayed."
+        ],
+        "correctAnswer": "We stayed because we were tired.",
+        "explanation": "Correct order is subject + verb + reason.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_5",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence correctly fixes the comma splice?",
+        "options": [
+          "The sun was shining so we went for a walk.",
+          "The sun was shining, we went for a walk.",
+          "The sun was shining and we went for a walk.",
+          "The sun was shining because we went for a walk."
+        ],
+        "correctAnswer": "The sun was shining so we went for a walk.",
+        "explanation": "Connecting with 'so' fixes the comma splice.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_6",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: Each of the students must bring ______ own pencil.",
+        "options": [
+          "his or her",
+          "their",
+          "her",
+          "his"
+        ],
+        "correctAnswer": "his or her",
+        "explanation": "'Each' is singular, so use 'his or her'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_7",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which is the most coherent topic sentence for a paragraph about the benefits of exercise?",
+        "options": [
+          "Regular exercise can improve physical and mental health.",
+          "Cats are popular pets worldwide.",
+          "History classes are boring.",
+          "The world economy is complex."
+        ],
+        "correctAnswer": "Regular exercise can improve physical and mental health.",
+        "explanation": "This introduces the topic clearly.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_8",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Arrange the words: enjoys / films / watching / she / foreign",
+        "options": [
+          "She enjoys watching foreign films.",
+          "Watching she enjoys films foreign.",
+          "Foreign films she enjoys watching.",
+          "She watching enjoys foreign films."
+        ],
+        "correctAnswer": "She enjoys watching foreign films.",
+        "explanation": "Correct word order is subject + verb + object.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_9",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank with the correct subordinating conjunction: I'll call you ______ I arrive.",
+        "options": [
+          "when",
+          "because",
+          "although",
+          "yet"
+        ],
+        "correctAnswer": "when",
+        "explanation": "'When' indicates time.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_10",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence avoids a run-on sentence?",
+        "options": [
+          "I went to the store, and I bought milk.",
+          "I went to the store I bought milk.",
+          "I went to the store I bought milk, eggs and bread.",
+          "Went I to the store and I bought milk."
+        ],
+        "correctAnswer": "I went to the store, and I bought milk.",
+        "explanation": "Using a comma and conjunction avoids a run-on.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_11",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: He was tired; ______, he kept working.",
+        "options": [
+          "nevertheless",
+          "therefore",
+          "because",
+          "so"
+        ],
+        "correctAnswer": "nevertheless",
+        "explanation": "'Nevertheless' shows contrast.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_12",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence is a correctly punctuated complex sentence?",
+        "options": [
+          "Although it was raining, we went outside.",
+          "Although it was raining we went outside.",
+          "Although it was raining; we went outside.",
+          "Although, it was raining we went outside."
+        ],
+        "correctAnswer": "Although it was raining, we went outside.",
+        "explanation": "Use a comma after the dependent clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_13",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Arrange the words: who / is / that / woman / who / everyone / knows",
+        "options": [
+          "Who is that woman who everyone knows?",
+          "Who that woman is who everyone knows?",
+          "That woman who everyone knows who is?",
+          "Who everyone knows that woman is who?"
+        ],
+        "correctAnswer": "Who is that woman who everyone knows?",
+        "explanation": "Correct word order in a question is 'Who is that woman...?'",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_14",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: If I ______ enough time, I will visit you.",
+        "options": [
+          "have",
+          "had",
+          "will have",
+          "am having"
+        ],
+        "correctAnswer": "have",
+        "explanation": "Use present simple in the 'if' clause for future plans.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_15",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence uses a colon correctly?",
+        "options": [
+          "She brought three items: bread, cheese and fruit.",
+          "She brought bread, cheese, and: fruit.",
+          "She brought bread: cheese, and fruit.",
+          "She brought three items bread, cheese and fruit:"
+        ],
+        "correctAnswer": "She brought three items: bread, cheese and fruit.",
+        "explanation": "Use a colon to introduce a list after an independent clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_16",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which thesis statement is best for an essay about recycling?",
+        "options": [
+          "Recycling helps reduce waste and save natural resources.",
+          "Dogs are better than cats.",
+          "I like to recycle.",
+          "Recycling is sometimes hard."
+        ],
+        "correctAnswer": "Recycling helps reduce waste and save natural resources.",
+        "explanation": "This thesis clearly states the main argument.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_17",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: I wanted to buy the shoes; ______, they were too expensive.",
+        "options": [
+          "however",
+          "because",
+          "therefore",
+          "although"
+        ],
+        "correctAnswer": "however",
+        "explanation": "'However' signals a contrast.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_18",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Arrange the words: essay / a / well-organized / includes / introduction / an",
+        "options": [
+          "A well-organized essay includes an introduction.",
+          "An essay includes well-organized a introduction.",
+          "A well-organized includes an introduction essay.",
+          "Includes an introduction a well-organized essay."
+        ],
+        "correctAnswer": "A well-organized essay includes an introduction.",
+        "explanation": "Correct word order for the sentence.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_19",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence has correct parallelism?",
+        "options": [
+          "She likes to read, cook, and jog.",
+          "She likes reading, to cook and jogging.",
+          "She likes reading, cooking and to jog.",
+          "She likes to read, cooking and jogging."
+        ],
+        "correctAnswer": "She likes to read, cook, and jog.",
+        "explanation": "Use infinitives consistently for parallelism.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_20",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: Neither John nor Mark brought ______ camera.",
+        "options": [
+          "his",
+          "their",
+          "him",
+          "them"
+        ],
+        "correctAnswer": "his",
+        "explanation": "Use singular pronoun after 'neither...nor'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_21",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence uses a semicolon correctly?",
+        "options": [
+          "I have a big test tomorrow; I can't go out tonight.",
+          "I have a big test tomorrow, I can't go out tonight.",
+          "I have; a big test tomorrow I can't go out tonight.",
+          "I have a big test; tomorrow I can't go out tonight."
+        ],
+        "correctAnswer": "I have a big test tomorrow; I can't go out tonight.",
+        "explanation": "A semicolon connects two related independent clauses.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_22",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: She was cooking dinner when the phone ______.",
+        "options": [
+          "rang",
+          "rings",
+          "ring",
+          "had rung"
+        ],
+        "correctAnswer": "rang",
+        "explanation": "Use past simple to interrupt past continuous.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_23",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence uses a comma with an introductory phrase correctly?",
+        "options": [
+          "After the meeting, we went for coffee.",
+          "After the meeting we went for coffee.",
+          "After, the meeting we went for coffee.",
+          "After the meeting we went, for coffee."
+        ],
+        "correctAnswer": "After the meeting, we went for coffee.",
+        "explanation": "Place a comma after an introductory phrase.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_24",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Fill in the blank: ______ you start now, you won't finish on time.",
+        "options": [
+          "Unless",
+          "Although",
+          "Since",
+          "Because"
+        ],
+        "correctAnswer": "Unless",
+        "explanation": "'Unless' expresses a negative condition.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_intermediate_25",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Which sentence avoids a dangling modifier?",
+        "options": [
+          "While walking down the street, I saw the tree fall.",
+          "While walking down the street, the tree fell.",
+          "Walking down the street, the tree fell.",
+          "Walking down the street, the wind was strong."
+        ],
+        "correctAnswer": "While walking down the street, I saw the tree fall.",
+        "explanation": "The subject performing the action should follow the modifier.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "writing_advanced_1",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Choose the best revision for clarity: 'In my opinion, I think that the main reason is because people are afraid.'",
+        "options": [
+          "I think the main reason is that people are afraid.",
+          "People are afraid, which is the main reason.",
+          "In my opinion, because people are afraid is why.",
+          "Because people are afraid, that is the main reason I think."
+        ],
+        "correctAnswer": "I think the main reason is that people are afraid.",
+        "explanation": "This revision removes redundancy and is clear.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_2",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence correctly uses an em dash?",
+        "options": [
+          "The committee—comprised of professors, students, and staff—met to discuss the proposal.",
+          "The committee, comprised of professors—students, and staff, met to discuss the proposal.",
+          "The committee—comprised of professors, students, and staff, met to discuss the proposal.",
+          "The committee—comprised of professors students and staff—met to discuss the proposal."
+        ],
+        "correctAnswer": "The committee—comprised of professors, students, and staff—met to discuss the proposal.",
+        "explanation": "This sentence correctly uses em dashes to set off the nonessential clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_3",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence avoids wordiness?",
+        "options": [
+          "Because the weather was bad, the game was canceled.",
+          "Due to the fact that the weather was bad, the game was canceled.",
+          "The game was canceled, due to the fact that the weather was bad.",
+          "In light of the fact that the weather was bad, the game was canceled."
+        ],
+        "correctAnswer": "Because the weather was bad, the game was canceled.",
+        "explanation": "This sentence expresses the idea concisely.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_4",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank to create parallel structure: The job requires applicants to be detail-oriented, creative, and ______.",
+        "options": [
+          "organized",
+          "to work hard",
+          "they must be punctual",
+          "and have experience"
+        ],
+        "correctAnswer": "organized",
+        "explanation": "Use a single adjective to maintain parallelism.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_5",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence has correct placement of a modifier?",
+        "options": [
+          "She drove her children to school almost every day.",
+          "She almost drove her children to school every day.",
+          "She drove almost her children to school every day.",
+          "Almost she drove her children to school every day."
+        ],
+        "correctAnswer": "She drove her children to school almost every day.",
+        "explanation": "The modifier 'almost' should modify the frequency, not the action.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_6",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank with the correct connector for contrast: The new policy is beneficial; ______, it may increase costs in the short term.",
+        "options": [
+          "however",
+          "therefore",
+          "consequently",
+          "moreover"
+        ],
+        "correctAnswer": "however",
+        "explanation": "'However' shows contrast.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_7",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence has correct subject–verb agreement?",
+        "options": [
+          "A number of students are missing the assignment.",
+          "A number of students is missing the assignment.",
+          "The number of students are missing the assignment.",
+          "The number of students were missing the assignment."
+        ],
+        "correctAnswer": "A number of students are missing the assignment.",
+        "explanation": "Use plural verb with 'a number of'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_8",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank with the correct pronoun reference: If the students don't study, they risk losing ______ scholarships.",
+        "options": [
+          "their",
+          "his or her",
+          "our",
+          "them"
+        ],
+        "correctAnswer": "their",
+        "explanation": "Use 'their' to refer back to 'students'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_9",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence uses the semicolon correctly in a complex list?",
+        "options": [
+          "The meeting was attended by John, the manager; Susan, the accountant; and Mark, the engineer.",
+          "The meeting was attended by John; the manager, Susan; the accountant, and Mark; the engineer.",
+          "The meeting was attended by John, the manager, Susan, the accountant; and Mark, the engineer.",
+          "The meeting was attended by John the manager; Susan the accountant; and Mark the engineer."
+        ],
+        "correctAnswer": "The meeting was attended by John, the manager; Susan, the accountant; and Mark, the engineer.",
+        "explanation": "Semicolons separate items in a list when the items contain commas.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_10",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank to create concision: ______ he was late, he apologized.",
+        "options": [
+          "Although",
+          "Because",
+          "After",
+          "Even though"
+        ],
+        "correctAnswer": "Although",
+        "explanation": "'Although he was late' is concise and clear.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_11",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which thesis statement is best for an essay about the importance of sleep?",
+        "options": [
+          "Adequate sleep is crucial for cognitive function, physical health, and emotional well-being.",
+          "People should sleep.",
+          "Sleep is nice.",
+          "Sleeping is something everyone does."
+        ],
+        "correctAnswer": "Adequate sleep is crucial for cognitive function, physical health, and emotional well-being.",
+        "explanation": "This thesis clearly states the importance of sleep.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_12",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank with a transition showing cause and effect: She studied all week; ______, she passed the exam with high marks.",
+        "options": [
+          "as a result",
+          "however",
+          "moreover",
+          "in contrast"
+        ],
+        "correctAnswer": "as a result",
+        "explanation": "'As a result' shows cause and effect.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_13",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence avoids a split infinitive?",
+        "options": [
+          "He decided to finish his work quickly.",
+          "He decided to quickly finish his work.",
+          "He decided quickly to finish his work.",
+          "He decided to finish quickly his work."
+        ],
+        "correctAnswer": "He decided to finish his work quickly.",
+        "explanation": "Place the adverb after the infinitive phrase to avoid splitting it.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_14",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank to maintain voice consistency: The report was written by the assistant, and the manager ______ it.",
+        "options": [
+          "reviewed",
+          "is reviewing",
+          "reviews",
+          "has reviewing"
+        ],
+        "correctAnswer": "reviewed",
+        "explanation": "Maintain past tense for consistency.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_15",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence uses a colon correctly?",
+        "options": [
+          "She had only one hobby: collecting rare stamps.",
+          "She had only one hobby; collecting rare stamps.",
+          "She had only one hobby: she collects rare stamps.",
+          "She had only one hobby collecting: rare stamps."
+        ],
+        "correctAnswer": "She had only one hobby: collecting rare stamps.",
+        "explanation": "Use a colon to introduce a list or explanation.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_16",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank with the correct conditional perfect: If they had planned better, they ______ fewer problems.",
+        "options": [
+          "would have had",
+          "will have",
+          "had",
+          "have"
+        ],
+        "correctAnswer": "would have had",
+        "explanation": "Use 'would have had' in third conditional sentences.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_17",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence avoids redundancy?",
+        "options": [
+          "The reason is that he was tired.",
+          "The reason is because he was tired.",
+          "He was tired, which is the reason.",
+          "Because he was tired, that is the reason."
+        ],
+        "correctAnswer": "The reason is that he was tired.",
+        "explanation": "Avoid using 'reason' and 'because' together.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_18",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank with a correct relative pronoun: The committee, ______ members were appointed last year, will meet tomorrow.",
+        "options": [
+          "whose",
+          "who's",
+          "which",
+          "that"
+        ],
+        "correctAnswer": "whose",
+        "explanation": "Use 'whose' to show possession.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_19",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence uses hyphenation correctly?",
+        "options": [
+          "She is a well-known author.",
+          "She is a well known author.",
+          "She is a well-known-author.",
+          "She is well - known author."
+        ],
+        "correctAnswer": "She is a well-known author.",
+        "explanation": "Compound adjectives before a noun are hyphenated.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_20",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank to combine the sentences using a participle phrase: He finished his work. He went for a run. ______ his work, he went for a run.",
+        "options": [
+          "Having finished",
+          "Having finish",
+          "After finished",
+          "Finishing"
+        ],
+        "correctAnswer": "Having finished",
+        "explanation": "Use 'Having finished' to form a perfect participle phrase.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_21",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence correctly punctuates an introductory clause?",
+        "options": [
+          "If possible, please send the files today.",
+          "If possible please send the files today.",
+          "If possible; please send the files today.",
+          "If possible please, send the files today."
+        ],
+        "correctAnswer": "If possible, please send the files today.",
+        "explanation": "Place a comma after an introductory clause.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_22",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Fill in the blank to maintain parallel structure: Her goals include traveling the world, starting a business, and ______.",
+        "options": [
+          "writing a novel",
+          "to write a novel",
+          "she wants to write a novel",
+          "write a novel"
+        ],
+        "correctAnswer": "writing a novel",
+        "explanation": "Use gerunds consistently to maintain parallel structure.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_23",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence correctly uses the subjunctive mood?",
+        "options": [
+          "It is important that he be on time.",
+          "It is important that he is on time.",
+          "It is important that he will be on time.",
+          "It is important that he was on time."
+        ],
+        "correctAnswer": "It is important that he be on time.",
+        "explanation": "Use the base verb form after 'that' in subjunctive clauses.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_24",
+        "type": "writing",
+        "level": "advanced",
+        "question": "She speaks French ______.",
+        "options": [
+          "fluently",
+          "fluent",
+          "fluent-ly",
+          "with fluently"
+        ],
+        "correctAnswer": "fluently",
+        "explanation": "Use the adverb 'fluently' to describe how she speaks.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "writing_advanced_25",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Which sentence uses commas to separate coordinate adjectives correctly?",
+        "options": [
+          "It was a long, tiring journey.",
+          "It was a long tiring journey.",
+          "It was a long, tiring, journey.",
+          "It was, a long tiring journey."
+        ],
+        "correctAnswer": "It was a long, tiring journey.",
+        "explanation": "Use a comma between coordinate adjectives.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "mixed": {
+    "beginner": [
+      {
+        "id": "mixed_beginner_1",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "What is the opposite of 'hot'?",
+        "options": [
+          "cold",
+          "warm",
+          "dark",
+          "soft"
+        ],
+        "correctAnswer": "cold",
+        "explanation": "'Cold' is the opposite of 'hot'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_2",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "She ____ a doctor.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "is",
+        "explanation": "Use 'is' with singular subject 'she'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_3",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Sara has a dog named Max. Max loves to chase balls. What is the dog's name?",
+        "options": [
+          "Max",
+          "Sara",
+          "Ball",
+          "Dog"
+        ],
+        "correctAnswer": "Max",
+        "explanation": "The dog's name is Max.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_4",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "We ____ to the cinema yesterday.",
+        "options": [
+          "went",
+          "go",
+          "going",
+          "goes"
+        ],
+        "correctAnswer": "went",
+        "explanation": "Use past tense 'went' for yesterday.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_5",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "What is the opposite of 'short'?",
+        "options": [
+          "tall",
+          "thin",
+          "big",
+          "small"
+        ],
+        "correctAnswer": "tall",
+        "explanation": "'Tall' is the opposite of 'short'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_6",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "The plant needs water and sunlight to grow. What does the plant need?",
+        "options": [
+          "water and sunlight",
+          "soil and ice",
+          "books and music",
+          "coffee and tea"
+        ],
+        "correctAnswer": "water and sunlight",
+        "explanation": "It needs water and sunlight.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_7",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "He ____ reading a book now.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "is",
+        "explanation": "Use 'is' with singular subject 'he' in present continuous.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_8",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Arrange the words: car / red / a / has / She",
+        "options": [
+          "She has a red car.",
+          "Has she a red car.",
+          "She a has red car.",
+          "She has red a car."
+        ],
+        "correctAnswer": "She has a red car.",
+        "explanation": "Correct word order is subject + verb + object.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_9",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Which word does not belong: apple, orange, banana, chair?",
+        "options": [
+          "chair",
+          "apple",
+          "orange",
+          "banana"
+        ],
+        "correctAnswer": "chair",
+        "explanation": "Chair is a piece of furniture, not a fruit.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_10",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "My friends ____ going to the party tonight.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "are",
+        "explanation": "Use 'are' with plural subject 'friends'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_11",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "It snowed all night, and the ground is covered in white. What is covering the ground?",
+        "options": [
+          "snow",
+          "sand",
+          "leaves",
+          "water"
+        ],
+        "correctAnswer": "snow",
+        "explanation": "Snow covers the ground.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_12",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "What is the opposite of 'begin'?",
+        "options": [
+          "end",
+          "start",
+          "open",
+          "close"
+        ],
+        "correctAnswer": "end",
+        "explanation": "'End' is the opposite of 'begin'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_13",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Where ____ you live?",
+        "options": [
+          "do",
+          "does",
+          "did",
+          "are"
+        ],
+        "correctAnswer": "do",
+        "explanation": "Use 'do' to form questions with 'you'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_14",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Lucy wears a hat to keep the sun off her face. Why does Lucy wear a hat?",
+        "options": [
+          "to keep the sun off her face",
+          "to be fashionable",
+          "to hide her hair",
+          "to rain"
+        ],
+        "correctAnswer": "to keep the sun off her face",
+        "explanation": "She wears it to block the sun.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_15",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Which word means 'fast'?",
+        "options": [
+          "quick",
+          "slow",
+          "late",
+          "small"
+        ],
+        "correctAnswer": "quick",
+        "explanation": "'Quick' means 'fast'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_16",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "I ____ dinner when you called.",
+        "options": [
+          "was cooking",
+          "am cooking",
+          "cooked",
+          "cook"
+        ],
+        "correctAnswer": "was cooking",
+        "explanation": "Use past continuous for an action in progress at a specific time in the past.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_17",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Arrange the words: very / a / dog / friendly / is / This",
+        "options": [
+          "This is a very friendly dog.",
+          "This dog is very a friendly.",
+          "Very this dog is friendly a.",
+          "Friendly is this a very dog."
+        ],
+        "correctAnswer": "This is a very friendly dog.",
+        "explanation": "Correct word order is subject + verb + article + adjectives + noun.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_18",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Which word does not belong: blue, green, happy, red?",
+        "options": [
+          "happy",
+          "blue",
+          "green",
+          "red"
+        ],
+        "correctAnswer": "happy",
+        "explanation": "'Happy' is an adjective of emotion, while the others are colors.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_19",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "She ____ like coffee.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "wasn't"
+        ],
+        "correctAnswer": "doesn't",
+        "explanation": "Use 'doesn't' for third-person singular negatives.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_20",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "The shop closes at 8 p.m. When does the shop close?",
+        "options": [
+          "8 p.m.",
+          "9 p.m.",
+          "7 p.m.",
+          "6 p.m."
+        ],
+        "correctAnswer": "8 p.m.",
+        "explanation": "It closes at 8 p.m.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_21",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Which word is the synonym of 'thin'?",
+        "options": [
+          "slim",
+          "fat",
+          "heavy",
+          "thick"
+        ],
+        "correctAnswer": "slim",
+        "explanation": "'Slim' and 'thin' have similar meanings.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_22",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "There ____ three books on the table.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "correctAnswer": "are",
+        "explanation": "Use 'are' with plural nouns.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_23",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "The dog barked loudly because he saw a stranger. Why did the dog bark?",
+        "options": [
+          "because he saw a stranger",
+          "because he was sleepy",
+          "because he was eating",
+          "because he wanted to play"
+        ],
+        "correctAnswer": "because he saw a stranger",
+        "explanation": "He barked because of the stranger.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_24",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Arrange the words: letter / wrote / long / a / She",
+        "options": [
+          "She wrote a long letter.",
+          "Long she wrote a letter.",
+          "She a wrote long letter.",
+          "Wrote she a long letter."
+        ],
+        "correctAnswer": "She wrote a long letter.",
+        "explanation": "Correct word order is subject + verb + article + adjective + noun.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_beginner_25",
+        "type": "mixed",
+        "level": "beginner",
+        "question": "Which word is the opposite of 'full'?",
+        "options": [
+          "empty",
+          "heavy",
+          "light",
+          "whole"
+        ],
+        "correctAnswer": "empty",
+        "explanation": "'Empty' is the opposite of 'full'.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "mixed_intermediate_1",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What is the synonym of 'purchase'?",
+        "options": [
+          "buy",
+          "sell",
+          "borrow",
+          "keep"
+        ],
+        "correctAnswer": "buy",
+        "explanation": "'Purchase' means to buy.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_2",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "If I _____ enough money, I would travel around the world.",
+        "options": [
+          "had",
+          "have",
+          "had had",
+          "will have"
+        ],
+        "correctAnswer": "had",
+        "explanation": "Use past simple in the conditional clause for hypothetical situations.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_3",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Marco forgot to set his alarm and woke up late. As a result, he missed the first train and arrived at work an hour late. What was the result of Marco forgetting to set his alarm?",
+        "options": [
+          "he missed the first train and arrived at work an hour late",
+          "he arrived early at work",
+          "he didn't go to work",
+          "he bought a new alarm"
+        ],
+        "correctAnswer": "he missed the first train and arrived at work an hour late",
+        "explanation": "He was late because he overslept.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_4",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "She ______ French for two years.",
+        "options": [
+          "has been studying",
+          "studied",
+          "studies",
+          "is studying"
+        ],
+        "correctAnswer": "has been studying",
+        "explanation": "Present perfect continuous shows an action continuing up to now.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_5",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What is the antonym of 'ancient'?",
+        "options": [
+          "modern",
+          "old",
+          "historic",
+          "classical"
+        ],
+        "correctAnswer": "modern",
+        "explanation": "'Modern' is the opposite of 'ancient'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_6",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "He was tired; ______, he finished his homework.",
+        "options": [
+          "nevertheless",
+          "because",
+          "therefore",
+          "although"
+        ],
+        "correctAnswer": "nevertheless",
+        "explanation": "'Nevertheless' shows contrast.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_7",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "The documentary about marine life featured colorful coral reefs and exotic fish. It encouraged viewers to protect the oceans. What did the documentary encourage viewers to do?",
+        "options": [
+          "protect the oceans",
+          "go fishing",
+          "swim in coral reefs",
+          "feed fish"
+        ],
+        "correctAnswer": "protect the oceans",
+        "explanation": "Viewers were encouraged to protect the oceans.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_8",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "They said they ______ the movie already.",
+        "options": [
+          "had seen",
+          "saw",
+          "have seen",
+          "see"
+        ],
+        "correctAnswer": "had seen",
+        "explanation": "Use past perfect for an action completed before another past action.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_9",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which collocation is correct?",
+        "options": [
+          "make a decision",
+          "do a decision",
+          "create a decision",
+          "build a decision"
+        ],
+        "correctAnswer": "make a decision",
+        "explanation": "We say 'make a decision'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_10",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which sentence has correct parallel structure?",
+        "options": [
+          "He likes to read, to cook, and to ride a bike.",
+          "He likes reading, to cook, and to ride a bike.",
+          "He likes reading, cooking and to ride a bike.",
+          "He likes to read, cooking and riding a bike."
+        ],
+        "correctAnswer": "He likes to read, to cook, and to ride a bike.",
+        "explanation": "Use the same form for all items in a list.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_11",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "I wish I ______ to the party last night.",
+        "options": [
+          "had gone",
+          "went",
+          "go",
+          "have gone"
+        ],
+        "correctAnswer": "had gone",
+        "explanation": "Use past perfect after 'wish' to express regret about the past.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_12",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which activity is NOT mentioned in the clean-up day description?",
+        "options": [
+          "cooking meals",
+          "painting fences",
+          "planting flowers",
+          "picking up trash"
+        ],
+        "correctAnswer": "cooking meals",
+        "explanation": "Cooking meals is not mentioned in the description.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_13",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which word means 'unexpected'?",
+        "options": [
+          "surprising",
+          "usual",
+          "ordinary",
+          "normal"
+        ],
+        "correctAnswer": "surprising",
+        "explanation": "'Surprising' means unexpected.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_14",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Neither the teacher nor the students ______ present.",
+        "options": [
+          "were",
+          "was",
+          "are",
+          "has been"
+        ],
+        "correctAnswer": "were",
+        "explanation": "Verb agrees with the closer subject.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_15",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which sentence avoids a run-on sentence?",
+        "options": [
+          "I went to the store, and I bought milk.",
+          "I went to the store I bought milk.",
+          "I went to the store I bought milk and eggs.",
+          "Went I to the store and I bought milk."
+        ],
+        "correctAnswer": "I went to the store, and I bought milk.",
+        "explanation": "Use a conjunction to avoid a run-on.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_16",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What effect did practice have on Mia's piano playing?",
+        "options": [
+          "It improved",
+          "It worsened",
+          "No change",
+          "She quit"
+        ],
+        "correctAnswer": "It improved",
+        "explanation": "Her playing improved with practice.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_17",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What does the phrasal verb 'look after' mean?",
+        "options": [
+          "care for",
+          "search for",
+          "remove",
+          "ignore"
+        ],
+        "correctAnswer": "care for",
+        "explanation": "'Look after' means to care for someone or something.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_18",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "By the time you arrive, we will have ______ dinner.",
+        "options": [
+          "finished",
+          "finish",
+          "finishing",
+          "been finished"
+        ],
+        "correctAnswer": "finished",
+        "explanation": "Use past participle after 'will have' to form future perfect.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_19",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "I wanted to buy the jacket; ______, it was too expensive.",
+        "options": [
+          "however",
+          "because",
+          "therefore",
+          "although"
+        ],
+        "correctAnswer": "however",
+        "explanation": "Use 'however' to contrast two clauses.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_20",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What tasks does Laura perform at the shelter?",
+        "options": [
+          "She feeds the animals and cleans their cages",
+          "She sells animals",
+          "She paints cages",
+          "She trains animals"
+        ],
+        "correctAnswer": "She feeds the animals and cleans their cages",
+        "explanation": "Her tasks include feeding and cleaning.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_21",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which word does not belong: democracy, monarchy, university, dictatorship?",
+        "options": [
+          "university",
+          "democracy",
+          "monarchy",
+          "dictatorship"
+        ],
+        "correctAnswer": "university",
+        "explanation": "'University' is an educational institution, not a government form.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_22",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Each of the students must bring ______ own calculator.",
+        "options": [
+          "his or her",
+          "their",
+          "him",
+          "them"
+        ],
+        "correctAnswer": "his or her",
+        "explanation": "Use singular pronoun for 'each'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_23",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "Which sentence uses a colon correctly?",
+        "options": [
+          "She brought three items: bread, cheese and fruit.",
+          "She brought three items; bread, cheese and fruit.",
+          "She brought: three items bread, cheese and fruit.",
+          "She brought three items bread, cheese and fruit:"
+        ],
+        "correctAnswer": "She brought three items: bread, cheese and fruit.",
+        "explanation": "Use a colon to introduce a list.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_24",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "How did the students react to the chemical reaction demonstration?",
+        "options": [
+          "They were fascinated",
+          "They were bored",
+          "They were scared",
+          "They left the room"
+        ],
+        "correctAnswer": "They were fascinated",
+        "explanation": "The students found the reaction fascinating.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_intermediate_25",
+        "type": "mixed",
+        "level": "intermediate",
+        "question": "What is the synonym of 'brief'?",
+        "options": [
+          "short",
+          "long",
+          "detailed",
+          "complicated"
+        ],
+        "correctAnswer": "short",
+        "explanation": "'Brief' means short.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "mixed_advanced_1",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Ubiquitous' means ______.",
+        "options": [
+          "everywhere",
+          "rare",
+          "hidden",
+          "trivial"
+        ],
+        "correctAnswer": "everywhere",
+        "explanation": "If something is ubiquitous, it is found everywhere.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_2",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Had I known about the delay, I ______ the bus earlier.",
+        "options": [
+          "would have taken",
+          "will take",
+          "took",
+          "had taken"
+        ],
+        "correctAnswer": "would have taken",
+        "explanation": "Use the conditional perfect for unreal past situations.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_3",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Although renewable energy sources are becoming more affordable, many communities still lack access to reliable electricity. What problem do many communities face?",
+        "options": [
+          "lack of access to reliable electricity",
+          "high energy costs",
+          "too much electricity",
+          "energy independence"
+        ],
+        "correctAnswer": "lack of access to reliable electricity",
+        "explanation": "They lack reliable electricity despite the affordability of renewables.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_4",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which sentence avoids redundancy?",
+        "options": [
+          "The reason is that he was late.",
+          "The reason is because he was late.",
+          "The reason was because of him being late.",
+          "Due to the reason that he was late."
+        ],
+        "correctAnswer": "The reason is that he was late.",
+        "explanation": "Avoid combining 'reason' and 'because' together.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_5",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Meticulous' is closest in meaning to ______.",
+        "options": [
+          "careful",
+          "careless",
+          "spontaneous",
+          "vague"
+        ],
+        "correctAnswer": "careful",
+        "explanation": "'Meticulous' means extremely careful and precise.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_6",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "No sooner ______ than the phone rang.",
+        "options": [
+          "had I sat down",
+          "I sat down",
+          "had sat down then",
+          "do I sit down"
+        ],
+        "correctAnswer": "had I sat down",
+        "explanation": "Use past perfect and inversion after 'no sooner'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_7",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "How do biodegradable plastics differ from traditional plastics?",
+        "options": [
+          "They can decompose naturally",
+          "They are heavier",
+          "They are non-renewable",
+          "They are more harmful"
+        ],
+        "correctAnswer": "They can decompose naturally",
+        "explanation": "Biodegradable plastics can break down naturally.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_8",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which sentence uses the semicolon correctly in a complex list?",
+        "options": [
+          "The meeting was attended by John, the manager; Susan, the accountant; and Mark, the engineer.",
+          "The meeting was attended by John; the manager, Susan; the accountant, and Mark; the engineer.",
+          "The meeting was attended by John, the manager, Susan, the accountant; and Mark, the engineer.",
+          "The meeting was attended by John the manager; Susan the accountant; and Mark the engineer."
+        ],
+        "correctAnswer": "The meeting was attended by John, the manager; Susan, the accountant; and Mark, the engineer.",
+        "explanation": "Use semicolons to separate list items that already contain commas.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_9",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Disseminate' means to ______.",
+        "options": [
+          "spread",
+          "hide",
+          "collect",
+          "memorize"
+        ],
+        "correctAnswer": "spread",
+        "explanation": "To disseminate means to spread widely.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_10",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Under no circumstances ______ you leave the room.",
+        "options": [
+          "should",
+          "you should",
+          "should you",
+          "you leaving"
+        ],
+        "correctAnswer": "should",
+        "explanation": "Use inversion: 'Under no circumstances should you leave the room.'",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_11",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "What factors did analysts credit for the company's growth?",
+        "options": [
+          "effective marketing and competitive pricing",
+          "reduced quality",
+          "increased labor costs",
+          "product recall"
+        ],
+        "correctAnswer": "effective marketing and competitive pricing",
+        "explanation": "Analysts credited marketing and pricing strategies.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_12",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "The new policy is beneficial; ______, it may have unintended consequences.",
+        "options": [
+          "however",
+          "therefore",
+          "moreover",
+          "consequently"
+        ],
+        "correctAnswer": "however",
+        "explanation": "'However' introduces a contrasting idea.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_13",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Scarce' is the opposite of ______.",
+        "options": [
+          "abundant",
+          "rare",
+          "limited",
+          "exclusive"
+        ],
+        "correctAnswer": "abundant",
+        "explanation": "'Scarce' and 'abundant' are opposites.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_14",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Had she taken the medicine, she ______ better by now.",
+        "options": [
+          "would have felt",
+          "will feel",
+          "felt",
+          "would feel"
+        ],
+        "correctAnswer": "would have felt",
+        "explanation": "Use conditional perfect for imaginary past situations.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_15",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Why did some readers struggle with the novel?",
+        "options": [
+          "because of its complex narrative structure",
+          "because it was too short",
+          "because it was full of pictures",
+          "because of its simple language"
+        ],
+        "correctAnswer": "because of its complex narrative structure",
+        "explanation": "The complexity of the narrative made it challenging.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_16",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which sentence uses the subjunctive mood correctly?",
+        "options": [
+          "It is essential that he arrive on time.",
+          "It is essential that he arrives on time.",
+          "It is essential that he arrived on time.",
+          "It is essential that he will arrive on time."
+        ],
+        "correctAnswer": "It is essential that he arrive on time.",
+        "explanation": "Use base verb after 'that' in subjunctive constructions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_17",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Reluctant' is opposite in meaning to ______.",
+        "options": [
+          "eager",
+          "unsure",
+          "hesitant",
+          "doubtful"
+        ],
+        "correctAnswer": "eager",
+        "explanation": "'Reluctant' is the opposite of 'eager'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_18",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Little ______ about the problem.",
+        "options": [
+          "did she know",
+          "she knew",
+          "knew she",
+          "did know she"
+        ],
+        "correctAnswer": "did she know",
+        "explanation": "Use inversion after negative expressions.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_19",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "How did students' attitudes change?",
+        "options": [
+          "they initially resisted but later appreciated them",
+          "they liked them from the start",
+          "they always disliked them",
+          "they never worked together"
+        ],
+        "correctAnswer": "they initially resisted but later appreciated them",
+        "explanation": "Students grew to appreciate group projects.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_20",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which transition fits best: He loves classical music; ______, his brother prefers rock.",
+        "options": [
+          "on the other hand",
+          "therefore",
+          "similarly",
+          "because"
+        ],
+        "correctAnswer": "on the other hand",
+        "explanation": "'On the other hand' shows contrast.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_21",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "'Inevitable' means ______.",
+        "options": [
+          "unavoidable",
+          "optional",
+          "unlikely",
+          "irregular"
+        ],
+        "correctAnswer": "unavoidable",
+        "explanation": "'Inevitable' means impossible to avoid.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_22",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Seldom ______ such kindness.",
+        "options": [
+          "have I seen",
+          "I have seen",
+          "I seen",
+          "have seen I"
+        ],
+        "correctAnswer": "have I seen",
+        "explanation": "Inversion follows negative adverbials like 'seldom'.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_23",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "What was the judge's conclusion?",
+        "options": [
+          "the defendant was innocent and charges were dismissed",
+          "the defendant was guilty",
+          "a new trial was needed",
+          "the evidence was inadequate"
+        ],
+        "correctAnswer": "the defendant was innocent and charges were dismissed",
+        "explanation": "The judge found the defendant innocent.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_24",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which sentence uses parallel structure?",
+        "options": [
+          "The committee is responsible for planning, organizing, and evaluating events.",
+          "The committee is responsible for planning, organizing, and the evaluation of events.",
+          "The committee is responsible for planning, to organize, and evaluating events.",
+          "The committee is responsible for the planning, organizing, and evaluating events."
+        ],
+        "correctAnswer": "The committee is responsible for planning, organizing, and evaluating events.",
+        "explanation": "Use the same form for all items in the series.",
+        "points": 10,
+        "timeLimit": 60
+      },
+      {
+        "id": "mixed_advanced_25",
+        "type": "mixed",
+        "level": "advanced",
+        "question": "Which word does not belong: altruistic, benevolent, generous, malicious?",
+        "options": [
+          "malicious",
+          "altruistic",
+          "benevolent",
+          "generous"
+        ],
+        "correctAnswer": "malicious",
+        "explanation": "'Malicious' is negative, unlike the positive other words.",
+        "points": 10,
+        "timeLimit": 60
+      }
+    ]
+  }
+}
