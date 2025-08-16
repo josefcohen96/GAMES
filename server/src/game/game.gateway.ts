@@ -11,6 +11,7 @@ import { UnauthorizedException, BadRequestException } from '@nestjs/common';
 export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
   public server: Server;
+  private countdowns: Map<string, NodeJS.Timeout> = new Map();
 
   constructor(
     private readonly gameService: GameService,
@@ -33,6 +34,10 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   handleDisconnect(client: Socket) {
+    const userId = (client as any).user?.sub;
+    if (userId) {
+      this.roomService.cleanupUser(userId);
+    }
     console.log(`❌ Client disconnected: ${(client as any).user?.username}`);
   }
 
@@ -47,26 +52,31 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
       throw new BadRequestException('Room ID is required');
     }
 
-    console.log(`User ${userId} joining room ${roomId}`);
-    client.join(roomId);  // Join the room in Socket.IO
-
-    const result = this.roomService.joinRoom(roomId, userId);  // if not exists, create it else join it
-
-    this.server.to(roomId).emit('roomUpdate', {  // Notify all clients in the room
-      message: `${userId} הצטרף לחדר`,
-      players: result.players,
-    });
-
+    // Check current state first; prevent join if game already started
     const currentState = await this.gameService.handleAction(roomId, {
       gameType: 'eratz-ir',
       action: 'state'
     });
-
     if (currentState.status !== 'waiting') {
       throw new BadRequestException('Cannot join, game already started');
     }
 
-    this.server.to(roomId).emit('gameStateUpdate', currentState);
+    console.log(`User ${userId} joining room ${roomId}`);
+    await this.roomService.joinRoom(roomId, userId);
+    client.join(roomId);
+
+    const joinedPlayers = this.roomService.getPlayers(roomId);
+    this.server.to(roomId).emit('roomUpdate', {
+      message: `${userId} הצטרף לחדר`,
+      players: joinedPlayers,
+    });
+
+    const refreshedState = await this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'state'
+    });
+
+    this.server.to(roomId).emit('gameStateUpdate', refreshedState);
   }
 
   @SubscribeMessage('startGame')
@@ -134,14 +144,22 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async handleFinishRoundWithTimer(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
 
+    if (this.countdowns.has(roomId)) {
+      // Timer already scheduled
+      return;
+    }
+
     this.server.to(roomId).emit('startCountdown');
 
-    setTimeout(async () => {
+    const timeout = setTimeout(async () => {
+      this.countdowns.delete(roomId);
       const result = await this.gameService.handleAction(roomId, {
         gameType: 'eratz-ir',
         action: 'finishRound',
       });
       this.server.to(roomId).emit('gameStateUpdate', result);
     }, 10000);
+
+    this.countdowns.set(roomId, timeout);
   }
 }

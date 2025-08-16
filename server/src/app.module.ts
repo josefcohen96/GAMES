@@ -11,29 +11,32 @@ import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { GameModule } from './game/game.module';
 import { AiValidationModule } from './ai-validation/ai-validation.module';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '1234',
-      database: 'games_db', // for laptop use 'games-db'
-      entities: [Users, Room],
-      synchronize: true,
+    ConfigModule.forRoot({
+      isGlobal: true,
     }),
-     ConfigModule.forRoot({
-      isGlobal: true, // Makes env vars available everywhere
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        type: 'postgres',
+        host: config.get<string>('DATABASE_HOST', 'localhost'),
+        port: parseInt(config.get<string>('DATABASE_PORT', '5432'), 10),
+        username: config.get<string>('DATABASE_USER', 'postgres'),
+        password: config.get<string>('DATABASE_PASS', '1234'),
+        database: config.get<string>('DATABASE_NAME', 'games_db'),
+        entities: [Users, Room],
+        synchronize: true,
+      }),
     }),
     UsersModule,
     AuthModule,
     RoomModule,
     GameModule,
     AiValidationModule,
-
   ],
   controllers: [AppController],
   providers: [

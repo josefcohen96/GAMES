@@ -7,13 +7,19 @@ import { RoomModule } from '../room/room.module';
 import { GameGateway } from './game.gateway';
 import { JwtModule } from '@nestjs/jwt';
 import { AiValidationModule } from '../ai-validation/ai-validation.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 @Module({
   imports: [
     AiValidationModule,
     RoomModule,
-    JwtModule.register({
-      secret: process.env.JWT_SECRET || 'secretKey', 
-      signOptions: { expiresIn: '1h' },
+    ConfigModule,
+    JwtModule.registerAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        secret: config.get<string>('JWT_SECRET', 'secretKey'),
+        signOptions: { expiresIn: config.get<string>('JWT_EXPIRES_IN', '1h') },
+      }),
     }),
   ],
   controllers: [GameController],

@@ -15,18 +15,20 @@ export class LobbyService {
         return this.lobbyRepo.find();
     }
 
+    async getRoomById(roomId: string): Promise<Room> {
+        const room = await this.lobbyRepo.findOne({ where: { id: roomId } });
+        if (!room) throw new NotFoundException(`Room with ID ${roomId} not found`);
+        return room;
+    }
+
     async createRoom(dto: CreateRoomDto): Promise<Room> {
         const { ...roomData } = dto;
-        console.log('Creating room with data:', roomData);
         const savedRoom = this.lobbyRepo.create(roomData);
-        console.log('Room created:', savedRoom);
         await this.lobbyRepo.save(savedRoom);
         return savedRoom;
     }
 
     async deleteRoom(roomid: string): Promise<{ message: string }> {
-        console.log('Deleting room ID:', roomid);
-
         const result = await this.lobbyRepo.delete(roomid);
         if (result.affected === 0) {
             throw new NotFoundException(`Room with ID ${roomid} not found`);
