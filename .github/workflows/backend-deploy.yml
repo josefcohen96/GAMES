@@ -1,0 +1,145 @@
+name: Backend Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'server/**'
+      - '.github/workflows/backend-deploy.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+
+jobs:
+  deploy-staging:
+    if: github.ref == 'refs/heads/develop' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'staging')
+    runs-on: ubuntu-latest
+    environment: staging
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: server/package-lock.json
+
+    - name: Install dependencies
+      working-directory: ./server
+      run: npm ci
+
+    - name: Run tests
+      working-directory: ./server
+      env:
+        DATABASE_HOST: ${{ secrets.STAGING_DB_HOST }}
+        DATABASE_PORT: ${{ secrets.STAGING_DB_PORT }}
+        DATABASE_USER: ${{ secrets.STAGING_DB_USER }}
+        DATABASE_PASS: ${{ secrets.STAGING_DB_PASS }}
+        DATABASE_NAME: ${{ secrets.STAGING_DB_NAME }}
+        JWT_SECRET: ${{ secrets.STAGING_JWT_SECRET }}
+        JWT_EXPIRES_IN: 1h
+      run: npm run test
+
+    - name: Build application
+      working-directory: ./server
+      run: npm run build
+
+    - name: Build Docker image
+      working-directory: ./server
+      run: |
+        docker build -t games-backend:staging .
+        docker tag games-backend:staging ${{ secrets.REGISTRY_URL }}/games-backend:staging
+
+    - name: Push to registry
+      run: |
+        echo ${{ secrets.REGISTRY_PASSWORD }} | docker login ${{ secrets.REGISTRY_URL }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
+        docker push ${{ secrets.REGISTRY_URL }}/games-backend:staging
+
+    - name: Deploy to staging
+      run: |
+        # Add your deployment commands here
+        # Example for Kubernetes:
+        # kubectl set image deployment/games-backend games-backend=${{ secrets.REGISTRY_URL }}/games-backend:staging -n staging
+        echo "Deploying to staging environment"
+
+  deploy-production:
+    if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production')
+    runs-on: ubuntu-latest
+    environment: production
+    needs: deploy-staging
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: server/package-lock.json
+
+    - name: Install dependencies
+      working-directory: ./server
+      run: npm ci
+
+    - name: Run tests
+      working-directory: ./server
+      env:
+        DATABASE_HOST: ${{ secrets.PROD_DB_HOST }}
+        DATABASE_PORT: ${{ secrets.PROD_DB_PORT }}
+        DATABASE_USER: ${{ secrets.PROD_DB_USER }}
+        DATABASE_PASS: ${{ secrets.PROD_DB_PASS }}
+        DATABASE_NAME: ${{ secrets.PROD_DB_NAME }}
+        JWT_SECRET: ${{ secrets.PROD_JWT_SECRET }}
+        JWT_EXPIRES_IN: 1h
+      run: npm run test
+
+    - name: Build application
+      working-directory: ./server
+      run: npm run build
+
+    - name: Build Docker image
+      working-directory: ./server
+      run: |
+        docker build -t games-backend:production .
+        docker tag games-backend:production ${{ secrets.REGISTRY_URL }}/games-backend:production
+        docker tag games-backend:production ${{ secrets.REGISTRY_URL }}/games-backend:latest
+
+    - name: Push to registry
+      run: |
+        echo ${{ secrets.REGISTRY_PASSWORD }} | docker login ${{ secrets.REGISTRY_URL }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
+        docker push ${{ secrets.REGISTRY_URL }}/games-backend:production
+        docker push ${{ secrets.REGISTRY_URL }}/games-backend:latest
+
+    - name: Deploy to production
+      run: |
+        # Add your deployment commands here
+        # Example for Kubernetes:
+        # kubectl set image deployment/games-backend games-backend=${{ secrets.REGISTRY_URL }}/games-backend:production -n production
+        echo "Deploying to production environment"
+
+    - name: Create release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: Release v${{ github.run_number }}
+        body: |
+          Production deployment for commit ${{ github.sha }}
+          
+          Changes:
+          ${{ github.event.head_commit.message }}
+        draft: false
+        prerelease: false
