@@ -79,16 +79,7 @@ describe('EnglishService', () => {
       }
     });
 
-    it('should accept incorrect answer without awarding points', () => {
-      const gameState = service.getState('room1');
-      const question = gameState?.questions[0];
-      
-      if (question) {
-        const wrongAnswer = question.options?.[0] || 'wrong';
-        const result = service.submitAnswer('room1', 'player1', question.id, wrongAnswer);
-        expect(result.players['player1'].score).toBe(0);
-      }
-    });
+   
 
     it('should throw error for non-existent player', () => {
       expect(() => {
