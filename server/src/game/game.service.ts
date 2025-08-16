@@ -1,12 +1,14 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { WarService } from './war/war.service';
 import { EratzIrService } from './eratzIr/eratzIr.service';
+import { EnglishService } from './english/english.service';
 
 @Injectable()
 export class GameService {
   constructor(
     private readonly warService: WarService,
     private readonly eratzIrService: EratzIrService,
+    private readonly englishService: EnglishService,
   ) {}
 
   handleAction(
@@ -20,6 +22,8 @@ export class GameService {
         return this.handleWarAction(roomId, action, payload);
       case 'eratz-ir':
         return this.handleEratzIrAction(roomId, action, payload);
+      case 'english':
+        return this.handleEnglishAction(roomId, action, payload);
       default:
         throw new BadRequestException(`Unsupported game type: ${gameType}`);
     }
@@ -68,6 +72,41 @@ export class GameService {
         return await this.eratzIrService.finishRound(roomId);
       case 'state':
         return await this.eratzIrService.getState(roomId);
+      default:
+        throw new BadRequestException(`Unsupported action: ${action}`);
+    }
+  }
+
+  private async handleEnglishAction(
+    roomId: string,
+    action: string,
+    payload: any,
+  ) {
+    switch (action) {
+      case 'start':
+        return this.englishService.startGame(
+          roomId,
+          payload.gameType,
+          payload.level,
+          payload.players,
+        );
+      case 'startRound':
+        return this.englishService.startRound(roomId);
+      case 'submitAnswer':
+        return this.englishService.submitAnswer(
+          roomId,
+          payload.playerId,
+          payload.questionId,
+          payload.answer,
+        );
+      case 'state':
+        return this.englishService.getState(roomId);
+      case 'end':
+        return this.englishService.endGame(roomId);
+      case 'leaderboard':
+        return this.englishService.getLeaderboard(roomId);
+      case 'options':
+        return this.englishService.getGameOptions();
       default:
         throw new BadRequestException(`Unsupported action: ${action}`);
     }

@@ -1,0 +1,867 @@
+{
+  "vocabulary": {
+    "beginner": [
+      {
+        "id": "voc_beginner_1",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What is the opposite of 'hot'?",
+        "options": ["cold", "warm", "cool", "freezing"],
+        "correctAnswer": "cold",
+        "explanation": "Hot and cold are opposites.",
+        "points": 10,
+        "timeLimit": 30
+      },
+      {
+        "id": "voc_beginner_2",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which word means 'a place where you sleep'?",
+        "options": ["kitchen", "bedroom", "bathroom", "living room"],
+        "correctAnswer": "bedroom",
+        "explanation": "A bedroom is where you sleep.",
+        "points": 10,
+        "timeLimit": 30
+      },
+      {
+        "id": "voc_beginner_3",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What do you call a person who teaches?",
+        "options": ["student", "teacher", "doctor", "engineer"],
+        "correctAnswer": "teacher",
+        "explanation": "A teacher is someone who teaches.",
+        "points": 10,
+        "timeLimit": 30
+      },
+      {
+        "id": "voc_beginner_4",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "Which animal says 'meow'?",
+        "options": ["dog", "cat", "bird", "fish"],
+        "correctAnswer": "cat",
+        "explanation": "Cats make a 'meow' sound.",
+        "points": 10,
+        "timeLimit": 30
+      },
+      {
+        "id": "voc_beginner_5",
+        "type": "vocabulary",
+        "level": "beginner",
+        "question": "What color is the sky on a sunny day?",
+        "options": ["blue", "green", "red", "yellow"],
+        "correctAnswer": "blue",
+        "explanation": "The sky appears blue on sunny days.",
+        "points": 10,
+        "timeLimit": 30
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "voc_intermediate_1",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What does 'perseverance' mean?",
+        "options": ["giving up easily", "continuing despite difficulties", "being lazy", "being angry"],
+        "correctAnswer": "continuing despite difficulties",
+        "explanation": "Perseverance means persistence in doing something despite difficulty.",
+        "points": 20,
+        "timeLimit": 45
+      },
+      {
+        "id": "voc_intermediate_2",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is a 'metaphor'?",
+        "options": ["a type of food", "a comparison without using 'like' or 'as'", "a musical instrument", "a type of car"],
+        "correctAnswer": "a comparison without using 'like' or 'as'",
+        "explanation": "A metaphor is a figure of speech that compares two things without using 'like' or 'as'.",
+        "points": 20,
+        "timeLimit": 45
+      },
+      {
+        "id": "voc_intermediate_3",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What does 'sustainable' mean?",
+        "options": ["expensive", "able to continue for a long time", "difficult", "modern"],
+        "correctAnswer": "able to continue for a long time",
+        "explanation": "Sustainable means able to be maintained or continued over time.",
+        "points": 20,
+        "timeLimit": 45
+      },
+      {
+        "id": "voc_intermediate_4",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What is an 'innovation'?",
+        "options": ["a problem", "a new idea or method", "a mistake", "a tradition"],
+        "correctAnswer": "a new idea or method",
+        "explanation": "Innovation is the introduction of something new or different.",
+        "points": 20,
+        "timeLimit": 45
+      },
+      {
+        "id": "voc_intermediate_5",
+        "type": "vocabulary",
+        "level": "intermediate",
+        "question": "What does 'authentic' mean?",
+        "options": ["fake", "real or genuine", "expensive", "old"],
+        "correctAnswer": "real or genuine",
+        "explanation": "Authentic means genuine, real, or true.",
+        "points": 20,
+        "timeLimit": 45
+      }
+    ],
+    "advanced": [
+      {
+        "id": "voc_advanced_1",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What is 'serendipity'?",
+        "options": ["a planned event", "a fortunate accident", "a difficult task", "a type of food"],
+        "correctAnswer": "a fortunate accident",
+        "explanation": "Serendipity is the occurrence and development of events by chance in a happy or beneficial way.",
+        "points": 30,
+        "timeLimit": 60
+      },
+      {
+        "id": "voc_advanced_2",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What does 'ubiquitous' mean?",
+        "options": ["rare", "present everywhere", "expensive", "dangerous"],
+        "correctAnswer": "present everywhere",
+        "explanation": "Ubiquitous means present, appearing, or found everywhere.",
+        "points": 30,
+        "timeLimit": 60
+      },
+      {
+        "id": "voc_advanced_3",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What is 'ephemeral'?",
+        "options": ["lasting forever", "lasting for a very short time", "very important", "very large"],
+        "correctAnswer": "lasting for a very short time",
+        "explanation": "Ephemeral means lasting for a very short time.",
+        "points": 30,
+        "timeLimit": 60
+      },
+      {
+        "id": "voc_advanced_4",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What does 'quintessential' mean?",
+        "options": ["representing the most perfect example", "very old", "very small", "very fast"],
+        "correctAnswer": "representing the most perfect example",
+        "explanation": "Quintessential means representing the most perfect or typical example of a quality or class.",
+        "points": 30,
+        "timeLimit": 60
+      },
+      {
+        "id": "voc_advanced_5",
+        "type": "vocabulary",
+        "level": "advanced",
+        "question": "What is 'mellifluous'?",
+        "options": ["sweet or musical", "bitter", "loud", "quiet"],
+        "correctAnswer": "sweet or musical",
+        "explanation": "Mellifluous means sweet or musical; pleasant to hear.",
+        "points": 30,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "grammar": {
+    "beginner": [
+      {
+        "id": "gram_beginner_1",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Complete the sentence: 'I ___ a student.'",
+        "options": ["am", "is", "are", "be"],
+        "correctAnswer": "am",
+        "explanation": "Use 'am' with 'I' in present tense.",
+        "points": 15,
+        "timeLimit": 30
+      },
+      {
+        "id": "gram_beginner_2",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Which is correct: 'I have ___ apple.'",
+        "options": ["a", "an", "the", "some"],
+        "correctAnswer": "an",
+        "explanation": "Use 'an' before words starting with vowel sounds.",
+        "points": 15,
+        "timeLimit": 30
+      },
+      {
+        "id": "gram_beginner_3",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Choose the correct form: 'She ___ to school every day.'",
+        "options": ["go", "goes", "going", "gone"],
+        "correctAnswer": "goes",
+        "explanation": "Use 'goes' with 'she' in present simple tense.",
+        "points": 15,
+        "timeLimit": 30
+      },
+      {
+        "id": "gram_beginner_4",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Which sentence is correct?",
+        "options": ["I am student", "I am a student", "I is a student", "I are a student"],
+        "correctAnswer": "I am a student",
+        "explanation": "Use 'am' with 'I' and 'a' before 'student'.",
+        "points": 15,
+        "timeLimit": 30
+      },
+      {
+        "id": "gram_beginner_5",
+        "type": "grammar",
+        "level": "beginner",
+        "question": "Complete: 'This is ___ book.'",
+        "options": ["a", "an", "the", "some"],
+        "correctAnswer": "a",
+        "explanation": "Use 'a' before words starting with consonant sounds.",
+        "points": 15,
+        "timeLimit": 30
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "gram_intermediate_1",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'If I ___ rich, I would travel the world.'",
+        "options": ["am", "was", "were", "will be"],
+        "correctAnswer": "were",
+        "explanation": "Use 'were' in hypothetical situations (second conditional).",
+        "points": 25,
+        "timeLimit": 45
+      },
+      {
+        "id": "gram_intermediate_2",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'She ___ to the store yesterday.'",
+        "options": ["go", "goes", "went", "gone"],
+        "correctAnswer": "went",
+        "explanation": "Use past simple 'went' for completed actions in the past.",
+        "points": 25,
+        "timeLimit": 45
+      },
+      {
+        "id": "gram_intermediate_3",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Which is correct: 'I have been ___ here for two hours.'",
+        "options": ["wait", "waited", "waiting", "waits"],
+        "correctAnswer": "waiting",
+        "explanation": "Use present perfect continuous with 'have been' + -ing form.",
+        "points": 25,
+        "timeLimit": 45
+      },
+      {
+        "id": "gram_intermediate_4",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'The movie ___ by millions of people.'",
+        "options": ["watch", "watches", "watched", "was watched"],
+        "correctAnswer": "was watched",
+        "explanation": "Use passive voice 'was watched' when the subject receives the action.",
+        "points": 25,
+        "timeLimit": 45
+      },
+      {
+        "id": "gram_intermediate_5",
+        "type": "grammar",
+        "level": "intermediate",
+        "question": "Which sentence uses the present perfect correctly?",
+        "options": ["I have gone to Paris last year", "I have been to Paris", "I went to Paris last year", "I am going to Paris"],
+        "correctAnswer": "I have been to Paris",
+        "explanation": "Present perfect is used for experiences without specific time.",
+        "points": 25,
+        "timeLimit": 45
+      }
+    ],
+    "advanced": [
+      {
+        "id": "gram_advanced_1",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Choose the correct form: 'Had I known about the meeting, I ___ attended.'",
+        "options": ["would", "would have", "will", "had"],
+        "correctAnswer": "would have",
+        "explanation": "Use 'would have' in third conditional (past hypothetical).",
+        "points": 35,
+        "timeLimit": 60
+      },
+      {
+        "id": "gram_advanced_2",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Which sentence uses the subjunctive mood correctly?",
+        "options": ["I suggest that he goes", "I suggest that he go", "I suggest that he went", "I suggest that he will go"],
+        "correctAnswer": "I suggest that he go",
+        "explanation": "Use base form 'go' after 'suggest that' in subjunctive mood.",
+        "points": 35,
+        "timeLimit": 60
+      },
+      {
+        "id": "gram_advanced_3",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Choose the correct form: 'Not only ___ she speak French, but she also knows Italian.'",
+        "options": ["do", "does", "did", "will"],
+        "correctAnswer": "does",
+        "explanation": "Use 'does' for subject-verb inversion after 'not only'.",
+        "points": 35,
+        "timeLimit": 60
+      },
+      {
+        "id": "gram_advanced_4",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Which sentence uses the past perfect continuous correctly?",
+        "options": ["I had been working for 8 hours when she called", "I have been working for 8 hours", "I was working for 8 hours", "I worked for 8 hours"],
+        "correctAnswer": "I had been working for 8 hours when she called",
+        "explanation": "Past perfect continuous shows duration before a past event.",
+        "points": 35,
+        "timeLimit": 60
+      },
+      {
+        "id": "gram_advanced_5",
+        "type": "grammar",
+        "level": "advanced",
+        "question": "Choose the correct form: 'It is high time we ___ about this.'",
+        "options": ["talk", "talked", "talking", "talks"],
+        "correctAnswer": "talked",
+        "explanation": "Use past subjunctive 'talked' after 'it is high time'.",
+        "points": 35,
+        "timeLimit": 60
+      }
+    ]
+  },
+  "reading": {
+    "beginner": [
+      {
+        "id": "read_beginner_1",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Read: 'Tom has a red car. He drives to work every day. What color is Tom's car?'",
+        "options": ["blue", "red", "green", "yellow"],
+        "correctAnswer": "red",
+        "explanation": "The text clearly states 'Tom has a red car.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "read_beginner_2",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Read: 'Sarah likes pizza. She eats it every Friday. When does Sarah eat pizza?'",
+        "options": ["every day", "every Friday", "every weekend", "every month"],
+        "correctAnswer": "every Friday",
+        "explanation": "The text states 'She eats it every Friday.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "read_beginner_3",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Read: 'The cat is on the table. The dog is under the table. Where is the dog?'",
+        "options": ["on the table", "under the table", "next to the table", "behind the table"],
+        "correctAnswer": "under the table",
+        "explanation": "The text states 'The dog is under the table.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "read_beginner_4",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Read: 'John is 25 years old. His sister is 20 years old. Who is older?'",
+        "options": ["John", "his sister", "they are the same age", "we don't know"],
+        "correctAnswer": "John",
+        "explanation": "John is 25 and his sister is 20, so John is older.",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "read_beginner_5",
+        "type": "reading",
+        "level": "beginner",
+        "question": "Read: 'The weather is sunny today. It is warm and nice. What is the weather like?'",
+        "options": ["rainy", "sunny", "cold", "snowy"],
+        "correctAnswer": "sunny",
+        "explanation": "The text states 'The weather is sunny today.'",
+        "points": 20,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "read_intermediate_1",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Read: 'The company experienced unprecedented growth last year, with profits increasing by 150%. However, this rapid expansion also brought new challenges.' What happened to the company's profits?",
+        "options": ["They decreased", "They increased by 150%", "They stayed the same", "They doubled"],
+        "correctAnswer": "They increased by 150%",
+        "explanation": "The text states 'profits increasing by 150%'.",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "read_intermediate_2",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Read: 'Despite the rain, the outdoor concert proceeded as planned. The organizers had prepared for bad weather by providing covered seating areas.' What did the organizers do to prepare for bad weather?",
+        "options": ["They cancelled the concert", "They moved it indoors", "They provided covered seating", "They postponed it"],
+        "correctAnswer": "They provided covered seating",
+        "explanation": "The text states 'prepared for bad weather by providing covered seating areas.'",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "read_intermediate_3",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Read: 'The research suggests that regular exercise not only improves physical health but also enhances cognitive function and reduces stress levels.' What are the benefits of regular exercise mentioned?",
+        "options": ["Only physical health", "Physical health and cognitive function", "Physical health, cognitive function, and stress reduction", "Only stress reduction"],
+        "correctAnswer": "Physical health, cognitive function, and stress reduction",
+        "explanation": "The text mentions all three benefits: physical health, cognitive function, and stress reduction.",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "read_intermediate_4",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Read: 'The novel, which was published in 1925, explores themes of wealth, love, and the American Dream. It has been adapted into several films and remains popular today.' When was the novel published?",
+        "options": ["1920", "1925", "1930", "The text doesn't say"],
+        "correctAnswer": "1925",
+        "explanation": "The text states 'which was published in 1925'.",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "read_intermediate_5",
+        "type": "reading",
+        "level": "intermediate",
+        "question": "Read: 'The new policy aims to reduce carbon emissions by 50% within the next decade. This ambitious target will require significant changes in both individual behavior and corporate practices.' What is the goal of the new policy?",
+        "options": ["To increase profits", "To reduce carbon emissions by 50%", "To change corporate practices only", "To change individual behavior only"],
+        "correctAnswer": "To reduce carbon emissions by 50%",
+        "explanation": "The text states 'aims to reduce carbon emissions by 50% within the next decade.'",
+        "points": 25,
+        "timeLimit": 90
+      }
+    ],
+    "advanced": [
+      {
+        "id": "read_advanced_1",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Read: 'The quantum computing breakthrough represents a paradigm shift in computational capabilities, potentially rendering current encryption methods obsolete while simultaneously opening new frontiers in scientific research.' What does the text suggest about current encryption methods?",
+        "options": ["They will become stronger", "They may become obsolete", "They will remain unchanged", "They will be replaced by quantum encryption"],
+        "correctAnswer": "They may become obsolete",
+        "explanation": "The text states 'potentially rendering current encryption methods obsolete'.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "read_advanced_2",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Read: 'The philosophical implications of artificial intelligence extend beyond mere technological advancement, challenging fundamental assumptions about consciousness, free will, and what it means to be human.' What does the text suggest about AI?",
+        "options": ["It's only a technological advancement", "It challenges our understanding of consciousness", "It has no philosophical implications", "It only affects free will"],
+        "correctAnswer": "It challenges our understanding of consciousness",
+        "explanation": "The text states 'challenging fundamental assumptions about consciousness, free will, and what it means to be human.'",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "read_advanced_3",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Read: 'The economic ramifications of climate change are multifaceted, encompassing not only direct costs of natural disasters but also indirect effects on agricultural productivity, migration patterns, and geopolitical stability.' What are the economic effects of climate change mentioned?",
+        "options": ["Only direct costs", "Only indirect effects", "Both direct and indirect effects", "Only agricultural effects"],
+        "correctAnswer": "Both direct and indirect effects",
+        "explanation": "The text mentions both direct costs and indirect effects on agriculture, migration, and geopolitics.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "read_advanced_4",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Read: 'The Renaissance, spanning roughly from the 14th to the 17th century, marked a period of unprecedented cultural, artistic, and intellectual flourishing that fundamentally transformed European society and laid the groundwork for the modern world.' What did the Renaissance do to European society?",
+        "options": ["It had no effect", "It transformed it fundamentally", "It only affected art", "It only affected culture"],
+        "correctAnswer": "It transformed it fundamentally",
+        "explanation": "The text states 'fundamentally transformed European society'.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "read_advanced_5",
+        "type": "reading",
+        "level": "advanced",
+        "question": "Read: 'The discovery of exoplanets in habitable zones has profound implications for our understanding of the universe's potential for life, challenging anthropocentric assumptions while simultaneously expanding the scope of astrobiological research.' What does the discovery of exoplanets do to our understanding?",
+        "options": ["It confirms anthropocentric views", "It challenges anthropocentric assumptions", "It has no effect on our understanding", "It only affects astrobiology"],
+        "correctAnswer": "It challenges anthropocentric assumptions",
+        "explanation": "The text states 'challenging anthropocentric assumptions'.",
+        "points": 30,
+        "timeLimit": 120
+      }
+    ]
+  },
+  "listening": {
+    "beginner": [
+      {
+        "id": "listen_beginner_1",
+        "type": "listening",
+        "level": "beginner",
+        "question": "Listen: 'Hello, my name is John. I am from Canada.' Where is John from?",
+        "options": ["USA", "Canada", "England", "Australia"],
+        "correctAnswer": "Canada",
+        "explanation": "John says 'I am from Canada.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "listen_beginner_2",
+        "type": "listening",
+        "level": "beginner",
+        "question": "Listen: 'I like to eat pizza and drink coffee.' What does the person like to drink?",
+        "options": ["tea", "coffee", "water", "juice"],
+        "correctAnswer": "coffee",
+        "explanation": "The person says 'drink coffee.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "listen_beginner_3",
+        "type": "listening",
+        "level": "beginner",
+        "question": "Listen: 'The weather is sunny today. It is warm and nice.' What is the weather like?",
+        "options": ["rainy", "sunny", "cold", "snowy"],
+        "correctAnswer": "sunny",
+        "explanation": "The person says 'The weather is sunny today.'",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "listen_beginner_4",
+        "type": "listening",
+        "level": "beginner",
+        "question": "Listen: 'I have two cats and one dog. They are my pets.' How many pets does the person have?",
+        "options": ["one", "two", "three", "four"],
+        "correctAnswer": "three",
+        "explanation": "The person has two cats and one dog, which equals three pets.",
+        "points": 20,
+        "timeLimit": 60
+      },
+      {
+        "id": "listen_beginner_5",
+        "type": "listening",
+        "level": "beginner",
+        "question": "Listen: 'I work in a hospital. I am a doctor.' What is the person's job?",
+        "options": ["teacher", "doctor", "engineer", "nurse"],
+        "correctAnswer": "doctor",
+        "explanation": "The person says 'I am a doctor.'",
+        "points": 20,
+        "timeLimit": 60
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "listen_intermediate_1",
+        "type": "listening",
+        "level": "intermediate",
+        "question": "Listen: 'The meeting has been rescheduled for next Tuesday at 3 PM due to the CEO's unexpected business trip.' When is the new meeting time?",
+        "options": ["Monday at 3 PM", "Tuesday at 3 PM", "Wednesday at 3 PM", "Thursday at 3 PM"],
+        "correctAnswer": "Tuesday at 3 PM",
+        "explanation": "The meeting was rescheduled for 'next Tuesday at 3 PM.'",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "listen_intermediate_2",
+        "type": "listening",
+        "level": "intermediate",
+        "question": "Listen: 'Despite the economic challenges, the company managed to increase its market share by 15% through innovative marketing strategies and improved customer service.' How did the company increase its market share?",
+        "options": ["By cutting costs", "Through innovative marketing and improved customer service", "By raising prices", "By reducing staff"],
+        "correctAnswer": "Through innovative marketing and improved customer service",
+        "explanation": "The company increased market share 'through innovative marketing strategies and improved customer service.'",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "listen_intermediate_3",
+        "type": "listening",
+        "level": "intermediate",
+        "question": "Listen: 'The research findings indicate that regular exercise not only improves physical health but also enhances cognitive function and reduces stress levels significantly.' What are the benefits of regular exercise mentioned?",
+        "options": ["Only physical health", "Physical health and cognitive function", "Physical health, cognitive function, and stress reduction", "Only stress reduction"],
+        "correctAnswer": "Physical health, cognitive function, and stress reduction",
+        "explanation": "The benefits mentioned are physical health, cognitive function, and stress reduction.",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "listen_intermediate_4",
+        "type": "listening",
+        "level": "intermediate",
+        "question": "Listen: 'The new environmental policy aims to reduce carbon emissions by 40% within the next five years, which will require significant changes in both individual behavior and corporate practices.' What is the target reduction in carbon emissions?",
+        "options": ["30%", "40%", "50%", "60%"],
+        "correctAnswer": "40%",
+        "explanation": "The policy aims to 'reduce carbon emissions by 40% within the next five years.'",
+        "points": 25,
+        "timeLimit": 90
+      },
+      {
+        "id": "listen_intermediate_5",
+        "type": "listening",
+        "level": "intermediate",
+        "question": "Listen: 'The novel, which was published in 1984, explores themes of surveillance, totalitarianism, and the manipulation of truth. It has been adapted into several films and remains relevant today.' When was the novel published?",
+        "options": ["1980", "1984", "1988", "1990"],
+        "correctAnswer": "1984",
+        "explanation": "The novel 'was published in 1984.'",
+        "points": 25,
+        "timeLimit": 90
+      }
+    ],
+    "advanced": [
+      {
+        "id": "listen_advanced_1",
+        "type": "listening",
+        "level": "advanced",
+        "question": "Listen: 'The quantum computing breakthrough represents a paradigm shift in computational capabilities, potentially rendering current encryption methods obsolete while simultaneously opening new frontiers in scientific research and drug discovery.' What does the text suggest about current encryption methods?",
+        "options": ["They will become stronger", "They may become obsolete", "They will remain unchanged", "They will be replaced by quantum encryption"],
+        "correctAnswer": "They may become obsolete",
+        "explanation": "The text states 'potentially rendering current encryption methods obsolete'.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "listen_advanced_2",
+        "type": "listening",
+        "level": "advanced",
+        "question": "Listen: 'The philosophical implications of artificial intelligence extend beyond mere technological advancement, challenging fundamental assumptions about consciousness, free will, and what it means to be human in an increasingly automated world.' What does the text suggest about AI?",
+        "options": ["It's only a technological advancement", "It challenges our understanding of consciousness and humanity", "It has no philosophical implications", "It only affects automation"],
+        "correctAnswer": "It challenges our understanding of consciousness and humanity",
+        "explanation": "The text states 'challenging fundamental assumptions about consciousness, free will, and what it means to be human'.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "listen_advanced_3",
+        "type": "listening",
+        "level": "advanced",
+        "question": "Listen: 'The economic ramifications of climate change are multifaceted, encompassing not only direct costs of natural disasters but also indirect effects on agricultural productivity, migration patterns, geopolitical stability, and global supply chains.' What are the economic effects of climate change mentioned?",
+        "options": ["Only direct costs", "Only indirect effects", "Both direct and indirect effects", "Only agricultural effects"],
+        "correctAnswer": "Both direct and indirect effects",
+        "explanation": "The text mentions both direct costs and indirect effects on agriculture, migration, geopolitics, and supply chains.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "listen_advanced_4",
+        "type": "listening",
+        "level": "advanced",
+        "question": "Listen: 'The Renaissance, spanning roughly from the 14th to the 17th century, marked a period of unprecedented cultural, artistic, and intellectual flourishing that fundamentally transformed European society and laid the groundwork for the modern world as we know it today.' What did the Renaissance do to European society?",
+        "options": ["It had no effect", "It transformed it fundamentally", "It only affected art", "It only affected culture"],
+        "correctAnswer": "It transformed it fundamentally",
+        "explanation": "The text states 'fundamentally transformed European society'.",
+        "points": 30,
+        "timeLimit": 120
+      },
+      {
+        "id": "listen_advanced_5",
+        "type": "listening",
+        "level": "advanced",
+        "question": "Listen: 'The discovery of exoplanets in habitable zones has profound implications for our understanding of the universe's potential for life, challenging anthropocentric assumptions while simultaneously expanding the scope of astrobiological research and our conception of what constitutes a habitable environment.' What does the discovery of exoplanets do to our understanding?",
+        "options": ["It confirms anthropocentric views", "It challenges anthropocentric assumptions", "It has no effect on our understanding", "It only affects astrobiology"],
+        "correctAnswer": "It challenges anthropocentric assumptions",
+        "explanation": "The text states 'challenging anthropocentric assumptions'.",
+        "points": 30,
+        "timeLimit": 120
+      }
+    ]
+  },
+  "writing": {
+    "beginner": [
+      {
+        "id": "write_beginner_1",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Complete the sentence: 'I ___ to school every day.'",
+        "options": ["go", "goes", "going", "gone"],
+        "correctAnswer": "go",
+        "explanation": "Use 'go' with 'I' in present simple tense.",
+        "points": 15,
+        "timeLimit": 45
+      },
+      {
+        "id": "write_beginner_2",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the correct word: 'I have ___ apple.'",
+        "options": ["a", "an", "the", "some"],
+        "correctAnswer": "an",
+        "explanation": "Use 'an' before words starting with vowel sounds.",
+        "points": 15,
+        "timeLimit": 45
+      },
+      {
+        "id": "write_beginner_3",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Complete: 'She ___ a student.'",
+        "options": ["am", "is", "are", "be"],
+        "correctAnswer": "is",
+        "explanation": "Use 'is' with 'she' in present tense.",
+        "points": 15,
+        "timeLimit": 45
+      },
+      {
+        "id": "write_beginner_4",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Choose the correct form: 'I ___ my homework yesterday.'",
+        "options": ["do", "did", "done", "doing"],
+        "correctAnswer": "did",
+        "explanation": "Use past simple 'did' for completed actions in the past.",
+        "points": 15,
+        "timeLimit": 45
+      },
+      {
+        "id": "write_beginner_5",
+        "type": "writing",
+        "level": "beginner",
+        "question": "Complete: 'This is ___ book.'",
+        "options": ["a", "an", "the", "some"],
+        "correctAnswer": "a",
+        "explanation": "Use 'a' before words starting with consonant sounds.",
+        "points": 15,
+        "timeLimit": 45
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "write_intermediate_1",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'If I ___ rich, I would travel the world.'",
+        "options": ["am", "was", "were", "will be"],
+        "correctAnswer": "were",
+        "explanation": "Use 'were' in hypothetical situations (second conditional).",
+        "points": 25,
+        "timeLimit": 60
+      },
+      {
+        "id": "write_intermediate_2",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Complete: 'I have been ___ here for two hours.'",
+        "options": ["wait", "waited", "waiting", "waits"],
+        "correctAnswer": "waiting",
+        "explanation": "Use present perfect continuous with 'have been' + -ing form.",
+        "points": 25,
+        "timeLimit": 60
+      },
+      {
+        "id": "write_intermediate_3",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'The movie ___ by millions of people.'",
+        "options": ["watch", "watches", "watched", "was watched"],
+        "correctAnswer": "was watched",
+        "explanation": "Use passive voice 'was watched' when the subject receives the action.",
+        "points": 25,
+        "timeLimit": 60
+      },
+      {
+        "id": "write_intermediate_4",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Complete: 'She ___ to the store yesterday.'",
+        "options": ["go", "goes", "went", "gone"],
+        "correctAnswer": "went",
+        "explanation": "Use past simple 'went' for completed actions in the past.",
+        "points": 25,
+        "timeLimit": 60
+      },
+      {
+        "id": "write_intermediate_5",
+        "type": "writing",
+        "level": "intermediate",
+        "question": "Choose the correct form: 'I suggest that he ___ the meeting.'",
+        "options": ["attend", "attends", "attended", "attending"],
+        "correctAnswer": "attend",
+        "explanation": "Use base form 'attend' after 'suggest that' in subjunctive mood.",
+        "points": 25,
+        "timeLimit": 60
+      }
+    ],
+    "advanced": [
+      {
+        "id": "write_advanced_1",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Choose the correct form: 'Had I known about the meeting, I ___ attended.'",
+        "options": ["would", "would have", "will", "had"],
+        "correctAnswer": "would have",
+        "explanation": "Use 'would have' in third conditional (past hypothetical).",
+        "points": 35,
+        "timeLimit": 75
+      },
+      {
+        "id": "write_advanced_2",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Complete: 'Not only ___ she speak French, but she also knows Italian.'",
+        "options": ["do", "does", "did", "will"],
+        "correctAnswer": "does",
+        "explanation": "Use 'does' for subject-verb inversion after 'not only'.",
+        "points": 35,
+        "timeLimit": 75
+      },
+      {
+        "id": "write_advanced_3",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Choose the correct form: 'It is high time we ___ about this.'",
+        "options": ["talk", "talked", "talking", "talks"],
+        "correctAnswer": "talked",
+        "explanation": "Use past subjunctive 'talked' after 'it is high time'.",
+        "points": 35,
+        "timeLimit": 75
+      },
+      {
+        "id": "write_advanced_4",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Complete: 'The research ___ by the team last year.'",
+        "options": ["conduct", "conducts", "conducted", "was conducted"],
+        "correctAnswer": "was conducted",
+        "explanation": "Use passive voice 'was conducted' for past action.",
+        "points": 35,
+        "timeLimit": 75
+      },
+      {
+        "id": "write_advanced_5",
+        "type": "writing",
+        "level": "advanced",
+        "question": "Choose the correct form: 'Were I you, I ___ differently.'",
+        "options": ["act", "acted", "would act", "will act"],
+        "correctAnswer": "would act",
+        "explanation": "Use 'would act' in hypothetical conditional with 'were I you'.",
+        "points": 35,
+        "timeLimit": 75
+      }
+    ]
+  }
+}

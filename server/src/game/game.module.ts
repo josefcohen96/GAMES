@@ -3,6 +3,7 @@ import { GameController } from './game.controller';
 import { GameService } from './game.service';
 import { WarService } from './war/war.service';
 import { EratzIrService } from './eratzIr/eratzIr.service';
+import { EnglishService } from './english/english.service';
 import { RoomModule } from '../room/room.module';
 import { GameGateway } from './game.gateway';
 import { JwtModule } from '@nestjs/jwt';
@@ -23,7 +24,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     }),
   ],
   controllers: [GameController],
-  providers: [GameService, WarService, EratzIrService, GameGateway],
+  providers: [GameService, WarService, EratzIrService, EnglishService, GameGateway],
   exports: [GameService],
 })
 export class GameModule {}

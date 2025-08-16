@@ -6,7 +6,6 @@ import { Users } from './entities/user.entity';
 import { RegisterDto } from './dto/register.dto';
 import { BadRequestException } from '@nestjs/common';
 
-
 describe('UsersService', () => {
   let service: UsersService;
 
