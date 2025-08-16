@@ -5,7 +5,7 @@ export class CreateRoomDto {
   name: string;
 
   @IsString()
-  @IsIn(['eratz-ir', 'war'])
+  @IsIn(['eratz-ir', 'war', 'english'])
   gameType: string; // supported games
 
   @IsInt()

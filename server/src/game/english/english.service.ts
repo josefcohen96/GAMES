@@ -142,7 +142,7 @@ export class EnglishService {
 
         // Check if all players have answered
         const allPlayersAnswered = Object.values(game.players).every(
-            (p) => p.currentQuestion > game.currentRound || !p.isActive,
+            (p) => p.currentQuestion >= game.currentRound || !p.isActive,
         );
 
         if (allPlayersAnswered) {
