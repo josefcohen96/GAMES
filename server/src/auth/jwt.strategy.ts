@@ -11,7 +11,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {  // JWT Strategy f
             ignoreExpiration: false,
             secretOrKey: process.env.JWT_SECRET || 'secretKey',
         });
-        console.log('JWT Strategy initialized with');
     }
 
     async validate(payload: any) { // Validate the JWT payload with the user data in the database.

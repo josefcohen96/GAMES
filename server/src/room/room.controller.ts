@@ -42,7 +42,7 @@ export class RoomController {
     }
 
     @Post(':roomId/join')
-    joinRoom(@Param('roomId') roomId: string, @Req() req) {
+    async joinRoom(@Param('roomId') roomId: string, @Req() req) {
         const userId = req.user.userId;
         return this.roomService.joinRoom(roomId, userId);
     }

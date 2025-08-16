@@ -1,10 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { Users } from './entities/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
 import { Repository } from 'typeorm';
 import { RegisterDto } from './dto/register.dto';
-import { NotFoundException, BadRequestException } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
@@ -16,7 +15,6 @@ export class UsersService {
 
     async createUser(dto: RegisterDto): Promise<{ message: string }> {
         const { username, password } = dto;
-        console.log('Creating user with dto:', dto);
         if (!username || !password) {
             throw new BadRequestException('Username and password are required');
         }
@@ -35,8 +33,6 @@ export class UsersService {
         return { message: 'User created successfully' };
     }
 
-  
-
     async updateUser(id: string, Body: { username?: string; password?: string }): Promise<{ message: string }> {
         const { username, password } = Body;
         if (!username && !password) {
@@ -47,16 +43,13 @@ export class UsersService {
             updateData.username = username;
         }
         if (password) {
-            updateData.password = bcrypt.hashSync(password, 10);
+            updateData.password = await bcrypt.hash(password, 10);
         }
         await this.userRepository.update(id, updateData);
-        console.log(`User with id ${id} updated with data:`, updateData);
         return { message: 'User updated successfully' };
     }
 
     async deleteUser(id: string) {
-        // Logic to delete a user
-
         const result = await this.userRepository.delete(id);
         if (result.affected === 0) {
             throw new NotFoundException(`User with ID ${id} not found`);
@@ -66,28 +59,22 @@ export class UsersService {
     }
 
     async getAllUsers(): Promise<Users[]> {
-        // Logic to get all users
         const users = await this.userRepository.find();
-        console.log('Retrieved all users:', users);
         return users;
     }
 
     async findById(id: string): Promise<Users | null> {
-        // Logic to find a user by ID
         const user = await this.userRepository.findOne({ where: { id } });
         if (!user) {
             throw new NotFoundException(`User with ID ${id} not found`);
         }
-        console.log(`User found with ID ${id}:`, user);
         return user;
     }
     async findOne(username: string): Promise<Users | null> {
-        // Logic to find a user by username
         const user = await this.userRepository.findOne({ where: { username } });
         if (!user) {
             throw new NotFoundException(`User with username ${username} not found`);
         }
-        console.log(`User found with username ${username}:`, user);
         return user;
     }
 }

@@ -27,8 +27,9 @@ export class EratzIrService {
         const gameState = this.gameStates.get(roomId);
         if (!gameState) throw new NotFoundException('לא נמצא משחק לחדר הזה');
 
-
-
+        if (gameState.status !== 'waiting') {
+            throw new BadRequestException('לא ניתן להתחיל משחק שכבר התחיל');
+        }
         if (gameState.players.length < 2) {
             throw new BadRequestException('נדרשים לפחות שני שחקנים כדי להתחיל משחק');
         }
@@ -82,7 +83,7 @@ export class EratzIrService {
 
 
     async getState(roomId: string) {
-        console.log("📥 getState for room:", roomId);
+        // getState invoked
 
         let gameState = this.gameStates.get(roomId);
 
@@ -103,6 +104,19 @@ export class EratzIrService {
             this.gameStates.set(roomId, gameState); // save the initial state in the map 
         }
 
+        // Keep players in sync with current room when in waiting state
+        if (gameState.status === 'waiting') {
+            const players = this.roomService.getPlayers(roomId);
+            gameState.players = players;
+            // ensure all new players exist in totalScores
+            for (const p of players) {
+                if (typeof gameState.totalScores[p] !== 'number') {
+                    gameState.totalScores[p] = 0;
+                }
+            }
+            this.gameStates.set(roomId, gameState);
+        }
+
         return gameState;
     }
 
@@ -113,12 +127,11 @@ export class EratzIrService {
             throw new BadRequestException('לא ניתן לשמור תשובות - לא בזמן סיבוב');
         }
 
-        const validation = await this.validateAnswers(roomId, answers);
-        console.log("📢 saveAnswers: validation", validation);
+        // Store answers only; validation will be performed at finishRound for all players
         gameState.answers[playerId] = answers;
         this.gameStates.set(roomId, gameState);
 
-        return { validation, state: gameState };
+        return { state: gameState };
     }
 
 
@@ -129,16 +142,12 @@ export class EratzIrService {
             throw new BadRequestException('אין סיבוב פעיל לסיים');
         }
 
-        console.log(`📥 finishRound for room: ${roomId}`);
-
         const validationResult = await this.aiValidator.validateGameData({
             roomId,
             letter: gameState.letter,
             answers: gameState.answers,
             categories: gameState.categories,
         });
-
-        console.log("📢 Validation Result", validationResult);
 
         const roundScores: { [playerId: string]: number } = {};
 
@@ -153,7 +162,6 @@ export class EratzIrService {
                 gameState.totalScores[player] += score;
             }
         } else {
-            console.warn("⚠️ AI לא החזיר details → מחשב ניקוד פשוט");
             for (const player of gameState.players) {
                 const answers = gameState.answers[player] || {};
                 let score = 0;

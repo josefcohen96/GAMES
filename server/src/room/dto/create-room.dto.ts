@@ -1,13 +1,15 @@
 
-import { IsString, Min, Max } from 'class-validator';
+import { IsString, Min, Max, IsIn, IsInt } from 'class-validator';
 
 export class CreateRoomDto {
     @IsString()
     name: string;
 
     @IsString()
-    gameType: string; //  "war", "chess", "memory" 
+    @IsIn(['eratz-ir', 'war'])
+    gameType: string; // supported games
 
+    @IsInt()
     @Min(2)
     @Max(10)
     maxPlayers: number;

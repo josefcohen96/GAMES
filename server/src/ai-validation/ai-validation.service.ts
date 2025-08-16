@@ -9,22 +9,51 @@ interface ValidationResult {
 
 @Injectable()
 export class AiValidationService {
-  private model;
+  private model: any | null = null;
+  private isAvailable = false;
 
   constructor() {
     const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY environment variable is not set');
+    if (apiKey) {
+      const genAI = new GoogleGenerativeAI(apiKey);
+      this.model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      this.isAvailable = true;
+    } else {
+      this.isAvailable = false;
     }
-    const genAI = new GoogleGenerativeAI(apiKey);
-    this.model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
   }
 
   async validateGameData(data: any): Promise<ValidationResult> {
-    try {
-      const safeData = JSON.stringify(data, null, 2);
-      console.log("📢 AI Validation Request Data:", safeData);
+    const buildNaiveResult = (): ValidationResult => {
+      const { letter, answers, categories } = data || {};
+      const details: Record<string, Record<string, boolean>> = {};
+      const errors: string[] = [];
 
+      const players = Object.keys(answers || {});
+      for (const playerId of players) {
+        const playerAnswers = answers[playerId] || {};
+        details[playerId] = {};
+        for (const cat of categories || []) {
+          const value: string = (playerAnswers[cat] || '').toString().trim();
+          const ok = !!value && (!letter || value[0]?.toLowerCase() === letter?.toLowerCase());
+          details[playerId][cat] = ok;
+          if (!ok) {
+            errors.push(`Invalid answer for player ${playerId}, category ${cat}`);
+          }
+        }
+      }
+
+      // If no answers provided (e.g., empty round), consider as invalid
+      const valid = errors.length === 0 && players.length > 0;
+      return { valid, errors, details };
+    };
+
+    try {
+      if (!this.isAvailable || !this.model) {
+        return buildNaiveResult();
+      }
+
+      const safeData = JSON.stringify(data, null, 2);
       const prompt = `
 אתה משמש כבודק תשובות למשחק "ארץ עיר".
 קיבלת את הנתונים הבאים:
@@ -33,7 +62,7 @@ ${safeData}
 בדוק כל שחקן וכל קטגוריה לפי האות הנתונה.
 אם התשובה נכונה - החזר true, אחרת false.
 
-**חובה להחזיר JSON בלבד במבנה הבא:**
+חובה להחזיר JSON בלבד במבנה הבא:
 {
   "valid": true/false,
   "errors": ["רשימת שגיאות כלליות"],
@@ -43,7 +72,7 @@ ${safeData}
   }
 }
 
-חוקי:
+חוקים:
 - details חייב להכיל את כל השחקנים.
 - לכל קטגוריה שציינת במשחק תהיה תשובה true אם נכונה, אחרת false.
 - valid = false אם יש לפחות תשובה אחת לא נכונה.
@@ -52,26 +81,24 @@ ${safeData}
 
       const result = await this.model.generateContent(prompt);
       const textResponse = result.response.text().trim();
-
-      console.log("📢 AI Response Text:", textResponse);
-
       const jsonMatch = textResponse.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error('לא נמצא JSON תקין בתשובת ה-AI');
+      if (!jsonMatch) {
+        return buildNaiveResult();
+      }
 
       const parsed: ValidationResult = JSON.parse(jsonMatch[0]);
-
       if (
         typeof parsed.valid !== 'boolean' ||
         !Array.isArray(parsed.errors) ||
         typeof parsed.details !== 'object'
       ) {
-        throw new Error('מבנה התשובה שהתקבל מה-AI אינו תקין');
+        return buildNaiveResult();
       }
 
       return parsed;
     } catch (err) {
-      console.error('שגיאה באימות עם AI:', err);
-      throw new InternalServerErrorException('האימות נכשל');
+      // Fallback gracefully instead of crashing the flow
+      return buildNaiveResult();
     }
   }
 }
