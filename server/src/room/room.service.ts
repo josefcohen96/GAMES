@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  BadRequestException,
+} from '@nestjs/common';
 import { LobbyService } from './lobby.service';
 
 @Injectable()
@@ -8,7 +12,10 @@ export class RoomService {
 
   constructor(private readonly lobbyService: LobbyService) {}
 
-  async joinRoom(roomId: string, userId: string): Promise<{ message: string; players: string[] }> {
+  async joinRoom(
+    roomId: string,
+    userId: string,
+  ): Promise<{ message: string; players: string[] }> {
     // Enforce maxPlayers from DB
     const roomEntity = await this.lobbyService.getRoomById(roomId);
     const state = this.roomStates.get(roomId) || { players: [] };
@@ -24,17 +31,26 @@ export class RoomService {
     if (!this.userToRooms.has(userId)) this.userToRooms.set(userId, new Set());
     this.userToRooms.get(userId)!.add(roomId);
 
-    return { message: `User ${userId} joined room ${roomId}`, players: this.getPlayers(roomId) };
+    return {
+      message: `User ${userId} joined room ${roomId}`,
+      players: this.getPlayers(roomId),
+    };
   }
 
-  leaveRoom(roomId: string, userId: string): { message: string; players: string[] } {
+  leaveRoom(
+    roomId: string,
+    userId: string,
+  ): { message: string; players: string[] } {
     const room = this.roomStates.get(roomId);
     if (!room) throw new NotFoundException('Room not found');
 
     room.players = room.players.filter((p) => p !== userId);
     this.userToRooms.get(userId)?.delete(roomId);
 
-    return { message: `User ${userId} left room ${roomId}`, players: this.getPlayers(roomId) };
+    return {
+      message: `User ${userId} left room ${roomId}`,
+      players: this.getPlayers(roomId),
+    };
   }
 
   getPlayers(roomId: string): string[] {

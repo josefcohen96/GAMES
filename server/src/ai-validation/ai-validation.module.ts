@@ -3,6 +3,6 @@ import { AiValidationService } from './ai-validation.service';
 
 @Module({
   providers: [AiValidationService],
-  exports: [AiValidationService]
+  exports: [AiValidationService],
 })
-export class AiValidationModule { }
+export class AiValidationModule {}

@@ -7,10 +7,12 @@ export class GameService {
   constructor(
     private readonly warService: WarService,
     private readonly eratzIrService: EratzIrService,
+  ) {}
 
-  ) { }
-
-  handleAction(roomId: string, body: { gameType: string; action: string; payload?: any }) {
+  handleAction(
+    roomId: string,
+    body: { gameType: string; action: string; payload?: any },
+  ) {
     const { gameType, action, payload } = body;
 
     switch (gameType) {
@@ -22,7 +24,6 @@ export class GameService {
         throw new BadRequestException(`Unsupported game type: ${gameType}`);
     }
   }
-
 
   private handleWarAction(roomId: string, action: string, payload: any) {
     switch (action) {
@@ -42,16 +43,27 @@ export class GameService {
     }
   }
 
-  private async handleEratzIrAction(roomId: string, action: string, payload: any) {
+  private async handleEratzIrAction(
+    roomId: string,
+    action: string,
+    payload: any,
+  ) {
     switch (action) {
       case 'resetGame':
         return await this.eratzIrService.resetGame(roomId);
       case 'startRound':
-        return await this.eratzIrService.startRound(roomId, payload?.categories);
+        return await this.eratzIrService.startRound(
+          roomId,
+          payload?.categories,
+        );
       case 'startGame':
         return await this.eratzIrService.startGame(roomId);
       case 'saveAnswers':
-        return await this.eratzIrService.saveAnswers(roomId, payload.playerId, payload.answers);
+        return await this.eratzIrService.saveAnswers(
+          roomId,
+          payload.playerId,
+          payload.answers,
+        );
       case 'finishRound':
         return await this.eratzIrService.finishRound(roomId);
       case 'state':

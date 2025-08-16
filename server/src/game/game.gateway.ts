@@ -1,4 +1,12 @@
-import { WebSocketGateway, SubscribeMessage, WebSocketServer, ConnectedSocket, MessageBody, OnGatewayConnection, OnGatewayDisconnect, } from '@nestjs/websockets';
+import {
+  WebSocketGateway,
+  SubscribeMessage,
+  WebSocketServer,
+  ConnectedSocket,
+  MessageBody,
+  OnGatewayConnection,
+  OnGatewayDisconnect,
+} from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 import { GameService } from './game.service';
 import { RoomService } from '../room/room.service';
@@ -16,8 +24,8 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   constructor(
     private readonly gameService: GameService,
     private readonly roomService: RoomService,
-    private readonly jwtService: JwtService
-  ) { }
+    private readonly jwtService: JwtService,
+  ) {}
 
   async handleConnection(client: Socket) {
     try {
@@ -42,7 +50,10 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('joinRoom')
-  async handleJoinRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
+  async handleJoinRoom(
+    @ConnectedSocket() client: Socket,
+    @MessageBody() data: { roomId: string },
+  ) {
     const { roomId } = data;
     const userId = (client as any).user.sub;
     if (!userId) {
@@ -55,7 +66,7 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     // Check current state first; prevent join if game already started
     const currentState = await this.gameService.handleAction(roomId, {
       gameType: 'eratz-ir',
-      action: 'state'
+      action: 'state',
     });
     if (currentState.status !== 'waiting') {
       throw new BadRequestException('Cannot join, game already started');
@@ -73,7 +84,7 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
     const refreshedState = await this.gameService.handleAction(roomId, {
       gameType: 'eratz-ir',
-      action: 'state'
+      action: 'state',
     });
 
     this.server.to(roomId).emit('gameStateUpdate', refreshedState);
@@ -83,14 +94,19 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async handleStartGame(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
     console.log(`Starting game in room: ${roomId}`);
-    const result = await this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'startGame' });
-    console.log("result", result);
+    const result = await this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'startGame',
+    });
+    console.log('result', result);
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
-
   @SubscribeMessage('leaveRoom')
-  handleLeaveRoom(@ConnectedSocket() client: Socket, @MessageBody() data: { roomId: string }) {
+  handleLeaveRoom(
+    @ConnectedSocket() client: Socket,
+    @MessageBody() data: { roomId: string },
+  ) {
     const { roomId } = data;
     const userId = (client as any).user.sub;
 
@@ -106,21 +122,29 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @SubscribeMessage('resetGame')
   async handleResetGame(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
-    const result = await this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'resetGame' });
+    const result = await this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'resetGame',
+    });
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
   @SubscribeMessage('startRound')
   async handleStartRound(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
-    const result = await this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'startRound', payload: {} });
+    const result = await this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'startRound',
+      payload: {},
+    });
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 
   @SubscribeMessage('saveAnswers')
   async handleSaveAnswers(
     @ConnectedSocket() client: Socket,
-    @MessageBody() data: { roomId: string; answers: { [category: string]: string } }
+    @MessageBody()
+    data: { roomId: string; answers: { [category: string]: string } },
   ) {
     const { roomId, answers } = data;
     const userId = (client as any).user.sub;
@@ -136,7 +160,10 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @SubscribeMessage('finishRound')
   async handleFinishRound(@MessageBody() data: { roomId: string }) {
     const { roomId } = data;
-    const result = await this.gameService.handleAction(roomId, { gameType: 'eratz-ir', action: 'finishRound' });
+    const result = await this.gameService.handleAction(roomId, {
+      gameType: 'eratz-ir',
+      action: 'finishRound',
+    });
     this.server.to(roomId).emit('gameStateUpdate', result);
   }
 

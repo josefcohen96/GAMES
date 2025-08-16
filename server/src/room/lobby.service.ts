@@ -6,38 +6,38 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class LobbyService {
-    constructor(
-        @InjectRepository(Room)
-        private readonly lobbyRepo: Repository<Room>,
-    ) { }
+  constructor(
+    @InjectRepository(Room)
+    private readonly lobbyRepo: Repository<Room>,
+  ) {}
 
-    async getAllRooms(): Promise<Room[]> {
-        return this.lobbyRepo.find();
-    }
+  async getAllRooms(): Promise<Room[]> {
+    return this.lobbyRepo.find();
+  }
 
-    async getRoomById(roomId: string): Promise<Room> {
-        const room = await this.lobbyRepo.findOne({ where: { id: roomId } });
-        if (!room) throw new NotFoundException(`Room with ID ${roomId} not found`);
-        return room;
-    }
+  async getRoomById(roomId: string): Promise<Room> {
+    const room = await this.lobbyRepo.findOne({ where: { id: roomId } });
+    if (!room) throw new NotFoundException(`Room with ID ${roomId} not found`);
+    return room;
+  }
 
-    async createRoom(dto: CreateRoomDto): Promise<Room> {
-        const { ...roomData } = dto;
-        const savedRoom = this.lobbyRepo.create(roomData);
-        await this.lobbyRepo.save(savedRoom);
-        return savedRoom;
-    }
+  async createRoom(dto: CreateRoomDto): Promise<Room> {
+    const { ...roomData } = dto;
+    const savedRoom = this.lobbyRepo.create(roomData);
+    await this.lobbyRepo.save(savedRoom);
+    return savedRoom;
+  }
 
-    async deleteRoom(roomid: string): Promise<{ message: string }> {
-        const result = await this.lobbyRepo.delete(roomid);
-        if (result.affected === 0) {
-            throw new NotFoundException(`Room with ID ${roomid} not found`);
-        }
-        return { message: `Room with ID ${roomid} deleted successfully` };
+  async deleteRoom(roomid: string): Promise<{ message: string }> {
+    const result = await this.lobbyRepo.delete(roomid);
+    if (result.affected === 0) {
+      throw new NotFoundException(`Room with ID ${roomid} not found`);
     }
+    return { message: `Room with ID ${roomid} deleted successfully` };
+  }
 
-    async deleteAllRooms(): Promise<{ message: string }> {
-        await this.lobbyRepo.clear();
-        return { message: `All rooms deleted successfully` };
-    }
+  async deleteAllRooms(): Promise<{ message: string }> {
+    await this.lobbyRepo.clear();
+    return { message: `All rooms deleted successfully` };
+  }
 }

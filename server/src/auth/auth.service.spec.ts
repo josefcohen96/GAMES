@@ -7,10 +7,10 @@ import { RegisterDto } from '../users/dto/register.dto';
 import { UnauthorizedException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 
+jest.mock('bcrypt');
+
 describe('AuthService', () => {
   let service: AuthService;
-  let usersService: UsersService;
-  let jwtService: JwtService;
 
   const mockUsersService = {
     findOne: jest.fn(),
@@ -37,8 +37,6 @@ describe('AuthService', () => {
     }).compile();
 
     service = module.get<AuthService>(AuthService);
-    usersService = module.get<UsersService>(UsersService);
-    jwtService = module.get<JwtService>(JwtService);
   });
 
   afterEach(() => {
@@ -58,7 +56,7 @@ describe('AuthService', () => {
       };
 
       mockUsersService.findOne.mockResolvedValue(mockUser);
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true as never);
+      (bcrypt.compare as jest.Mock).mockResolvedValue(true);
 
       const result = await service.validateUser('testuser', 'password123');
 
@@ -85,7 +83,7 @@ describe('AuthService', () => {
       };
 
       mockUsersService.findOne.mockResolvedValue(mockUser);
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(false as never);
+      (bcrypt.compare as jest.Mock).mockResolvedValue(false);
 
       const result = await service.validateUser('testuser', 'wrongpassword');
 
@@ -116,7 +114,10 @@ describe('AuthService', () => {
         access_token: mockToken,
         userId: '1',
       });
-      expect(service.validateUser).toHaveBeenCalledWith('testuser', 'password123');
+      expect(service.validateUser).toHaveBeenCalledWith(
+        'testuser',
+        'password123',
+      );
       expect(mockJwtService.sign).toHaveBeenCalledWith({
         username: 'testuser',
         sub: '1',
@@ -131,7 +132,9 @@ describe('AuthService', () => {
 
       jest.spyOn(service, 'validateUser').mockResolvedValue(null);
 
-      await expect(service.login(loginDto)).rejects.toThrow(UnauthorizedException);
+      await expect(service.login(loginDto)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw UnauthorizedException when username or password is missing', async () => {
@@ -140,7 +143,9 @@ describe('AuthService', () => {
         password: 'password123',
       };
 
-      await expect(service.login(loginDto)).rejects.toThrow(UnauthorizedException);
+      await expect(service.login(loginDto)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
   });
 
@@ -167,8 +172,9 @@ describe('AuthService', () => {
         password: 'password123',
       };
 
-      await expect(service.register(registerDto)).rejects.toThrow(UnauthorizedException);
+      await expect(service.register(registerDto)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
   });
 });
-

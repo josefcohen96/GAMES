@@ -5,11 +5,10 @@ import { UsersService } from './users.service';
 import { Users } from './entities/user.entity';
 import { RegisterDto } from './dto/register.dto';
 import { BadRequestException } from '@nestjs/common';
-import * as bcrypt from 'bcrypt';
+
 
 describe('UsersService', () => {
   let service: UsersService;
-  let repository: Repository<Users>;
 
   const mockRepository = {
     findOne: jest.fn(),
@@ -29,7 +28,6 @@ describe('UsersService', () => {
     }).compile();
 
     service = module.get<UsersService>(UsersService);
-    repository = module.get<Repository<Users>>(getRepositoryToken(Users));
   });
 
   afterEach(() => {
@@ -117,4 +115,3 @@ describe('UsersService', () => {
     });
   });
 });
-

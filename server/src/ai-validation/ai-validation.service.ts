@@ -35,10 +35,14 @@ export class AiValidationService {
         details[playerId] = {};
         for (const cat of categories || []) {
           const value: string = (playerAnswers[cat] || '').toString().trim();
-          const ok = !!value && (!letter || value[0]?.toLowerCase() === letter?.toLowerCase());
+          const ok =
+            !!value &&
+            (!letter || value[0]?.toLowerCase() === letter?.toLowerCase());
           details[playerId][cat] = ok;
           if (!ok) {
-            errors.push(`Invalid answer for player ${playerId}, category ${cat}`);
+            errors.push(
+              `Invalid answer for player ${playerId}, category ${cat}`,
+            );
           }
         }
       }

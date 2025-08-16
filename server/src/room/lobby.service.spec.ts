@@ -8,7 +8,6 @@ import { NotFoundException } from '@nestjs/common';
 
 describe('LobbyService', () => {
   let service: LobbyService;
-  let repository: Repository<Room>;
 
   const mockRepository = {
     find: jest.fn(),
@@ -31,7 +30,6 @@ describe('LobbyService', () => {
     }).compile();
 
     service = module.get<LobbyService>(LobbyService);
-    repository = module.get<Repository<Room>>(getRepositoryToken(Room));
   });
 
   afterEach(() => {
@@ -135,7 +133,9 @@ describe('LobbyService', () => {
 
       const result = await service.deleteRoom('1');
 
-      expect(result).toEqual({ message: 'Room with ID 1 deleted successfully' });
+      expect(result).toEqual({
+        message: 'Room with ID 1 deleted successfully',
+      });
       expect(mockRepository.delete).toHaveBeenCalledWith('1');
     });
 
@@ -162,4 +162,3 @@ describe('LobbyService', () => {
     });
   });
 });
-
