@@ -36,14 +36,15 @@ export class EnglishService {
         gameType: EnglishGameType,
         level: EnglishGameLevel,
         players: string[],
+        questionCount = 10,
     ): EnglishGameState {
         // Filter questions based on game type and level
         let filteredQuestions = this.questionsDatabase.filter(
             (q) => q.level === level && (gameType === EnglishGameType.MIXED || q.type === gameType),
         );
 
-        // Shuffle and select 10 questions
-        filteredQuestions = this.shuffleArray(filteredQuestions).slice(0, 10);
+    // Shuffle and select requested number of questions
+    filteredQuestions = this.shuffleArray(filteredQuestions).slice(0, questionCount);
 
         if (filteredQuestions.length === 0) {
             throw new BadRequestException('No questions available for the selected type and level');

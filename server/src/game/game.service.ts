@@ -89,6 +89,7 @@ export class GameService {
           payload.gameType,
           payload.level,
           payload.players,
+          payload.questionCount,
         );
       case 'startRound':
         return this.englishService.startRound(roomId);

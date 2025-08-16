@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { initSocket } from "./socket";
 import WarGame from "./components/WarGame";
+import EnglishGame from "./components/EnglishGame";
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <WarGame />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/games/english/:roomId"
+              element={
+                <ProtectedRoute>
+                  <EnglishGame />
                 </ProtectedRoute>
               }
             />

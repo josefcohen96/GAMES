@@ -133,6 +133,7 @@ export default function Home() {
               className="border w-full p-2 rounded mb-3"
             >
               <option value="eratz-ir">ארץ עיר</option>
+              <option value="english">אנגלית</option>
               <option value="war">מלחמה</option>
             </select>
             <input
