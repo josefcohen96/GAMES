@@ -27,7 +27,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         port: parseInt(config.get<string>('DATABASE_PORT', '5432'), 10),
         username: config.get<string>('DATABASE_USER', 'postgres'),
         password: config.get<string>('DATABASE_PASS', '1234'),
-        database: config.get<string>('DATABASE_NAME', 'games-db'),
+        database: config.get<string>('DATABASE_NAME', 'games_db'),
         entities: [Users, Room],
         synchronize: true,
       }),

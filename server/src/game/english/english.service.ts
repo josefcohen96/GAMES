@@ -3,7 +3,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { EnglishGameLevel, EnglishGameState, EnglishGameStatus,EnglishGameType,EnglishQuestion } from './english.constants';
 
-
 @Injectable()
 export class EnglishService {
     private games: Map<string, EnglishGameState> = new Map();
