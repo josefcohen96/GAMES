@@ -58,7 +58,7 @@ describe('AuthService', () => {
       };
 
       mockUsersService.findOne.mockResolvedValue(mockUser);
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true as any);
+      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true as never);
 
       const result = await service.validateUser('testuser', 'password123');
 
@@ -85,7 +85,7 @@ describe('AuthService', () => {
       };
 
       mockUsersService.findOne.mockResolvedValue(mockUser);
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(false as any);
+      jest.spyOn(bcrypt, 'compare').mockResolvedValue(false as never);
 
       const result = await service.validateUser('testuser', 'wrongpassword');
 
